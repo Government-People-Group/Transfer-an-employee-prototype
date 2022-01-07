@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Current level of security clearance
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/url/of/next/page" method="post">
+<h1 class="govuk-heading-xl"> Upload files to prove your identity</h1>
+<p class="govuk-body">Upload the folowing documents:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>driving license</li>
+<li>proof of address</li>
+<li>2 most recent payslips</li>
+</ul>
+
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "file-upload-1",
+    label: {
+      text: "Upload a file"
+    }
+  }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
