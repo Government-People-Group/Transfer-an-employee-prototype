@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirm this is your home address - Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/phase-banner.html" %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Confirm this is your home address</h1>
+          <form class="form" action="." method="get">
+
+            <p>72 Guild Street<br>London<br>SE23 6FH</p>
+            <p>
+              <a href="">Change address</a>
+            </p>
+            {{ govukButton({
+          text: "Confirm and continue"
+        }) }}
+
+          </form>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+{% endblock %}

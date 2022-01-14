@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is your home address? - Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/service/home-address" method="post">
+        {% if errorPostcode == true %}
+          {{ govukErrorSummary({
+               titleText: "There is a problem",
+               errorList: errorList
+             }) }}
+        {% endif %}
+
+        <h1 class="govuk-heading-l">
+          What is your home address?
+        </h1>
+        <span id="changed-name-hint" class="govuk-hint">You cannot remove a registered office address from the public register, even if it's your home address.</span>
+
+        {% if errorPostcode == true %}
+
+          {{ govukInput({
+  label: {
+    text: "UK postcode"
+  },
+  errorMessage: {
+      text: "Enter a postcode"
+    },
+  classes: "govuk-input--width-10",
+  id: "postcode",
+  name: "postcode"
+ }) }}
+        {% else %}
+
+          {{ govukInput({
+ label: {
+ text: "UK postcode"
+ },
+ classes: "govuk-input--width-10",
+ id: "postcode",
+ name: "postcode"
+ }) }}
+
+        {% endif %}
+        {{ govukInput({
+  label: {
+    text: "Property name or number"
+  },
+  classes: "govuk-input--width-5",
+  hint: {
+    text: "For example, 'The Mill', '116' or 'Flat 37a'"
+  },
+  id: "property",
+  name: "property"
+ }) }}
+
+        <p>
+          <a href="">Enter the address manually</a>
+        </p>
+
+        {{ govukButton({
+           text: "Continue"
+         }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

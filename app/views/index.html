@@ -1,57 +1,345 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Transfer a member of Staff
+  Transfer an employee across the Civil Service
 {% endblock %}
-
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Transfer an employee across the Civil Service
+        <span class="govuk-caption-xl">Version 1</span>
+      </h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h4 class="govuk-tabs__title">
+          Contents
+        </h4>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#code">
+              Currently being user tested
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#other">
+              Other user journeys (work in progress)
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#form-versions">
+              Previous versions
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="code">
+          <h2 class="govuk-heading-l">
+            Scenario
+          </h2>
 
-      <h2 class="govuk-heading-m">Design patterns</h2>
+          <p class="govuk-body">.
+          </p>
+          <p>.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/start">Start</a>
-        </li>
-        <li>
-          <a href="security-clearance">What level of security clearance do you currently hold</a>
-        </li>
-        <li>
-          <a href="upload">Uploads</a>
-        </li>
-        <li>
-          <a href="check-answers">Check your answers</a>
-        </li>
-        <li>
-          <a href="task-list">Task list</a>
-        </li>
-      </ul>
+          <h3 class="govuk-heading-m">Task</h3>
+          <p class="govuk-body">
+            Can you show and tell me how you would..?</p>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+          <h3 class="govuk-heading-m">...</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="/start">Start</a>
+            </li>
+            <li>
+              <a href="/service/personal-details">Personal details</a>
+            </li>
+            <li>
+              <a href="/service/home-address">What is your home address?</a>
+            </li>
+            <ul>  <li>
+                <a href="/service/home-address-details">Enter your home address manually</a>
+              </li>
+              </ul>
+            <li>
+              <a href="/service/confirm-home-address">Confirm your home address</a>
+            </li>
+            <li>
+              <a href="/service/confirm-home-address">Confirm your home address</a>
+            </li>
+            <li>
+              <a href="/service/contact-details">What are your contact details?</a>
+            </li>
+<li>
+<a href="/service/check-your-answers">Check your answers</a>
+</li>
+<li>
+<a href="/service/confirmation">Confirmation</a>
+</li>
+</li>
+</ul>
 
-      <ul class="govuk-list govuk-list--bullet">
+<h3 class="govuk-heading-m">Proof of concept</h3>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/default-pages/long-statement-of-capital">Long Statement of Capital</a>
+</li>
+
+</div>
+<div class="govuk-tabs__panel" id="other">
+<h2 class="govuk-heading-m">Confirmation statement</h2>
+<h3 class="govuk-heading-s">
+Scenario
+</h3>
+
+<p class="govuk-body">You’re the director/ working on behalf of ABC limited.
+</p>
+<p>You notice that the Statment of Capital is incorrect.</p>
+<p>
+The Ordinary shares should have a value of £1.50 each.
+</p>
+
+<h3 class="govuk-heading-s">Task</h3>
+<p class="govuk-body">
+Can you show and tell me how you would ...?</p>
+<h3 class="govuk-heading-s">Confirmation Statement service</h3>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/user-journeys/confirmation-statement/statement-of-capital">Check the statement of capital</a>
+</li>
+<li>
+<a href="/user-journeys/confirmation-statement/wrong-statement-of-capital">Wrong statement of capital</a>
+</li>
+</ul>
+<h3 class="govuk-heading-s">Statement of Capital service</h3>
+<ul class="govuk-list govuk-list--bullet">
+
+<li>
+<a href="/user-journeys/confirmation-statement/change">What change has been made to the share capital?</a>
+</li>
+<li>
+<a href="/user-journeys/confirmation-statement/edit-the-statement-of-capital">Edit the statement of capital</a>
+</li>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+  <a href="/dynamic-pages/share-type">Share type</a>
+</li>
+
+<li>
+  <a href="/dynamic-pages/how-many-shares">How many shares</a>
+</li>
+<li>
+  <a href="/dynamic-pages/choose-a-currency">What is the currency?</a>
+</li>
+<li>
+  <a href="/dynamic-pages/choose-a-value">Choose a value</a>
+</li>
+<li>
+  <a href="/dynamic-pages/prescribed-particulars">Rights attached to the shares</a>
+</li>
+</ul>
+<li>
+<a href="/user-journeys/confirmation-statement/confirmation-page">Confirmation page</a>
+</li>
+</li>
+</ul>
+
+<h3 class="govuk-heading-s">Return to Confirmation Statement service</h3>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/user-journeys/confirmation-statement/task-list">Task list</a>
+</li>
+
+</ul>
+
+<h2 class="govuk-heading-m">Redesignation of shares (SH08)</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/user-journeys/SH08/date">Date of redesignation of shares</a>
+</li>
+<li>
+<a href="/user-journeys/SH08/class">Prescribed particulars</a>
+</li>
+<li>
+<a href="/user-journeys/SH08/share-rights">Share rights</a>
+</li>
+<li>
+<a href="/user-journeys/SH08/check-your-answers">Check your answers</a>
+</li>
+</ul>
+<h2 class="govuk-heading-m">Change the rights attached to shares (SH10)</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/user-journeys/SH10/date">Date of variation of rights to shares</a>
+</li>
+<li>
+<a href="/user-journeys/SH10/prescribed-particulars">Prescribed particulars</a>
+</li>
+<li>
+<a href="/user-journeys/SH10/check-your-answers">Check your answers</a>
+</li>
+</ul>
+
+<h2 class="govuk-heading-m">Other designs</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li>
+<a href="/dynamic-pages/share-type-no-hint">Share type (long)</a>
+</li>
+<li>
+<a href="/default-pages/long-statement-of-capital">The current (long) statement of capital</a>
+</li>
+<li>
+<a href="/user-journeys/CHS">CHS</a>
+</li>
+<li>
+<a href="/user-journeys/Resolution/attach-a-special-resolution">Attach a special resolution</a>
+</li>
+<li>
+<a href="/user-journeys/Article/attach-the-amended-articles-of-association">Attach the amended articles of association</a>
+</ul>
+
+</div>
+
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
+<table class="govuk-table version-history">
+<caption class="govuk-table__caption govuk-heading-l">Previous versions</caption>
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Version</th>
+<th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Tested on</th>
+<th scope="col" class="govuk-table__header govuk-!-width-one-third">Changes</th>
+<th scope="col" class="govuk-table__header govuk-!-width-one-third">Status</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">
+  <a href="https://statement-of-capital-prototype.herokuapp.com/">Version 1</a>
+</th>
+<td class="govuk-table__cell">N/A</td>
+<td class="govuk-table__cell">
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Changes included in version 1
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list--bulletlist">
+
         <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          Added the following pages
+          <a href="default-pages/start">GOV.UK start page</a>,
+          <a href="default-pages/sign-in">Sign in</a>,
+          <a href="default-pages/company-details">Company details</a>,
+          <a href="default-pages/confirm-company-details">Confirm company details</a>,
+          <a href="default-pages/company-authentication">Company authentication</a>,
+          <a href="default-pages/statement-of-capital">The current statement of capital</a>,
+          <a href="default-pages/long-statement-of-capital">The current (long) statement of capital</a>,
+          <a href="default-pages/change">Make a change</a>,
+          <a href="dynamic-pages/date">Date page (allotment)</a>,
+          <a href="dynamic-pages/share-type">Share type</a>,
+          <a href="dynamic-pages/how-many-shares">How many shares</a>,
+          <a href="dynamic-pages/choose-a-value">Choose a value</a>,
+          <a href="dynamic-pages/prescribed-particulars">Prescribed particulars</a>,
+          <a href="dynamic-pages/check-your-answers">Check your answers</a>,
+          <a href="default-pages/new-statement-of-capital">Check the new statement of capital</a>,
+          <a href="default-pages/confirmation">Confirmation</a>,
+          <a href="user-journeys/SH08/date">Date page (redesignation)</a>,
+          <a href="user-journeys/SH08/class">Prescribed particulars (redesignation)</a>,
+          <a href="user-journeys/SH08/share-rights">Share rights page (redesignation)</a>,
+          <a href="user-journeys/SH08/check-your-answers">Check your answers page (redesignation)</a>,
+          <a href="user-journeys/SH10/date">Date page (change rights)</a>,
+          <a href="user-journeys/SH10/prescribed-particulars">Prescribed particulars (change rights)</a>,
+          <a href="user-journeys/SH10/check-your-answers">Check your answers (change rights)</a>,
+          <a href="user-journeys/CHS">CHS</a>,
+          <a href="user-journeys/Resolution/attach-a-special-resolution">Attach a special resolution</a>,
+          <a href="user-journeys/Article/attach-the-amended-articles-of-association">Attach the ammended articles of association</a>,
+
         </li>
       </ul>
     </div>
-  </div>
+  </details>
+</td>
+<td class="govuk-table__cell">
+  <strong class="govuk-tag govuk-tag--green">
+    Proof of Concept
+  </strong>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">
+  <a href="https://update-share-capital-v2.herokuapp.com/">Version 2</a>
+</th>
+<td class="govuk-table__cell">N/A</td>
+<td class="govuk-table__cell">
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Changes included in version 2
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list--bulletlist">
 
+        <li>
+          Added the following pages
+          <a href="choose-a-currency">Choose a currency</a>,
+          <a href="paid-and-unpaid">What are the amounts paid and unpaid</a>
+
+        </li>
+      </ul>
+    </div>
+  </details>
+</td>
+<td class="govuk-table__cell">
+  <strong class="govuk-tag govuk-tag--green">
+    Proof of Concept
+  </strong>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">
+  <a href="https://update-share-capital-v3.herokuapp.com/">Version 3</a>
+</th>
+<td class="govuk-table__cell">N/A</td>
+<td class="govuk-table__cell">
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Changes included in version 3
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list--bulletlist">
+
+        <li>
+          Iterated the following pages
+          <a href="change">What change has been made to the share capital</a>,
+          <a href="paid-and-unpaid">Were the shares paid for in cash?</a>,
+          <a href="paid-and-unpaid-cash">What are the amounts paid and unpaid for each share?</a>,
+          <a href="paid-and-unpaid-non-cash">What are the non cash considerations for each share?</a>,
+          <a href="check-your-answers">Check your answers</a>,
+        </li>
+      </ul>
+    </div>
+  </details>
+</td>
+<td class="govuk-table__cell">
+  <strong class="govuk-tag govuk-tag--green">
+    Proof of Concept
+  </strong>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 {% endblock %}
