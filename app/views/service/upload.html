@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Current level of security clearance
+Upload files to prove your identity
 {% endblock %}
 
-{% block beforeContent %}
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -13,8 +13,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/url/of/next/page" method="post">
-<h1 class="govuk-heading-xl"> Upload files to prove your identity</h1>
+      <form class="form" action="current-department" method="post">
+<h1 class="govuk-heading-l"> Upload files to prove your identity</h1>
 <p class="govuk-body">Upload the folowing documents:</p>
 <ul class="govuk-list govuk-list--bullet">
 <li>driving license</li>

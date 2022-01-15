@@ -102,4 +102,22 @@ router.post('/service/home-address', function (req, res) {
   }
 })
 
+
+router.post('/service/sc-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var securityClearance = req.session.data['clearance']
+
+  // Check whether the variable matches a condition
+  if (securityClearance == "bpss") {
+    // Send user to next page
+    res.redirect('/done')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/more-sc-q')
+  }
+
+})
+
 module.exports = router

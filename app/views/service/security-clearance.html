@@ -4,7 +4,7 @@
   Current level of security clearance
 {% endblock %}
 
-{% block beforeContent %}
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -13,11 +13,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/service/sc-answer" method="post">
 
         {{ govukRadios({
-          idPrefix: "where-do-you-live",
-          name: "where-do-you-live",
+          idPrefix: "clearance",
+          name: "clearance",
           fieldset: {
             legend: {
               text: "What level of security clearance do you currently hold?",
@@ -28,28 +28,28 @@
 
           items: [
             {
-              value: "england",
+              value: "bpss",
               text: "Baseline Personnel Security Standard (BPSS)"
             },
             {
-              value: "scotland",
+              value: "ctc",
               text: "Counter Terrorism Check (CTC)"
             },
             {
-              value: "wales",
+              value: "sc",
               text: "Security Clearance (SC)"
             },
             {
-              value: "wales",
+              value: "esc",
               text: "enhanced Security Clearance (eSC)"
             },
             {
-              value: "northern-ireland",
+              value: "dv",
               text: "Developed Vetting (DV)"
             }
             ,
             {
-              value: "northern-ireland",
+              value: "edv",
               text: "enhanced Developed Vetting (eDV)"
             }
           ]
