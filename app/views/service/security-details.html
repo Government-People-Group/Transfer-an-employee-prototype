@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Security Clearance details
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/service/check-answers" method="post">
+
+        {% set yesHtml %}
+
+        <p class="govuk-body">
+          You will need to complete a new NSV application in addition to this form. Your vacancy holder will arrange this as necessary.
+        </p>
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "more-clearance",
+          name: "more-clearance",
+          fieldset: {
+            legend: {
+              text: "Does your new role require a higher level of security clearance?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: yesHtml
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              conditional: {
+                html: noHtml
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

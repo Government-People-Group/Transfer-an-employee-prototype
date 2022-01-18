@@ -14,13 +14,12 @@ Upload files to prove your identity
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="current-department" method="post">
-<h1 class="govuk-heading-l"> Upload files to prove your identity</h1>
-<p class="govuk-body">Upload the folowing documents:</p>
-<ul class="govuk-list govuk-list--bullet">
-<li>driving license</li>
-<li>proof of address</li>
-<li>2 most recent payslips</li>
-</ul>
+<h1 class="govuk-heading-l"> Upload your two most recent payslips</h1>
+
+<div id="upload-hint" class="govuk-hint">
+  We will use your payslips to verify your salary
+ </div>
+
 
   {{ govukFileUpload({
     id: "file-upload-1",

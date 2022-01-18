@@ -14,19 +14,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="new-department" method="post">
-<h1 class="govuk-heading-l">Current department details</h1>
-
-{{ govukInput({
-  label: {
-    text: "Current department employee number"
-  },
-   classes: "govuk-input--width-10",
-  id: "event-name",
-  name: "event-name"
-}) }}
-
-
+      <form class="form" action="new-dept-answer" method="post">
 
         {% set otherHtml %}
         <div class="govuk-input--width-30">
@@ -39,13 +27,13 @@
 
         {{ govukRadios({
   classes: "govuk-radios",
-  idPrefix: "current-department",
-  name: "current-department",
+  idPrefix: "new-department",
+  name: "new-department",
   fieldset: {
     legend: {
-      text: "Which Government department do you currently work for?",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--s"
+      text: "Which Government department are you moving to?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
@@ -62,8 +50,8 @@
       text: "Intellectual Property Office (IPO)"
     },
     {
-      value: "met",
-      text: "Ministry of Justice (MOJ)"
+      value: "hmrc",
+      text: "HM Revenue & Customs (HMRC)"
     },
     {
       value: "other",
@@ -74,8 +62,6 @@
     }
   ]
 }) }}
-
-
 
         {{ govukButton({
           text: "Continue"

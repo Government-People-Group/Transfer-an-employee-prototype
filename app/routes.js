@@ -113,32 +113,16 @@ router.post('/service/home-address', function (req, res) {
 })
 
 
-router.post('/service/sc-answer', function (req, res) {
+
+router.post('/service/new-dept-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var securityClearance = req.session.data['clearance']
-
-  // Check whether the variable matches a condition
-  if (securityClearance == "bpss") {
-    // Send user to next page
-    res.redirect('/done')
-  }
-  else {
-    // Send user to ineligible page
-    res.redirect('/more-sc-q')
-  }
-
-})
-
-router.post('/service/dept-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var currentDepartment = req.session.data['current-department']
+  var currentDepartment = req.session.data['new-department']
 
   // Check whether the variable matches a condition
   if (currentDepartment == "ho") {
     // Send user to next page
-    res.redirect('/skip')
+    res.redirect('/service/check-answers')
   }
   else {
     // Send user to ineligible page
