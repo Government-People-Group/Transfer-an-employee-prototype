@@ -18,7 +18,7 @@
 
       <form action="/service/personal-details" method="post">
 
-        {% if errorName == true or errorDob == true or errorEmail == true %}
+        {% if errorName == true or errorDob == true or errorEmail == true or errorNin == true%}
           {{ govukErrorSummary({
                  titleText: "There is a problem",
                  errorList: errorList
@@ -138,9 +138,36 @@
    }) }}
    {% endif %}
 
+       {% if errorNin == true %}
+
+   {{ govukInput({
+       label: {
+         text: "National Insurance Number"
+       },
+       classes: "govuk-input--width-20",
+       id: "national-insurance",
+       name: "national-insurance",
+       errorMessage: {
+         text: "Enter your National Insurance Number"
+       }
+     }) }}
+
+     {% else %}
+
+       {{ govukInput({
+           label: {
+             text: "National Insurance Number"
+           },
+           classes: "govuk-input--width-20",
+           id: "national-insurance",
+           name: "national-insurance"
+         }) }}
+     {% endif %}
+
         {{ govukButton({
            text: "Continue"
          }) }}
+
       </form>
 
     </div>

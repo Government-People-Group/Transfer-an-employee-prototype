@@ -16,6 +16,7 @@ router.post('/service/personal-details', function (req, res) {
   var nameHasError = false
   var emailHasError = false
   var dobHasError = false
+  var ninHasError = false
 
   if (req.session.data['full-name'] === '') {
     nameHasError = true
@@ -41,12 +42,21 @@ router.post('/service/personal-details', function (req, res) {
     })
   }
 
+  if (req.session.data['national-insurance'] === '') {
+    ninHasError = true
+    errors.push({
+      text: "Enter your National Insurance Number",
+      href: '#national-insurance'
+    })
+  }
 
-  if (nameHasError || dobHasError || emailHasError) {
+
+  if (nameHasError || dobHasError || emailHasError || ninHasError) {
     res.render('service/personal-details', {
       errorName: nameHasError,
       errorDob: dobHasError,
       errorEmail: emailHasError,
+      errorNin: ninHasError,
       errorList: errors
     })
   } else {
@@ -116,6 +126,23 @@ router.post('/service/sc-answer', function (req, res) {
   else {
     // Send user to ineligible page
     res.redirect('/more-sc-q')
+  }
+
+})
+
+router.post('/service/dept-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var currentDepartment = req.session.data['current-department']
+
+  // Check whether the variable matches a condition
+  if (currentDepartment == "ho") {
+    // Send user to next page
+    res.redirect('/skip')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/service/security-clearance')
   }
 
 })
