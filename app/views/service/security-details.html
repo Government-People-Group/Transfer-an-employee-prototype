@@ -15,6 +15,13 @@
 
       <form class="form" action="/service/check-answers" method="post">
 
+        {% set unsureHtml %}
+
+        <p class="govuk-body">
+          You can find out by....
+        </p>
+        {% endset -%}
+
         {% set yesHtml %}
 
         <p class="govuk-body">
@@ -43,9 +50,13 @@
             },
             {
               value: "no",
-              text: "No",
+              text: "No"
+            },
+            {
+              value: "unsure",
+              text: "I'm not sure",
               conditional: {
-                html: noHtml
+                html: unsureHtml
               }
             }
           ]
