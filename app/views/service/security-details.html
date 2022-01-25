@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Security Clearance details
+  Does your new role require a higher level of security clearance?
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}
@@ -13,7 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/service/check-answers" method="post">
+      <form class="form" action="/service/birth" method="post">
 
         {% set unsureHtml %}
 
