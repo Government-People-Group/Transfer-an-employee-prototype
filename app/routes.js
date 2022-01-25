@@ -131,5 +131,22 @@ router.post('/service/new-dept-answer', function (req, res) {
 
 })
 
+router.post('/service/clearance', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var currentDepartment = req.session.data['clearance']
+
+  // Check whether the variable matches a condition
+  if (currentDepartment == "bpss") {
+    // Send user to next page
+    res.redirect('/service/check-answers')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('/service/security-details')
+  }
+
+})
+
 
 module.exports = router
