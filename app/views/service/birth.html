@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is your place of birth?
+  Where is your place of birth?
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,21 +17,67 @@
 
 
 
+
         {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
 
-        {{ govukInput({
-          label: {
-            text: "What is your place of birth?",
-            classes: "govuk-label--l",
+        {% call govukFieldset({
+          legend: {
+            text: "Where is your place of birth?",
+            classes: "govuk-fieldset__legend--l",
             isPageHeading: true
-          },
-          hint: {
-            text: "For example, Sheffield, UK"
-          },
-          id: "event-name",
-          name: "event-name"
-        }) }}
+          }
+        }) %}
 
+
+
+          {{ govukInput({
+            label: {
+              text: "Town or city"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-town",
+            name: "address-town",
+            autocomplete: "address-level2"
+          }) }}
+
+
+
+
+        {% endcall %}
+
+
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+      {{ govukSelect({
+        id: "country",
+        name: "country",
+        label: {
+          text: "Country",
+  isPageHeading: true
+        },
+        items: [
+          {
+            value: "published",
+            text: "Country 1",
+            selected: true
+          },
+          {
+            value: "updated",
+            text: "Country 2"
+
+          },
+          {
+            value: "views",
+            text: "Country 3"
+          },
+          {
+            value: "comments",
+            text: "Country 4"
+          }
+        ]
+      }) }}
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
