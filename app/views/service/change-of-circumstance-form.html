@@ -23,7 +23,7 @@
         </p>
         {% endset -%}
 
-        {% set yesHtml %}
+        {% set noHtml %}
 
         <p class="govuk-body">
           If you have not submitted a change of circumstances form please visit: https://www.gov.uk/government/publications/change-of-personal-circumstances
@@ -44,14 +44,14 @@
           items: [
             {
               value: "yes",
-              text: "Yes",
-              conditional: {
-                html: yesHtml
-              }
+              text: "Yes"
             },
+
             {
               value: "no",
-              text: "No"
+              text: "No",
+              conditional: {
+                html: noHtml }
             }
 
 
