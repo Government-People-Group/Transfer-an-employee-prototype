@@ -15,8 +15,26 @@
 
       <form class="form" action="change-of-circumstance-form" method="post">
 
+        {% set textHtml %}
+        <p class="govuk-body">For example:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>nationality</li>
+                <li>lived outside the UK for more than 6 months</li>
+                <li>arrest</li>
+                <li>caution</li>
+                <li>criminal conviction</li>
+                <li>marriage or civil partnership</li>
+                <li>substantial change in financial situation</li>
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+              </ul>
+  {% endset -%}
+
+  {% set yesHtml %}
+
+  <p class="govuk-body">
+    If you haven't already, please submit a <a href="https://www.gov.uk/government/publications/change-of-personal-circumstances" target="_blank">change of circumstances form </a>
+  </p>
+  {% endset -%}
 
         {{ govukRadios({
           idPrefix: "changes",
@@ -29,17 +47,22 @@
             }
           },
           hint: {
-            text: "For example, arrest/ caution/ criminal conviction, marriage/ civil partnership, substantial change in financial situation"
+            html: textHtml
           },
           items: [
             {
               value: "yes",
-              text: "Yes"
+              text: "Yes",
+              conditional: {
+                html: yesHtml }
             },
+
             {
               value: "no",
               text: "No"
             }
+
+
           ]
         }) }}
 
