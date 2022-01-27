@@ -16,9 +16,6 @@
       <form class="form" action="/service/lived-outside-uk" method="post">
 
 
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
         {{ govukRadios({
           idPrefix: "nationality",
           name: "nationality",
@@ -40,9 +37,6 @@
             }
           ]
         }) }}
-
-
-
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

@@ -15,69 +15,27 @@
 
       <form class="form" action="/service/nationality" method="post">
 
+<h1 class="govuk-heading-l">Where is your place of birth?</h1>
+{{ govukInput({
+  label: {
+    text: "Town or city"
+  },
+  classes: "govuk-input--width-20",
+  id: "width-20",
+  name: "width-20"
+}) }}
 
 
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-        {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
-
-        {% call govukFieldset({
-          legend: {
-            text: "Where is your place of birth?",
-            classes: "govuk-fieldset__legend--l",
-            isPageHeading: true
-          }
-        }) %}
-
-
-
-          {{ govukInput({
-            label: {
-              text: "Town or city"
-            },
-            classes: "govuk-!-width-two-thirds",
-            id: "address-town",
-            name: "address-town",
-            autocomplete: "address-level2"
-          }) }}
-
-
-
-
-        {% endcall %}
-
-
-
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-      {{ govukSelect({
-        id: "country",
-        name: "country",
-        label: {
-          text: "Country",
-  isPageHeading: true
-        },
-        items: [
-          {
-            value: "published",
-            text: "Country 1",
-            selected: true
-          },
-          {
-            value: "updated",
-            text: "Country 2"
-
-          },
-          {
-            value: "views",
-            text: "Country 3"
-          },
-          {
-            value: "comments",
-            text: "Country 4"
-          }
-        ]
-      }) }}
+      <div class="govuk-form-group">
+        <div class="govuk-input--width-20">
+  <label class="govuk-label" for="width-10">
+    Country
+  </label>
+  <div id="country" class="autocomplete-wrapper"></div>
+</div>
+</div>
+<script src="/public/javascripts/accessible-autocomplete.js"></script>
+<script src="/public/javascripts/country.js"></script>
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
