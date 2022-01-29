@@ -112,8 +112,6 @@ router.post('/service/home-address', function (req, res) {
   }
 })
 
-
-
 router.post('/service/new-dept-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -131,41 +129,22 @@ router.post('/service/new-dept-answer', function (req, res) {
 
 })
 
-router.post('/service/clearance', function (req, res) {
+router.post('/service/security-details-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var currentDepartment = req.session.data['clearance']
+  var higherClearance = req.session.data['clearance']
 
   // Check whether the variable matches a condition
-  if (currentDepartment == "bpss") {
+  if (higherClearance == "bpss") {
     // Send user to next page
-    res.redirect('/service/check-answers')
+    res.redirect('check-your-answers')
   }
   else {
     // Send user to ineligible page
-    res.redirect('/service/security-details')
+    res.redirect('birth')
   }
 
 })
-
-router.post('/service/change-of-circumstance-form', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var currentDepartment = req.session.data['changes']
-
-  // Check whether the variable matches a condition
-  if (currentDepartment == "yes") {
-    // Send user to next page
-    res.redirect('/service/change-of-circumstance-form')
-  }
-  else {
-    // Send user to ineligible page
-    res.redirect('/service/check-answers')
-  }
-
-})
-
-
 
 
 
