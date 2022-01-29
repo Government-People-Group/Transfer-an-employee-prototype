@@ -120,7 +120,7 @@ router.post('/service/new-dept-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (currentDepartment == "ho") {
     // Send user to next page
-    res.redirect('/service/check-answers')
+    res.redirect('/service/check-your-answers')
   }
   else {
     // Send user to ineligible page
