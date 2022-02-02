@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
 
 // Applicant-details
 
-router.post('/service/personal-details', function (req, res) {
+router.post('/section-1/personal-details', function (req, res) {
   var errors = []
   var nameHasError = false
   var emailHasError = false
@@ -52,7 +52,7 @@ router.post('/service/personal-details', function (req, res) {
 
 
   if (nameHasError || dobHasError || emailHasError || ninHasError) {
-    res.render('service/personal-details', {
+    res.render('section-1/personal-details', {
       errorName: nameHasError,
       errorDob: dobHasError,
       errorEmail: emailHasError,
@@ -66,7 +66,7 @@ router.post('/service/personal-details', function (req, res) {
 
 // home-address-details
 
-router.post('/service/home-address', function (req, res) {
+router.post('/section-1/home-address', function (req, res) {
   var errors = []
   var postcodeHasError = false
 
@@ -79,18 +79,18 @@ router.post('/service/home-address', function (req, res) {
   }
 
   if (postcodeHasError) {
-    res.render('service/home-address', {
+    res.render('section-1/home-address', {
       errorPostcode: postcodeHasError,
       errorList: errors
     })
   } else {
-    res.redirect('/service/confirm-home-address')
+    res.redirect('/section-1/confirm-home-address')
   }
 })
 
 // contact-details
 
-router.post('/service/home-address', function (req, res) {
+router.post('/section-1/home-address', function (req, res) {
   var errors = []
   var EmailHasError = false
 
@@ -103,16 +103,16 @@ router.post('/service/home-address', function (req, res) {
   }
 
   if (postcodeHasError) {
-    res.render('service/home-address', {
+    res.render('section-1/home-address', {
       errorPostcode: postcodeHasError,
       errorList: errors
     })
   } else {
-    res.redirect('/service/confirm-home-address')
+    res.redirect('/section-1/confirm-home-address')
   }
 })
 
-router.post('/service/new-dept-answer', function (req, res) {
+router.post('/section-1/new-dept-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var currentDepartment = req.session.data['new-department']
@@ -120,16 +120,16 @@ router.post('/service/new-dept-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (currentDepartment == "ho") {
     // Send user to next page
-    res.redirect('/service/check-your-answers')
+    res.redirect('/section-1/check-your-answers')
   }
   else {
     // Send user to ineligible page
-    res.redirect('/service/security-clearance')
+    res.redirect('/section-1/security-clearance')
   }
 
 })
 
-router.post('/service/security-details-answer', function (req, res) {
+router.post('/section-1/security-details-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var higherClearance = req.session.data['clearance']
