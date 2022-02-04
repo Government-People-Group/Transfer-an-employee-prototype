@@ -15,6 +15,112 @@ Transfer Details
 
       <form class="form" action="next-page-link-here" method="post">
 
+        <h1 class="govuk-heading-l">
+          Transfer details
+        </h1>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "type-of-transfer",
+          name: "Type of transfer",
+          fieldset: {
+            legend: {
+              text: "Type of transfer"
+            }
+          },
+          items: [
+            {
+              value: "fixed",
+              text: "Fixed Term"
+            },
+            {
+              value: "Loan",
+              text: "Loan (6+ months)"
+            },
+            {
+              value: "Permanent",
+              text: "Permanent Transfer"
+            },
+
+            {
+              value: "Return",
+              text: "Return from loan"
+            }
+          ]
+        }) }}
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "compulsory",
+          name: "compulsory",
+          fieldset: {
+
+            legend: {
+              text: "Is this move a cross government redeployment move in order to avoid compulsory redundancy? "
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "nature",
+          name: "nature",
+          fieldset: {
+
+            legend: {
+              text: "Nature of transfer"
+            }
+          },
+          items: [
+            {
+              value: "Downgrade",
+              text: "Downgrade"
+            },
+
+            {
+              value: "Level",
+              text: "Level transfer"
+            },
+
+            {
+              value: "Promotion",
+              text: "Promotion"
+            }
+          ]
+        }) }}
+
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "date-of-transfer",
+          namePrefix: "date-of-transfer",
+          fieldset: {
+            legend: {
+              text: "When is the start date for your new department?"
+            }
+          },
+          hint: {
+            text: "For example, 12 3 2022"
+          }
+        }) }}
+
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
