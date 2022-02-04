@@ -28,54 +28,15 @@
 
 
 
-        {% set otherHtml %}
-        <div class="govuk-input--width-30">
-          <label for="autocomplete-default" class="govuk-label">Enter a department</label>
-          <div id="department" class="autocomplete-wrapper"></div>
+<div class="govuk-form-group">
+            <label for="autocomplete-default" class="govuk-label">Which Government department do you currently work for?</label>
+      <div class="govuk-input--width-30">
+        <div id="department" class="autocomplete-wrapper"></div>
         </div>
+        </div>
+
         <script src="/public/javascripts/accessible-autocomplete.js"></script>
         <script src="/public/javascripts/department.js"></script>
-        {% endset -%}
-
-        {{ govukRadios({
-  classes: "govuk-radios",
-  idPrefix: "current-department",
-  name: "current-department",
-  fieldset: {
-    legend: {
-      text: "Which Government department do you currently work for?",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--s"
-    }
-  },
-  items: [
-    {
-      value: "co",
-      text: "Cabinet Office (CO)"
-    },
-    {
-      value: "ho",
-      text: "Home Office (HO)"
-    },
-    {
-      value: "ipo",
-      text: "Intellectual Property Office (IPO)"
-    },
-    {
-      value: "met",
-      text: "Ministry of Justice (MOJ)"
-    },
-    {
-      value: "other",
-      text: "Other",
-      conditional: {
-        html: otherHtml
-      }
-    }
-  ]
-}) }}
-
-
 
         {{ govukButton({
           text: "Continue"
