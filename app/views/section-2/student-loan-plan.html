@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which student loan plans are you on
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="next-page-link-here" method="post">
+
+    {{ govukCheckboxes({
+      idPrefix: "nationality",
+      name: "nationality",
+      fieldset: {
+        legend: {
+          text: "Which student loan plans are you on?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "plan1",
+          text: "Plan 1"
+        },
+        {
+          value: "plan2",
+          text: "Plan 2"
+        },
+        {
+          value: "plan4",
+          text: "Plan 4"
+        },
+        {
+          value: "postgrad",
+          text: "Postgraduate Loan"
+        }
+      ]
+    }) }}
+
+    {{ govukDetails({
+      summaryText: "I don't know which repayment plan I am on",
+      html: "<p><a target='_blank' href='https://www.gov.uk/repaying-your-student-loan/which-repayment-plan-you-are-on' class='govuk-link'>Help with identifying which repayment plan you're on</a> (link opens in a new tab)</p>"
+    }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

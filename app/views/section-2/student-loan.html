@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Do you have a student loan which is not fully repaid?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="next-page-link-here" method="post">
+
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "changed-name",
+          name: "changed-name",
+          fieldset: {
+            legend: {
+              text: "Do you have a student loan which is not fully repaid?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
