@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Sign in to Transfer an employee across the Civil Service
+{% endblock %}
+
+<!--service names are not currently shown on CH sign in or company authenticate-->
+{% set serviceName %}
+{% endset%}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="company-details" method="GET">
+
+        <h1 class="govuk-heading-l">
+          Sign in to Transfer an employee across the Civil Service
+        </h1>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" data-required="data-required" data-error="Enter your email address">
+            <legend>
+              <label class="govuk-label" for="chs-email">
+                Email address
+              </label>
+            </legend>
+            <input class="govuk-input govuk-!-width-two-thirds" id="chs-email" name="chs-email" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" data-required="data-required" data-error="Enter your password">
+            <legend>
+              <label class="govuk-label" for="chs-password">
+                Password
+              </label>
+            </legend>
+            <input class="govuk-input govuk-!-width-two-thirds" id="chs-password" name="chs-password" type="password">
+          </fieldset>
+        </div>
+
+      </fieldset>
+
+      {{ govukButton({
+           text: "Sign in"
+         }) }}
+    </form>
+
+    <p class="action-link">
+      <a class="button-link" id="register" href="/register">Register</a>
+    </p>
+    <p>
+      <a id="forgotten_password" href="javascript:void(0)">Forgotten your password?</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
