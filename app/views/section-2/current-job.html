@@ -15,6 +15,10 @@ Current Job
 
       <form class="form" action="next-page-link-here" method="post">
 
+        <h1 class="govuk-heading-l">
+          Current job
+        </h1>
+
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
@@ -25,6 +29,31 @@ Current Job
           id: "full-time-salary",
           name: "full-time-salary"
         }) }}
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "temp-promotion",
+          name: "temp-promotion",
+          fieldset: {
+            legend: {
+              text: "Are you currently on a form of Temporary Promotion?"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
