@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+New job - working pattern
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="next-page-link-here" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "new-pattern",
+          name: "new-pattern",
+          fieldset: {
+            legend: {
+              text: "New working pattern",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "full-time",
+              text: "Full-time"
+            },
+            {
+              value: "part-time",
+              text: "Part-time"
+            },
+            {
+              value: "job-share",
+              text: "Job-share"
+            },
+            {
+              value: "compressed-hours",
+              text: "Compressed hours"
+            },
+            {
+              value: "annual-hours",
+              text: "Annual hours"
+            },
+            {
+              value: "term-time-only",
+              text: "Term-time only"
+            },
+            {
+              value: "phased-retiree",
+              text: "Phased retiree"
+            },
+            {
+              value: "career-break",
+              text: "Career break"
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
