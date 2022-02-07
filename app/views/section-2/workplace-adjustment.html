@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Page title
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="next-page-link-here" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+
+
+
+
+
+        {% set emailHtml %}
+        {{ govukTextarea({
+          id: "contact-by-email",
+          name: "contact-by-email",
+          type: "email",
+          rows: "8",
+          label: {
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Additional information"
+          }
+        }) }}
+        {% endset -%}
+
+
+
+        {{ govukRadios({
+          idPrefix: "contact",
+          name: "contact",
+          fieldset: {
+            legend: {
+              text: "Do you have a formal workplace/ reasonable adjustment passport agreed in your current role?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select one option."
+          },
+          items: [
+            {
+              value: "email",
+              text: "Yes",
+              conditional: {
+                html: emailHtml
+              }
+            },
+            {
+              value: "phone",
+              text: "No",
+              conditional: {
+                html: phoneHtml
+              }
+            
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
