@@ -13,10 +13,7 @@ Which pension scheme are you a member of?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="next-page-link-here" method="post">
-
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      <form class="form" action="line-manager" method="post">
 
         {{ govukRadios({
           idPrefix: "grade",

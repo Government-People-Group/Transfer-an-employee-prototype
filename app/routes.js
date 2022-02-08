@@ -107,11 +107,11 @@ router.post('/section-2/student-loan-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (studentLoan == "yes") {
     // Send user to next page
-    res.redirect('student-loan-details')
+    res.redirect('student-loan-plan')
   }
   else {
     // Send user to ineligible page
-    res.redirect('whoch-pension')
+    res.redirect('which-pension')
   }
 
 })
