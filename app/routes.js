@@ -82,6 +82,24 @@ router.post('/section-1/security-details-answer', function (req, res) {
 
 })
 
+router.post('/section-2/parental-leave-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var parentalLeave = req.session.data['parentalleave']
+
+  // Check whether the variable matches a condition
+  if (parentalLeave == "yes") {
+    // Send user to next page
+    res.redirect('parental-leave-details')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('transfer-details')
+  }
+
+})
+
+
 
 
 module.exports = router
