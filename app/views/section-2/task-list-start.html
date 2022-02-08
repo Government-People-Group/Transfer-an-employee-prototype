@@ -4,6 +4,10 @@
   Task list - Transfer an employee across the Civil Service
 {% endblock %}
 
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -56,7 +60,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="contact-details-status">
+                <a href="/section-2/civil-service-dates" aria-describedby="contact-details-status">
                   Transfer details
                 </a>
               </span>

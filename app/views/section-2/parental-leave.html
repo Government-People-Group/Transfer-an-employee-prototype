@@ -13,14 +13,14 @@ Is the employee on a form of parental leave?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="next-page-link-here" method="post">
+      <form class="form" action="parental-leave-answer" method="post">
 
 {{ govukRadios({
-  idPrefix: "contact",
-  name: "contact",
+  idPrefix: "parentalleave",
+  name: "parentalleave",
   fieldset: {
     legend: {
-      text: "Is the employee on a form of parental leave?",
+      text: "Are you on a form of parental leave?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }

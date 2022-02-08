@@ -13,33 +13,33 @@ What type of parently leave?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="next-page-link-here" method="post">
+      <form class="form" action="transfer-details" method="post">
 
         {{ govukRadios({
           idPrefix: "where-do-you-live",
           name: "where-do-you-live",
           fieldset: {
             legend: {
-              text: "What type of parently leave?",
+              text: "What type of parental leave?",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
             {
-              value: "england",
+              value: "maternity",
               text: "Maternity"
             },
             {
-              value: "scotland",
+              value: "paternity",
               text: "Paternity"
             },
             {
-              value: "wales",
+              value: "shared",
               text: "Shared parental leave"
             },
             {
-              value: "northern-ireland",
+              value: "adoption",
               text: "Adoption"
             }
           ]
