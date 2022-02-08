@@ -20,6 +20,28 @@ Transfer Details
         </h1>
 
         {{ govukRadios({
+          idPrefix: "compulsory",
+          name: "compulsory",
+          fieldset: {
+
+            legend: {
+              text: "Is this a redeployment move in order to avoid compulsory redundancy? "
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
           idPrefix: "type-of-transfer",
           name: "Type of transfer",
           fieldset: {
@@ -40,7 +62,6 @@ Transfer Details
               value: "Permanent",
               text: "Permanent Transfer"
             },
-
             {
               value: "Return",
               text: "Return from loan"
@@ -48,27 +69,7 @@ Transfer Details
           ]
         }) }}
 
-        {{ govukRadios({
-          idPrefix: "compulsory",
-          name: "compulsory",
-          fieldset: {
 
-            legend: {
-              text: "Is this move a cross government redeployment move in order to avoid compulsory redundancy? "
-            }
-          },
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
-            },
-
-            {
-              value: "no",
-              text: "No"
-            }
-          ]
-        }) }}
 
         {{ govukRadios({
           idPrefix: "nature",

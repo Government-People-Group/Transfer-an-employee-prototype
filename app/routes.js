@@ -111,10 +111,26 @@ router.post('/section-2/student-loan-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('which-pension')
+    res.redirect('pensions-member')
   }
 
 })
 
+router.post('/section-2/pension-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var pensionAnswer = req.session.data['pension']
+
+  // Check whether the variable matches a condition
+  if (pensionAnswer == "yes") {
+    // Send user to next page
+    res.redirect('which-pension')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('tax')
+  }
+
+})
 
 module.exports = router
