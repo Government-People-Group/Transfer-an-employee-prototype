@@ -16,18 +16,21 @@ Current Job
       <form class="form" action="current-grade" method="post">
 
         <h1 class="govuk-heading-l">
-          Current job
+          Current job details
         </h1>
 
         {{ govukInput({
-          label: {
-            text: "Full Time Salary"
-          },
-          classes: "govuk-input--width-10",
-          id: "full-time-salary",
-          name: "full-time-salary"
-        }) }}
-
+  id: "full-time-salary",
+  name: "full-time-salary",
+  label: {
+    text: "What is your current full time salary?"
+  },
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-input--width-5",
+  spellcheck: false
+}) }}
 
         {{ govukRadios({
           idPrefix: "temp-promotion",
@@ -49,6 +52,47 @@ Current Job
             }
           ]
         }) }}
+
+        {% set yesHtml %}
+        {{ govukDateInput({
+      id: "passport-issued",
+      namePrefix: "passport-issued",
+      fieldset: {
+
+      },
+      hint: {
+        text: "End date of loan"
+      }
+    }) }}
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "contact",
+          name: "contact",
+          fieldset: {
+            legend: {
+              text: "Are you currently on loan?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--label"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: yesHtml
+              }
+            },
+            {
+              value: "phone",
+              text: "No"
+
+            }
+          ]
+        }) }}
+
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

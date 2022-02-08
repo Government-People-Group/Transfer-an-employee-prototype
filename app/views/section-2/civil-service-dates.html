@@ -15,79 +15,21 @@ Civil Service dates
 
       <form class="form" action="grade-when-appointed" method="post">
 
-
-        <h1 class="govuk-heading-l">
-          Civil Service dates
-        </h1>
-
-
-
-        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
         {{ govukDateInput({
           id: "date-of-transfer",
           namePrefix: "start-date",
           fieldset: {
             legend: {
-              text: "Civil Service start date"
-            }
+              text: "When did you first join the Civil Service?",
+                 isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+            
           },
           hint: {
             text: "For example, 12 3 2022"
           }
         }) }}
-
-
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
-
-    {% set yesHtml %}
-    {{ govukDateInput({
-  id: "passport-issued",
-  namePrefix: "passport-issued",
-  fieldset: {
-
-  },
-  hint: {
-    text: "End date of loan"
-  }
-}) }}
-    {% endset -%}
-
-
-
-
-    {{ govukRadios({
-      idPrefix: "contact",
-      name: "contact",
-      fieldset: {
-        legend: {
-          text: "Are you on loan?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--label"
-        }
-      },
-      hint: {
-        text: "Select one option."
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes",
-          conditional: {
-            html: yesHtml
-          }
-        },
-        {
-          value: "phone",
-          text: "No"
-
-        }
-      ]
-    }) }}
-
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
