@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which pension scheme are you a member of?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="next-page-link-here" method="post">
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "grade",
+          name: "grade",
+          fieldset: {
+            legend: {
+              text: "Which pension scheme are you a member of?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "classic",
+              text: "Classic"
+            },
+            {
+              value: "classic-plus",
+              text: "Classic Plus"
+            },
+            {
+              value: "nuvos",
+              text: "Nuvos"
+            },
+            {
+              value: "partnership",
+              text: "Partnership"
+            },
+            {
+              value: "premium",
+              text: "Premium"
+            },
+            {
+              value: "alpha",
+              text: "Alpha"
+            },
+            {
+              value: "not sure",
+              text: "not sure"
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
