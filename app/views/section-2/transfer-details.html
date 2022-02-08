@@ -24,7 +24,7 @@ Transfer Details
           name: "Type of transfer",
           fieldset: {
             legend: {
-              text: "Type of transfer"
+              text: "What is the type of transfer?"
             }
           },
           items: [
@@ -48,9 +48,6 @@ Transfer Details
           ]
         }) }}
 
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
         {{ govukRadios({
           idPrefix: "compulsory",
           name: "compulsory",
@@ -73,16 +70,13 @@ Transfer Details
           ]
         }) }}
 
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
         {{ govukRadios({
           idPrefix: "nature",
           name: "nature",
           fieldset: {
 
             legend: {
-              text: "Nature of transfer"
+              text: "What is the nature of the transfer?"
             }
           },
           items: [
@@ -101,22 +95,6 @@ Transfer Details
               text: "Promotion"
             }
           ]
-        }) }}
-
-
-        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
-        {{ govukDateInput({
-          id: "date-of-transfer",
-          namePrefix: "date-of-transfer",
-          fieldset: {
-            legend: {
-              text: "When is the start date for your new department?"
-            }
-          },
-          hint: {
-            text: "For example, 12 3 2022"
-          }
         }) }}
 
 

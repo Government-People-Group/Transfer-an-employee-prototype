@@ -15,18 +15,17 @@ Workplace adjustment
 
       <form class="form" action="new-job-working-pattern" method="post">
 
-        {% set emailHtml %}
+        {% set yesHtml %}
         {{ govukTextarea({
-          id: "contact-by-email",
-          name: "contact-by-email",
-          type: "email",
+          id: "yes-adjustment",
+          name: "yes-adjustment",
           rows: "8",
           label: {
             classes: "govuk-label--l",
-            isPageHeading: true
+            isPageHeading: false
           },
           hint: {
-            text: "Additional information"
+            text: "Provide any additional information concerning your workplace adjustment"
           }
         }) }}
         {% endset -%}
@@ -38,28 +37,23 @@ Workplace adjustment
           name: "contact",
           fieldset: {
             legend: {
-              text: "Do you have a formal workplace/ reasonable adjustment passport agreed in your current role?",
+              text: "Do you require a formal workplace adjustment?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
-          hint: {
-            text: "Select one option."
-          },
+
           items: [
             {
-              value: "email",
+              value: "yes",
               text: "Yes",
               conditional: {
-                html: emailHtml
+                html: yesHtml
               }
             },
             {
-              value: "phone",
-              text: "No",
-              conditional: {
-                html: phoneHtml
-              }
+              value: "no",
+              text: "No"
 
             }
           ]
