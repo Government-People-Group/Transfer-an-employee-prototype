@@ -13,16 +13,7 @@ Page title
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="next-page-link-here" method="post">
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-
-
-
-
+      <form class="form" action="new-job-working-pattern" method="post">
 
         {% set emailHtml %}
         {{ govukTextarea({
@@ -69,7 +60,7 @@ Page title
               conditional: {
                 html: phoneHtml
               }
-            
+
             }
           ]
         }) }}
