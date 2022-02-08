@@ -15,18 +15,27 @@ New job - agreed salary
 
       <form class="form" action="student-loan" method="post">
 
-        <h1 class="govuk-heading-l">
-          What is the agreed salary for your new role?
-        </h1>
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
-        {{ govukInput({
 
-          classes: "govuk-input--width-10",
-          id: "agreed-salary",
-          name: "agreed-salary"
+
+        {{ govukInput({
+          id: "cost",
+          name: "cost",
+          label: {
+            text: "What is the agreed salary for your new role?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-!-width-one-quarter",
+          spellcheck: false
         }) }}
+
+
 
 
 
