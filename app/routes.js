@@ -99,7 +99,22 @@ router.post('/section-2/parental-leave-answer', function (req, res) {
 
 })
 
+router.post('/section-2/student-loan-answer', function (req, res) {
 
+  // Make a variable and give it the value from 'how-many-balls'
+  var studentLoan = req.session.data['student-loan']
+
+  // Check whether the variable matches a condition
+  if (studentLoan == "yes") {
+    // Send user to next page
+    res.redirect('student-loan-details')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('whoch-pension')
+  }
+
+})
 
 
 module.exports = router
