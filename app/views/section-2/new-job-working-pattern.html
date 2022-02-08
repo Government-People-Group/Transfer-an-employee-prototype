@@ -16,17 +16,20 @@ New job - working pattern
       <form class="form" action="next-page-link-here" method="post">
 
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-        {{ govukRadios({
-          idPrefix: "new-pattern",
-          name: "new-pattern",
+        {{ govukCheckboxes({
+          idPrefix: "working-pattern",
+          name: "working-pattern",
           fieldset: {
             legend: {
               text: "New working pattern",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
+          },
+          hint: {
+            text: "You can select more than one."
           },
           items: [
             {
@@ -43,7 +46,7 @@ New job - working pattern
             },
             {
               value: "compressed-hours",
-              text: "Compressed hours"
+              text: "Compressed-hours"
             },
             {
               value: "annual-hours",
@@ -63,6 +66,8 @@ New job - working pattern
             }
           ]
         }) }}
+
+
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
