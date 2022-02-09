@@ -60,7 +60,7 @@ router.post('/section-1/personal-details', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('home-address')
+    res.redirect('current-department')
   }
 })
 
