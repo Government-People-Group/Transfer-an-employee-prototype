@@ -13,11 +13,11 @@ Have you taken partial retirement?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="line-manager-details" method="post">
+      <form class="form" action="retirement-answer" method="post">
 
 {{ govukRadios({
   idPrefix: "retirement",
-  name: "contact",
+  name: "retirement",
   fieldset: {
     legend: {
       text: "Have you taken partial retirement?",
@@ -27,7 +27,7 @@ Have you taken partial retirement?
   },
   items: [
     {
-      value: "Statement C",
+      value: "yes",
       text: "Yes"
     },
     {
