@@ -4,6 +4,10 @@
   Task list - Transfer an employee across the Civil Service
 {% endblock %}
 
+{% block beforeContent %}{% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -13,18 +17,18 @@
       </h1>
 
       <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Transfer incomplete</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 7 sections.</p>
 
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">1. </span> Security clearance checks
+            <span class="app-task-list__section-number">1. </span> Personal details
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="eligibility-status">
-                  Personal information
+                  Personal details
                 </a>
               </span>
               <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
@@ -32,7 +36,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="read-declaration-status">
-                  Department details
+                  Current department details
                 </a>
               </span>
               <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
@@ -40,8 +44,189 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="read-declaration-status">
-                  Current security clearance level
+                  Upload your two most recent payslips
                 </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-status">
+                  Which government department are you moving to?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+
+          </ul>
+        </li>
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Security clearance checks
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
+                  What level of security clearance do you currently hold?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-status">
+                  Does your new role require a higher level of clearance?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-status">
+                  Where is your place of birth?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="read-declaration-status">
+                  Has there been any relevant changes to your personal circumstances since you last submitted a vetting application?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+
+          </ul>
+        </li>
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Current role
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="civil-service-dates" aria-describedby="eligibility-status">
+                  When did you first join the Civil Service?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Which grade were you on when you first joined the Civil Service?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Current job details
+
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+
+                  What is your current grade?
+
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+                Will you be carrying over any annual leave?
+            </span>
+            <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+          </li>
+        </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+              Are you on a form of parental leave?
+          </span>
+          <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+        </li>
+
+
+          </ul>
+        </li>
+
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Transfer details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Transfer details
+
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Do you require a formal workplace adjustment?
+
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                What is your agree start date for your new role?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                What is your new working pattern?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                What is your new grade?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                What is the agreed salary for your new role?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Student loan and pension
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Do you have a student loan which is not fully paid?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  Are you a member of a pension scheme?
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Is this your first job since 6th April?
               </span>
               <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
@@ -51,49 +236,7 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Transfer details
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="contact-details-status">
-                  Transfer details
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="list-convictions-status">
-                  Current job - working pattern and salary
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                New job - working pattern and salary
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status">Cannot start yet</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                Tax information
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                Electronic signature
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Current Line manager
+            <span class="app-task-list__section-number">6. </span> Current Line manager
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
@@ -131,7 +274,7 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> HR / Shared Services
+            <span class="app-task-list__section-number">7. </span> HR / Shared Services
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
@@ -142,7 +285,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                Salary,, allowances and benefits
+                Salary, allowances and benefits
               </span>
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
             </li>
