@@ -15,6 +15,24 @@ Grade when appointed to the Civil Service
 
       <form class="form" action="current-job" method="post">
 
+
+        {% set otherHtml %}
+        {{ govukInput({
+          id: "other",
+          name: "other",
+          type: "other",
+          autocomplete: "other",
+          spellcheck: false,
+          classes: "govuk-!-width-one-third",
+          classes: "govuk-input--width-20",
+          label: {
+            text: "Please specify"
+          }
+        }) }}
+        {% endset -%}
+
+
+
         {{ govukRadios({
           idPrefix: "grade",
           name: "grade",
@@ -73,6 +91,13 @@ Grade when appointed to the Civil Service
             {
               value: "unsure",
               text: "I'm not sure"
+            },
+            {
+              value: "other",
+              text: "Other",
+              conditional: {
+       html: otherHtml
+     }
             }
           ]
         }) }}
