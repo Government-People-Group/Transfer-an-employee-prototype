@@ -20,28 +20,6 @@ Transfer Details
         </h1>
 
         {{ govukRadios({
-          idPrefix: "compulsory",
-          name: "compulsory",
-          fieldset: {
-
-            legend: {
-              text: "Is this a redeployment move in order to avoid compulsory redundancy? "
-            }
-          },
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
-            },
-
-            {
-              value: "no",
-              text: "No"
-            }
-          ]
-        }) }}
-
-        {{ govukRadios({
           idPrefix: "type-of-transfer",
           name: "Type of transfer",
           fieldset: {
@@ -68,6 +46,7 @@ Transfer Details
             }
           ]
         }) }}
+
 
 
 
@@ -98,6 +77,28 @@ Transfer Details
           ]
         }) }}
 
+
+        {{ govukRadios({
+          idPrefix: "compulsory",
+          name: "compulsory",
+          fieldset: {
+
+            legend: {
+              text: "Is this a redeployment move in order to avoid compulsory redundancy? "
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
