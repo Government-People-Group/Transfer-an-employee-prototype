@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-New job - agreed salary
+What is the agreed salary for your new role
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -14,11 +14,6 @@ New job - agreed salary
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="student-loan" method="post">
-
-
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-
 
         {{ govukInput({
           id: "cost",
