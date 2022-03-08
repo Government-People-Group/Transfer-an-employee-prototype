@@ -4,7 +4,7 @@
   Has your nationality changed since you last applied for security clearance?
 {% endblock %}
 
-{% block beforeContent %}
+{% block beforeContent %}  {% include "includes/user-bar.html" %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
