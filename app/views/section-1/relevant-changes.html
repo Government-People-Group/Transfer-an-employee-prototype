@@ -4,16 +4,14 @@
   Has there been any relevant changes to your personal circumstances since you last submitted a vetting application?
 {% endblock %}
 
-{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
- 
-{% endblock %}
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/section-2/transfer-details" method="post">
+      <form class="form" action="/section-1/check-your-answers" method="post">
 
         {% set textHtml %}
         <p class="govuk-body">For example:</p>
