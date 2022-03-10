@@ -1,0 +1,250 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+          <form class="form" action="/section-2/task-list-end-section2" method="get">
+
+            <h2 class="govuk-heading-m">Transfer details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Type of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Fixed term
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Type of transfer</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Nature of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Promotion
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Nature of transfer</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Workplace adjustment
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Workplace adjustment</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Agreed start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  29/01/2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Agreed start date</span>
+                  </a>
+                </dd>
+              </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  New working pattern
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Full-time
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">New working pattern</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  New grade
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Grade 7 Equivalent
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">New grade</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Agreed new salary
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £40,000
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Agreed new salary</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="govuk-heading-m">Pension and student loan</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Student loan
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Student loan</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Pension scheme
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Pension scheme</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Pension scheme type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Alpha
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Pension scheme type</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Partial retirement
+                </dt>
+                <dd class="govuk-summary-list__value">
+                No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Partial retirement</span>
+                  </a>
+                </dd>
+              </div>
+
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Line manager details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current line manager
+        </dt>
+        <dd class="govuk-summary-list__value">
+          John Smith
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden">Current Line manager</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          john.smith@gov.uk
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            Change
+            <span class="govuk-visually-hidden">Email address</span>
+          </a>
+        </dd>
+      </div>
+
+      </dl>
+
+
+
+
+
+
+      <h2 class="govuk-heading-m">Now send this section</h2>
+
+      <p>By submitting this section you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p>A copy of the details you have provided will be sent to you and the vacancy holder</p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
