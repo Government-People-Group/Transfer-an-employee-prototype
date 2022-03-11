@@ -13,14 +13,14 @@ Are you a member of a pension scheme?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/section-3/probation" method="post">
+      <form class="form" action="probation-answer" method="post">
 
 {{ govukRadios({
-  idPrefix: "competition",
-  name: "competition",
+  idPrefix: "probation",
+  name: "probation",
   fieldset: {
     legend: {
-      text: "Was this individual recruited through fair and open competition?",
+      text: "Has this individual passed their probation?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
