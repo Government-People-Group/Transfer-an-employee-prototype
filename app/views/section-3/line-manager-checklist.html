@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Does the employee have any live disciplinary warning for misconduct?
+I have agreed to the date of transfer submitted by employee
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
@@ -13,14 +13,14 @@ Does the employee have any live disciplinary warning for misconduct?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/section-3/end-loan" method="post">
+      <form class="form" action="/section-3/line-manager-check-answers" method="post">
 
 {{ govukRadios({
-  idPrefix: "disciplinary",
-  name: "disciplinary",
+  idPrefix: "competition",
+  name: "competition",
   fieldset: {
     legend: {
-      text: "Does the employee have any live disciplinary warning for misconduct?",
+      text: "I have agreed to the date of transfer submitted by employee",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }

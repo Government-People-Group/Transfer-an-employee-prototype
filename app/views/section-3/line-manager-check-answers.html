@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+          <form class="form" action="/section-2/task-list-end-section2" method="get">
+
+            <h2 class="govuk-heading-m">Line manager answers</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Competition
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Competition</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Probation passed
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Probation passed</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Probation end date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  	29/01/2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Probation end date</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Disciplinary warning or misconduct
+                </dt>
+                <dd class="govuk-summary-list__value">
+                No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Disciplinary warning or misconduct</span>
+                  </a>
+                </dd>
+              </div>
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  End date of proposed loan
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  29/01/2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">End date of proposed loan</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Agreed to date of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    Change
+                    <span class="govuk-visually-hidden">Agreed to date of transfer</span>
+                  </a>
+                </dd>
+              </div>
+
+
+
+      </dl>
+
+
+
+
+
+
+      <h2 class="govuk-heading-m">Now send this section</h2>
+
+      <p>By submitting this section you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p>A copy of the details you have provided will be sent to you and the employee</p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
