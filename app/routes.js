@@ -68,16 +68,16 @@ router.post('/section-1/personal-details', function (req, res) {
 router.post('/section-1/security-details-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var higherClearance = req.session.data['clearance']
+  var higherClearance = req.session.data['more-clearance']
 
   // Check whether the variable matches a condition
-  if (higherClearance == "bpss") {
+  if (higherClearance == "yes") {
     // Send user to next page
-    res.redirect('check-your-answers')
+    res.redirect('birth')
   }
   else {
     // Send user to ineligible page
-    res.redirect('birth')
+    res.redirect('check-your-answers')
   }
 
 })
@@ -111,7 +111,7 @@ router.post('/section-2/student-loan-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('pensions-member')
+    res.redirect('tax')
   }
 
 })
@@ -146,6 +146,23 @@ router.post('/section-2/retirement-answer', function (req, res) {
   else {
     // Send user to ineligible page
     res.redirect('tax')
+  }
+
+})
+
+router.post('/section-2/workplace-adjustment-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var workplaceadjustmentAnswer = req.session.data['workplace-adjustment']
+
+  // Check whether the variable matches a condition
+  if (workplaceadjustmentAnswer == "yes") {
+    // Send user to next page
+    res.redirect('upload')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('transfer-details')
   }
 
 })
