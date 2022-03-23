@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What is your current grade?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/section-1/current-job" method="post">
+
+        {{ govukRadios({
+          idPrefix: "grade",
+          name: "grade",
+          fieldset: {
+            legend: {
+              text: "What is your current grade?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "perm",
+              text: "Senior Civil Servant - Permanent Secretary"
+            },
+            {
+              value: "pb3",
+              text: "Senior Civil Servant - Director General (PB3)"
+            },
+            {
+              value: "pb2",
+              text: "Senior Civil Servant - Director (PB2)"
+            },
+            {
+              value: "pb1/1a",
+              text: "Senior Civil Servant - Deputy Director (PB1/1A)"
+            },
+            {
+              value: "g6",
+              text: "Grade 6 Equivalent"
+            },
+            {
+              value: "g7",
+              text: "Grade 7 Equivalent"
+            },
+            {
+              value: "seo",
+              text: "Senior Executive Officer (SEO) Equivalent"
+            },
+            {
+              value: "heo",
+              text: "Higher Executive Officer (HEO) Equivalent"
+            },
+            {
+              value: "eo",
+              text: "Executive Officer (EO) Equivalent"
+            },
+            {
+              value: "ao",
+              text: "Administrative Officer (AO) Equivalent"
+            },
+            {
+              value: "aa",
+              text: "Administrative Assistant (AA) Equivalent"
+            },
+            {
+              value: "unsure",
+              text: "I'm not sure"
+            }
+          ]
+        }) }}
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

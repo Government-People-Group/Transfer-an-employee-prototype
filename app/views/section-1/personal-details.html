@@ -8,7 +8,7 @@
   {% include "includes/phase-banner.html" %}
     {% include "includes/user-bar.html" %}
 
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="/section-1/current-department" method="post">
+      <form action="/section-1/civil-service-dates" method="post">
 
         {% if errorName == true or errorDob == true or errorEmail == true or errorNin == true%}
           {{ govukErrorSummary({
@@ -46,7 +46,15 @@
         {% else %}
           {{ govukInput({
               label: {
-                text: "Full name"
+                text: "First name"
+              },
+              classes: "govuk-input--width-20",
+              id: "full-name",
+              name: "full-name"
+            }) }}
+            {{ govukInput({
+              label: {
+                text: "Last name"
               },
               classes: "govuk-input--width-20",
               id: "full-name",

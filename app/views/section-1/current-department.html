@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}  <!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
 {% endblock %}
 
 {% block content %}
@@ -14,19 +14,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="upload" method="post">
+      <form class="form" action="/section-1/current-grade" method="post">
 <h1 class="govuk-heading-l">Current department details</h1>
-
-{{ govukInput({
-  label: {
-    text: "Current department employee number"
-  },
-   classes: "govuk-input--width-10",
-  id: "event-name",
-  name: "event-name"
-}) }}
-
-
 
 <div class="govuk-form-group">
             <label for="autocomplete-default" class="govuk-label">Which Government department do you currently work for?</label>
@@ -37,6 +26,15 @@
 
         <script src="/public/javascripts/accessible-autocomplete.js"></script>
         <script src="/public/javascripts/department.js"></script>
+
+{{ govukInput({
+  label: {
+    text: "Current department employee number"
+  },
+   classes: "govuk-input--width-10",
+  id: "event-name",
+  name: "event-name"
+}) }}
 
         {{ govukButton({
           text: "Continue"

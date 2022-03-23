@@ -94,7 +94,7 @@ router.post('/section-2/parental-leave-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('transfer-details')
+    res.redirect('workplace-adjustment')
   }
 
 })
