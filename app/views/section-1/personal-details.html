@@ -134,14 +134,29 @@
 
    {{ govukInput({
      label: {
-       text: "Email address"
+       text: "Primary email address"
      },
      hint: {
        text: "We will use this to contact you about your transfer"
      },
        classes: "govuk-input--width-20",
-     id: "email",
-     name: "email",
+     id: "primary-email",
+     name: "primary-email",
+     type: "email",
+     autocomplete: "email",
+     spellcheck: false
+   }) }}
+
+   {{ govukInput({
+     label: {
+       text: "Secondary email address"
+     },
+     hint: {
+       text: "We will use this to contact you about your transfer"
+     },
+       classes: "govuk-input--width-20",
+     id: "secondary-email",
+     name: "secondary-email",
      type: "email",
      autocomplete: "email",
      spellcheck: false

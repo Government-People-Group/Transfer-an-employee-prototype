@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Current level of security clearance
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="security-clearance" method="post">
+
+
+        {% set nobpssHtml %}
+
+        <p class="govuk-body">
+
+          Find information about <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" target="_blank">BPSS guidelines</>
+        </p>
+        {% endset -%}
+
+        {{ govukRadios({
+          idPrefix: "bpss",
+          name: "bpss",
+          fieldset: {
+            legend: {
+              text: "Have you undergone Baseline Personnel Security Standards (BPSS) screening in the past 3 years?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No",
+              conditional: {
+                html: nobpssHtml
+              }
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
