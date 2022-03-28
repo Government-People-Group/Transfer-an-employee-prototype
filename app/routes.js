@@ -82,6 +82,40 @@ router.post('/section-1/security-details-answer', function (req, res) {
 
 })
 
+router.post('/section-1/workplace-adjustment-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var workplaceadjustmentAnswer = req.session.data['workplace-adjustment']
+
+  // Check whether the variable matches a condition
+  if (workplaceadjustmentAnswer == "yes") {
+    // Send user to next page
+    res.redirect('upload-workplace-adjusment')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('check-your-answers')
+  }
+
+})
+
+router.post('/section-1/relevant-changes-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var workplaceadjustmentAnswer = req.session.data['changes']
+
+  // Check whether the variable matches a condition
+  if (workplaceadjustmentAnswer == "yes") {
+    // Send user to next page
+    res.redirect('workplace-adjustment')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('check-your-answers')
+  }
+
+})
+
 router.post('/section-2/parental-leave-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -149,24 +183,6 @@ router.post('/section-2/retirement-answer', function (req, res) {
   }
 
 })
-
-router.post('/section-2/workplace-adjustment-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var workplaceadjustmentAnswer = req.session.data['workplace-adjustment']
-
-  // Check whether the variable matches a condition
-  if (workplaceadjustmentAnswer == "yes") {
-    // Send user to next page
-    res.redirect('upload')
-  }
-  else {
-    // Send user to ineligible page
-    res.redirect('transfer-details')
-  }
-
-})
-
 
 router.post('/section-3/probation-answer', function (req, res) {
 
