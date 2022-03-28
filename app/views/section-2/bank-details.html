@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are your personal details - Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="student-loan" method="post">
+
+{% call govukFieldset({
+  legend: {
+    text: "Bank details for payroll",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
+
+<br>
+
+  {{ govukInput({
+    label: {
+      text: "Bank name"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "bank-name",
+    name: "bank-name",
+    autocomplete: ""
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Name of account holder"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "account-holder",
+    name: "account-holder"
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Account number"
+    },
+    classes: "govuk-input--width-10",
+    id: "account-number",
+    name: "account-number",
+    autocomplete: ""
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Sort code"
+    },
+    classes: "govuk-input--width-10",
+    id: "sort-code",
+    name: "sort-code",
+    autocomplete: ""
+  }) }}
+
+{% endcall %}
+
+        {{ govukButton({
+           text: "Continue"
+         }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

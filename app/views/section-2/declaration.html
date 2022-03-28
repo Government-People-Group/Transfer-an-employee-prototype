@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What are your personal details - Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="check-your-answers-section2" method="post">
+
+<h1 class="govuk-heading-l">Declaration</h1>
+<p class="govuk-body"></p>
+<ul class="govuk-list govuk-list--bullet">
+<li>I agree that the recruiting organisation may contact my current department to validate the information I've provided on this form.</li>
+<li>I confirm the information given in this section is complete and correct. I understand that providing incorrect information could place my transfer at risk and/or result in disciplinary action.</li>
+<li>I consent to my information being sent to the recruiting organisation for HR purposes.</li>
+</ul>
+
+<br>
+
+<p class="govuk-heading-m">Before you continue</p>
+
+<p class="govuk-body">Have you reviewed and updated your details on the <a href="https://members.civilservicepensionscheme.org.uk/">Civil Service Pension Portal?</p>
+
+<br>
+
+<button class="govuk-button" data-module="govuk-button">
+Confirm
+</button>
+</div> 
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -13,28 +13,11 @@ Do you require a formal workplace adjustment
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="start-date" method="post">
-
-        {% set yesHtml %}
-        {{ govukTextarea({
-          id: "yes-adjustment",
-          name: "yes-adjustment",
-          rows: "8",
-          label: {
-            classes: "govuk-label--l",
-            isPageHeading: false
-          },
-          hint: {
-            text: "Provide any additional information concerning your workplace adjustment"
-          }
-        }) }}
-        {% endset -%}
-
-
+      <form class="form" action="workplace-adjustment-answer" method="post">
 
         {{ govukRadios({
-          idPrefix: "contact",
-          name: "contact",
+          idPrefix: "workplace-adjustment",
+          name: "workplace-adjustment",
           fieldset: {
             legend: {
               text: "Do you require a formal workplace adjustment?",
@@ -46,10 +29,7 @@ Do you require a formal workplace adjustment
           items: [
             {
               value: "yes",
-              text: "Yes",
-              conditional: {
-                html: yesHtml
-              }
+              text: "Yes"
             },
             {
               value: "no",
@@ -58,7 +38,6 @@ Do you require a formal workplace adjustment
             }
           ]
         }) }}
-
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

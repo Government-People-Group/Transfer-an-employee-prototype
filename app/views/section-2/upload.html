@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Does your new role require a higher level of security clearance?
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="transfer-details" method="post">
+<h1 class="govuk-heading-l">Upload files or add details about your formal workplace adjustment</h1>
+
+<div id="upload-hint" class="govuk-hint">
+  We will use your payslips to verify your salary
+ </div>
+
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "file-upload-1",
+    label: {
+      text: "Upload a workplace adjustment passport"
+    }
+  }) }}
+
+  {{ govukFileUpload({
+    id: "file-upload-2",
+    name: "file-upload-2",
+    label: {
+      text: "Upload an occupational health report"
+    }
+  }) }}
+
+  {{ govukTextarea({
+    name: "add-comments",
+    id: "add-comments",
+    label: {
+      text: "Do you need to add comments or provide any additional information concerning your workplace adjustment? (optional)"
+    }
+  }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
