@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Which Government department do you currently work for?
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}   {% include "includes/user-bar.html" %}
+{% endblock %}
+
+{% block content %}
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="upload" method="post">
+
+<div class="govuk-form-group">
+            <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your Home Department?</label>
+      <div class="govuk-input--width-40">
+        <div id="department" class="autocomplete-wrapper"></div>
+        </div>
+        </div>
+
+        <script src="/public/javascripts/accessible-autocomplete.js"></script>
+        <script src="/public/javascripts/department.js"></script>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}

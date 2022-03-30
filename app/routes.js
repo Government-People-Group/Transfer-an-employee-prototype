@@ -102,16 +102,33 @@ router.post('/section-1/workplace-adjustment-answer', function (req, res) {
 router.post('/section-1/relevant-changes-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var workplaceadjustmentAnswer = req.session.data['changes']
+  var relevantchangesAnswer = req.session.data['changes']
 
   // Check whether the variable matches a condition
-  if (workplaceadjustmentAnswer == "yes") {
+  if (relevantchangesAnswer == "yes") {
     // Send user to next page
     res.redirect('workplace-adjustment')
   }
   else {
     // Send user to ineligible page
     res.redirect('check-your-answers')
+  }
+
+})
+
+router.post('/section-1/current-job-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var onloanAnswer = req.session.data['loan']
+
+  // Check whether the variable matches a condition
+  if (onloanAnswer == "yes") {
+    // Send user to next page
+    res.redirect('home-department')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('upload')
   }
 
 })

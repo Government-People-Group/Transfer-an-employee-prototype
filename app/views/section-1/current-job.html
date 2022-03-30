@@ -13,13 +13,13 @@ Current Job details
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="upload" method="post">
+      <form class="form" action="current-job-answer" method="post">
 
         <h1 class="govuk-heading-l">
           Current job details
         </h1>
 
-        {{ govukInput({
+        <!--{{ govukInput({
   id: "full-time-salary",
   name: "full-time-salary",
   label: {
@@ -30,7 +30,7 @@ Current Job details
   },
   classes: "govuk-input--width-5",
   spellcheck: false
-}) }}
+}) }}-->
 
         {{ govukRadios({
           idPrefix: "temp-promotion",
@@ -67,8 +67,8 @@ Current Job details
         {% endset -%}
 
         {{ govukRadios({
-          idPrefix: "contact",
-          name: "contact",
+          idPrefix: "loan",
+          name: "loan",
           fieldset: {
             legend: {
               text: "Are you currently on loan?",
