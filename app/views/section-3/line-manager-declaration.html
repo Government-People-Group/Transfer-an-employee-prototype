@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+I have agreed to the date of transfer submitted by employee
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form action="check-your-answers" method="post">
+
+<h1 class="govuk-heading-l">Declaration</h1>
+<p class="govuk-body"></p>
+
+<ul class="govuk-list govuk-list--bullet">
+<li>I agree to the date of transfer submitted by the employee</li>
+</ul>
+
+<br>
+
+<button class="govuk-button" data-module="govuk-button">
+Confirm
+</button>
+</div> 
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

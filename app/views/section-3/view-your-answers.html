@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Review employees answers
+  Check your answers
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
@@ -9,198 +9,187 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">Review employees answers</h1>
-          <form class="form" action="/section-3/competition" method="get">
+      <h1 class="govuk-heading-xl">View your answers</h1>
+          <form class="form" action="/section-2/task-list-end" method="get">
 
-            <h2 class="govuk-heading-m">Transfer details</h2>
-
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Type of transfer
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Fixed term
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Nature of transfer
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Promotion
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Workplace adjustment
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  No
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Agreed start date
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  29/01/2023
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  New working pattern
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Full-time
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  New grade
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  Grade 7 Equivalent
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Agreed new salary
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  £40,000
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-            </dl>
-
-            <h2 class="govuk-heading-m">Pension and student loan</h2>
+          <h2 class="govuk-heading-m">Employee answers</h2>
 
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Student loan
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  No
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                </dd>
-              </div>
-
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Pension scheme
+                  Reviewed and accepted
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Yes
                 </dd>
                 <dd class="govuk-summary-list__actions">
-
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Employee answers reviewed and accepted</span>
+                  </a>
                 </dd>
               </div>
+            </dl>
 
+            <h2 class="govuk-heading-m">Employee transfer</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Pension scheme type
+                  Recruited through Fair and Open competition
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Alpha
+                  Yes
                 </dd>
                 <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Employee recruited through Fair and Open competition</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
 
+            <h2 class="govuk-heading-m">Probation details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  End date of proposed loan
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  29 January 2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">End date of proposed loan</span>
+                  </a>
                 </dd>
               </div>
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Partial retirement
+                  Probation passed
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Probation passed</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Probation end date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  	29 January 2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Probation end date</span>
+                  </a>
+                </dd>
+              </div>
+              </dl>
+
+              <h2 class="govuk-heading-m">Leave details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Annual leave carry-over agreed
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  	Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Annual leave</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Parental leave
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  	Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Annual leave</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Parental leave details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  	Maternity<br>
+                    29 Jan 2023
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Annual leave</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+            <h2 class="govuk-heading-m">Disciplinary details</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Disciplinary warning or misconduct
                 </dt>
                 <dd class="govuk-summary-list__value">
                 No
                 </dd>
                 <dd class="govuk-summary-list__actions">
-
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Disciplinary warning or misconduct</span>
+                  </a>
                 </dd>
               </div>
+            </dl>
 
+            <h2 class="govuk-heading-m">Line manager declaration</h2>
 
-      </dl>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-      <h2 class="govuk-heading-m">Line manager details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Current line manager
-        </dt>
-        <dd class="govuk-summary-list__value">
-          John Smith
-        </dd>
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          john.smith@gov.uk
-        </dd>
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
-
-      </dl>
-
-
-
-
-
-
-
-      <form action="/confirmation" method="post" novalidate>
-
-        <input type="hidden" name="answers-checked" value="true">
-
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-
-      </form>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Agreed to date of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Agreed to date of transfer</span>
+                  </a>
+                </dd>
+              </div>
+             </dl>
 
     </div>
   </div>

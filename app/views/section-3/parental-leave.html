@@ -1,26 +1,24 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-I have agreed to the date of transfer submitted by employee
+Are you on a form of parental leave?
 {% endblock %}
 
-{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
-
-{% endblock %}
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/section-3/line-manager-check-answers" method="post">
+      <form class="form" action="parental-leave-answer" method="post">
 
 {{ govukRadios({
-  idPrefix: "competition",
-  name: "competition",
+  idPrefix: "parental-leave",
+  name: "parental-leave",
   fieldset: {
     legend: {
-      text: "I have agreed to the date of transfer submitted by employee",
+      text: "Are you on a form of parental leave?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
