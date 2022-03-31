@@ -13,12 +13,14 @@ What is your new grade?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <form class="form" action="bank-details" method="post">
+
         {% set otherHtml %}
 
-        <div class="govuk-form-group govuk-input--width-30">
-  <label class="govuk-label" for="event-name"></label>
-  <input class="govuk-input" id="event-name" name="event-name" type="text">
-</div>
+      <div class="govuk-form-group govuk-input--width-30">
+      <label class="govuk-label" for="event-name"></label>
+       <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
 
         {% endset -%}
 
@@ -86,7 +88,6 @@ What is your new grade?
             }
           ]
         }) }}
-
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
