@@ -133,23 +133,6 @@ router.post('/section-1/current-job-answer', function (req, res) {
 
 })
 
-router.post('/section-2/parental-leave-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var parentalLeave = req.session.data['parentalleave']
-
-  // Check whether the variable matches a condition
-  if (parentalLeave == "yes") {
-    // Send user to next page
-    res.redirect('parental-leave-details')
-  }
-  else {
-    // Send user to ineligible page
-    res.redirect('workplace-adjustment')
-  }
-
-})
-
 router.post('/section-2/student-loan-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -209,7 +192,24 @@ router.post('/section-3/probation-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (pensionAnswer == "yes") {
     // Send user to next page
+    res.redirect('annual-leave')
+  }
+  else {
+    // Send user to ineligible page
     res.redirect('probation-end')
+  }
+
+})
+
+router.post('/section-3/parental-leave-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var parentalLeave = req.session.data['parental-leave']
+
+  // Check whether the variable matches a condition
+  if (parentalLeave == "yes") {
+    // Send user to next page
+    res.redirect('parental-leave-details')
   }
   else {
     // Send user to ineligible page
