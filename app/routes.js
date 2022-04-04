@@ -218,5 +218,39 @@ router.post('/section-3/parental-leave-answer', function (req, res) {
 
 })
 
+router.post('/section-4/fta-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var parentalLeave = req.session.data['fta']
+
+  // Check whether the variable matches a condition
+  if (parentalLeave == "yes") {
+    // Send user to next page
+    res.redirect('fta-end-date')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('parental-leave')
+  }
+
+})
+
+router.post('/section-4/parental-leave-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var parentalLeave = req.session.data['parental-leave']
+
+  // Check whether the variable matches a condition
+  if (parentalLeave == "yes") {
+    // Send user to next page
+    res.redirect('parental-leave-details')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('absence-history')
+  }
+
+})
+
 
 module.exports = router
