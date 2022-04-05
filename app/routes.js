@@ -192,7 +192,7 @@ router.post('/section-3/probation-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (pensionAnswer == "yes") {
     // Send user to next page
-    res.redirect('annual-leave')
+    res.redirect('disciplinary')
   }
   else {
     // Send user to ineligible page
