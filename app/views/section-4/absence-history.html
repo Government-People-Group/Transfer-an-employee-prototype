@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+{%- from "govuk/components/button/macro.njk" import govukButton -%}
+{%- from "govuk/components/date-input/macro.njk" import govukDateInput -%}
+{%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+{%- from "govuk/components/input/macro.njk" import govukInput -%}
+{%- from "govuk/components/textarea/macro.njk" import govukTextarea -%}
+
+<div data-module="moj-add-another">
+
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Absence history</h2>
+
+  <p class="govuk-body">Provide a 4 year absence history including the absence dates and reason for absence.</p>
+  <p class="govuk-inset-text">Highlight any absences that are pregnancy related so that they can be discounted. If you are providing this separately, indicate this in the 'other related information' field.</p>
+
+  <form action="" method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Absence 1',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
+
+    {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+  {{ govukDateInput({
+            id: "ah-start-date",
+            namePrefix: "ah-start-date",
+            fieldset: {
+              legend: {
+                text: "Start date",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend"
+              }
+            },
+            hint: {
+              text: "For example, 31 3 2007"
+            },
+            items: [
+   {
+     classes: "govuk-input--width-2",
+     name: "day"
+   },
+   {
+     classes: "govuk-input--width-2",
+     name: "month"
+   },
+   {
+     classes: "govuk-input--width-4",
+     name: "year"
+   }
+ ]
+  }) }}
+
+  {{ govukDateInput({
+            id: "ah-end-date",
+            namePrefix: "ah-end-date",
+            fieldset: {
+              legend: {
+                text: "End date",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend"
+              }
+            },
+            hint: {
+              text: "For example, 30 6 2007"
+            },
+            items: [
+   {
+     classes: "govuk-input--width-2",
+     name: "day"
+   },
+   {
+     classes: "govuk-input--width-2",
+     name: "month"
+   },
+   {
+     classes: "govuk-input--width-4",
+     name: "year"
+   }
+ ]
+  }) }}
+
+  {{ govukRadios({
+  idPrefix: "absence-type",
+  name: "absence-type",
+  fieldset: {
+    legend: {
+      text: "Absence type"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "option one"
+    },
+    {
+      value: "scotland",
+      text: "option two"
+    },
+    {
+      value: "wales",
+      text: "option three"
+    },
+    {
+      value: "northern-ireland",
+      text: "option four"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+{{ govukTextarea({
+  name: "more-detail",
+  id: "more-detail",
+  label: {
+    text: "Other related information"
+  }
+}) }}
+
+    {% endcall %}
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another absence',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Continue'
+      }) }}
+    </div>
+
+  </form>
+
+    </div>
+  </div>
+
+{% endblock %}
