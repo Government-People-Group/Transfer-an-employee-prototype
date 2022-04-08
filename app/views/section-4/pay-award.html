@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Current pay zone
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="terms-conditions" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Pay award
+      </h1>
+    </legend>
+
+    <div id="question-1" class="govuk-body">
+      Does the employee have a pay award pending?
+      <!--<p class="govuk-hint">For example, Season Ticket Loans.</p>-->
+      </div>
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yespay" name="consolidated" type="radio" value="email" data-aria-controls="conditional-yespay">
+        <label class="govuk-label govuk-radios__label" for="yespay">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nopay" name="consolidated" type="radio" value="phone" data-aria-controls="conditional-nopay">
+        <label class="govuk-label govuk-radios__label" for="nopay">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-nopay">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="nopay">
+            Enter details of last pay award
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="details" name="details" type="email" spellcheck="false" autocomplete="email">
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="question-2" class="govuk-body">
+      What was the employee's contractual pensionable pay the day before the pay award took place? 
+      <p class="govuk-hint">Only complete if pay award took place after 1 April.</p>
+
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="weight">
+    Enter amount
+  </label>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

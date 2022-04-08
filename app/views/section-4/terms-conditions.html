@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Current pay zone
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="benefits" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Terms and conditions
+      </h1>
+    </legend>
+
+    <div class="govuk-body">
+      What is the employee’s annual leave entitlement?
+    </div>
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="weight">
+  </label>
+  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+    <div class="govuk-input__suffix" aria-hidden="true">days</div>
+  </div>
+</div>
+
+    <div id="question-1" class="govuk-body">
+      Is the employee in a mobile grade?
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated" name="non-consolidated" type="radio" value="email" data-aria-controls="conditional-non-consolidated">
+        <label class="govuk-label govuk-radios__label" for="non-consolidated">
+          Yes
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated-2" name="non-consolidated" type="radio" value="phone" data-aria-controls="conditional-non-consolidated-2">
+        <label class="govuk-label govuk-radios__label" for="no-2">
+          No
+        </label>
+      </div>
+    </div>
+
+     <br>
+
+    <div class="govuk-body">
+      Is the employee on modernised terms and conditions?
+      <!--<p class="govuk-hint">For example, Season Ticket Loans.</p>-->
+      </div>
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yespay" name="consolidated" type="radio" value="email" data-aria-controls="conditional-yespay">
+        <label class="govuk-label govuk-radios__label" for="yespay">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yespay" name="consolidated" type="radio" value="email" data-aria-controls="conditional-yespay">
+        <label class="govuk-label govuk-radios__label" for="yespay">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nopay" name="consolidated" type="radio" value="phone" data-aria-controls="conditional-nopay">
+        <label class="govuk-label govuk-radios__label" for="nopay">
+          Mix of both
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-nopay">
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Provide details on pre-modernised terms
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+</div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

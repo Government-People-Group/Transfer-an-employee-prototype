@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Is the employee on a fixed term appointment?
+Current pay zone
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
@@ -13,29 +13,46 @@ Is the employee on a fixed term appointment?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="fta-answer" method="post">
+      <form class="form" action="allowances" method="post">
 
 {{ govukRadios({
-  idPrefix: "fta",
-  name: "fta",
+  idPrefix: "pay-zone",
+  name: "pay-zone",
   fieldset: {
     legend: {
-      text: "Is the employee on a fixed term appointment?",
+      text: "What is the employee's current pay zone",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "national",
+      text: "National"
     },
     {
-      value: "no",
-      text: "No"
+      value: "london",
+      text: "London"
     }
 
   ]
+}) }}
+
+{{ govukInput({
+  id: "ft-salary",
+  name: "ft-salary",
+  label: {
+    text: "Full time salary (substantive)",
+    isPageHeading: true
+  },
+  hint: {
+    text: "This excludes London weighting, allowances etc."
+  },
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-!-width-one-quarter",
+  spellcheck: false
 }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

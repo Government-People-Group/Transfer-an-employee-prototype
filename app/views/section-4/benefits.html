@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Current pay zone
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="pay-award" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Benefits and deductions
+      </h1>
+    </legend>
+
+    <div id="question-1" class="govuk-body">
+      Does the employee have any active beneficial loans?
+      <p class="govuk-hint">For example, Season Ticket Loans.</p>
+      </div>
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="consolidated" name="consolidated" type="radio" value="email" data-aria-controls="conditional-consolidated">
+        <label class="govuk-label govuk-radios__label" for="consolidated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consolidated">
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="details" name="details" type="email" spellcheck="false" autocomplete="email">
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-1" name="consolidated" type="radio" value="phone" data-aria-controls="conditional-no-1">
+        <label class="govuk-label govuk-radios__label" for="no-1">
+          No
+        </label>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="question-1" class="govuk-body">
+      Does the employee have any further detuctions?
+      <p class="govuk-hint">For example, Court Orders.</p>
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated" name="non-consolidated" type="radio" value="email" data-aria-controls="conditional-non-consolidated">
+        <label class="govuk-label govuk-radios__label" for="non-consolidated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-non-consolidated">
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="non-consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount-2" name="amount-2" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+        <label class="govuk-label" for="non-consolidated">
+            Enter details
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="details-2" name="details-2" type="email" spellcheck="false" autocomplete="email">
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated-2" name="non-consolidated" type="radio" value="phone" data-aria-controls="conditional-non-consolidated-2">
+        <label class="govuk-label govuk-radios__label" for="no-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
