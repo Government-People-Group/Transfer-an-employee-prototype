@@ -150,23 +150,6 @@ router.post('/section-2/student-loan-answer', function (req, res) {
 
 })
 
-router.post('/section-2/pension-answer', function (req, res) {
-
-  // Make a variable and give it the value from 'how-many-balls'
-  var pensionAnswer = req.session.data['pension']
-
-  // Check whether the variable matches a condition
-  if (pensionAnswer == "yes") {
-    // Send user to next page
-    res.redirect('which-pension')
-  }
-  else {
-    // Send user to ineligible page
-    res.redirect('tax')
-  }
-
-})
-
 router.post('/section-2/retirement-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -248,6 +231,40 @@ router.post('/section-4/parental-leave-answer', function (req, res) {
   else {
     // Send user to ineligible page
     res.redirect('absence-history')
+  }
+
+})
+
+router.post('/section-4/pension-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var pensionAnswer = req.session.data['pension']
+
+  // Check whether the variable matches a condition
+  if (pensionAnswer == "yes") {
+    // Send user to next page
+    res.redirect('which-pension')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('which-pension-optout')
+  }
+
+})
+
+router.post('/section-4/which-pension-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var whichpensionAnswer = req.session.data['which-pension']
+
+  // Check whether the variable matches a condition
+  if (whichpensionAnswer == "partnership") {
+    // Send user to next page
+    res.redirect('partnership')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('basic-employee-contributions')
   }
 
 })
