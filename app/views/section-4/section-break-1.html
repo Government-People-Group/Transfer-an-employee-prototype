@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+We’re now going to ask you about the employee’s
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-!-margin-bottom-0">
+
+      </div>
+      <div class="flash-card">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-7" style="color:white">We’re now going to ask you about the employee’s</h1>
+
+        <ul class="govuk-list govuk-list--bullet" style="color:white">
+          <li>salary</li>
+          <li>allowances</li>
+          <li>advances of salary</li>
+          <li>deductions</li>
+          <li>pay award</li>
+          <li>terms and conditions</li>
+        </ul>
+
+        <br>
+
+        <a href="pay-zone" role="button" draggable="false" class="govuk-button" style="background-color:white; color:#1d70b8" data-module="govuk-button">
+          <strong>&nbsp;Continue&nbsp;</strong>
+        </a>
+
+        <!--<p><a class="govuk-link govuk-link--inverse" href="task-list-start">Skip this step</a></p>-->
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+When did you first join the Civil Service?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="partial-retirement" method="post">
+
+      <h1 class="govuk-heading-l">Basic employee contributions</h1>
+
+        {{ govukDateInput({
+            id: "basic-contributions-start",
+            namePrefix: "basic-contributions-start",
+            fieldset: {
+              legend: {
+                text: "Start date",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend"
+              }
+            },
+            hint: {
+              text: "For example, 27 3 2022"
+            },
+            items: [
+   {
+     classes: "govuk-input--width-2",
+     name: "day"
+   },
+   {
+     classes: "govuk-input--width-2",
+     name: "month"
+   },
+   {
+     classes: "govuk-input--width-4",
+     name: "year"
+   }
+ ]
+          }) }}
+
+
+{{ govukInput({
+  label: {
+    text: "Rate"
+  },
+  classes: "govuk-input--width-5",
+  id: "rate",
+  name: "rate",
+  suffix: {
+    text: "%"
+  },
+  spellcheck: false
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Which pension scheme are you a member of?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="partial-retirement" method="post">
+
+        {{ govukRadios({
+          idPrefix: "grade",
+          name: "grade",
+          fieldset: {
+            legend: {
+              text: "Which pension scheme has the employee opted out of?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "classic",
+              text: "Classic"
+            },
+            {
+              value: "classic-plus",
+              text: "Classic Plus"
+            },
+            {
+              value: "nuvos",
+              text: "Nuvos"
+            },
+            {
+              value: "partnership",
+              text: "Partnership"
+            },
+            {
+              value: "premium",
+              text: "Premium"
+            },
+            {
+              value: "alpha",
+              text: "Alpha"
+            },
+            {
+              value: "not member",
+              text: "Not a member of a pension scheme"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
