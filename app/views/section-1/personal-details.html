@@ -107,6 +107,16 @@
               id: "last-name",
               name: "last-name"
             }) }}
+
+            {{ govukInput({
+              label: {
+                text: "Previous last name (optional)"
+              },
+              classes: "govuk-input--width-20",
+              id: "previous-last-name",
+              name: "previous-last-name"
+            }) }}
+
             {{ govukInput({
               label: {
                 text: "Preferred name"
@@ -150,7 +160,7 @@
    }
  ]
           }) }}
-          
+
         {% else %}
           {{ govukDateInput({
      id: "dob",
