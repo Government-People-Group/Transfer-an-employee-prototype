@@ -213,7 +213,7 @@ router.post('/section-4/contract-type-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('fta-end-date')
+    res.redirect('parental-leave')
   }
 
 })
