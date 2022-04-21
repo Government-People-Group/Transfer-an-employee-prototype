@@ -429,7 +429,21 @@
      spellcheck: false
    }) }}
    {% endif %}
+   {% from "govuk/components/input/macro.njk" import govukInput %}
 
+   {{ govukInput({
+     label: {
+       text: "Telephone number"
+     },
+     hint: {
+       text: "This should be your personal number"
+     },
+     id: "telephone-number",
+     name: "telephone-number",
+     type: "tel",
+     autocomplete: "tel",
+     classes: "govuk-input--width-20"
+   }) }}
        {% if errorNin == true %}
 
    {{ govukInput({
