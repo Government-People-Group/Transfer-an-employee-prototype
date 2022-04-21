@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Is the employee on a fixed term appointment?
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="contract-type-answer" method="post">
+
+        {% set tempHtml %}
+{{ govukDateInput({
+  id: "temp-end",
+  namePrefix: "temp-end",
+  fieldset: {
+    legend: {
+      text: "What is the end date?"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2023"
+  }
+}) }}
+{% endset -%}
+
+{% set ftaHtml %}
+{{ govukDateInput({
+  id: "fta-end",
+  namePrefix: "fta-end",
+  fieldset: {
+    legend: {
+      text: "What is the end date?"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2023"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "contract-type",
+  name: "contract-type",
+  fieldset: {
+    legend: {
+      text: "What is the employee’s current contract type?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "permanent",
+      text: "Permanent"
+    },
+    {
+      value: "temporary",
+      text: "Temporary",
+      conditional: {
+        html: tempHtml
+      }
+    },
+    {
+      value: "fta",
+      text: "Fixed term appointment",
+      conditional: {
+        html: ftaHtml
+      }
+    }
+  ]
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
