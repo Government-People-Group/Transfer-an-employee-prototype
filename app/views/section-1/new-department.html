@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Which Government department do you currently work for?
+  New department
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,24 +15,38 @@
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="higher-security-clearance" method="post">
+<h1 class="govuk-heading-l">New department</h1>
+        <div class="govuk-form-group">
+                    <label for="autocomplete-default" class="govuk-label">Which Government department are you moving to?</label>
+              <div class="govuk-input--width-40">
+                <div id="event-name-hint" class="govuk-hint">
+                <div id="department" class="autocomplete-wrapper"></div>
+                </div>
+                </div>
 
-<div class="govuk-form-group">
-            <label for="autocomplete-default" class="govuk-label govuk-label--l">Which Government department are you moving to?</label>
-      <div class="govuk-input--width-40">
-        <div id="department" class="autocomplete-wrapper"></div>
-        </div>
-        </div>
+                <script src="/public/javascripts/accessible-autocomplete.js"></script>
+                <script src="/public/javascripts/department.js"></script>
 
-        <script src="/public/javascripts/accessible-autocomplete.js"></script>
-        <script src="/public/javascripts/department.js"></script>
+                {{ govukInput({
+                  label: {
+                    text: "What is your vacancy reference number?"
+                  },
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+                   classes: "govuk-input--width-20",
+                  id: "vacancy-ref-number",
+                  name: "vacancy-ref-number",
+                  hint: {
+            text: "This should be available on Civil service jobs"
+          }
+                }) }}
+
+
 
       </form>
 
     </div>
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
   </div>
 
 </form>
