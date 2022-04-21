@@ -178,6 +178,25 @@
    }) }}
       {% endif %}
 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Marital status
+        </label>
+        <select class="govuk-select" id="sort" name="marital">
+        <option value="please select" selected>Select</option>
+        <option value="never">Never married and never registered in a civil partnership</option>
+        <option value="reg-partnership">In a registered civil partnership</option>
+        <option value="separated-legal-married">Separated, but still legally married</option>
+        <option value="separated-civil">Separated, but still legally in a civil partnership</option>
+        <option value="divorced">Divorced</option>
+        <option value="formely-civil">Formerly in a civil partnership which is now legally dissolved</option>
+        <option value="widowed">Widowed</option>
+        <option value="surviving">Surviving partner from a registered civil partnership</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+      </select>
+      </div>
+
+
 <div class="govuk-form-group">
   <label class="govuk-label" for="sort">
     Current nationality
