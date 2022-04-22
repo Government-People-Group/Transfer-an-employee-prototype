@@ -21,6 +21,23 @@ What is your new working pattern
             </h1>
           </legend>
 
+        {% set parttimeHtml %}
+        {{ govukInput({
+          id: "parttime",
+          name: "parttime",
+          label: {
+            text: "What is your full time equivalant contracted hours?",
+            isPageHeading: true
+          },
+          suffix: {
+            text: "hours"
+          },
+          classes: "govuk-input--width-2",
+          spellcheck: false
+        }) }}
+
+        {% endset -%}
+
         {{ govukCheckboxes({
           idPrefix: "working-pattern",
           name: "working-pattern",
@@ -39,7 +56,10 @@ What is your new working pattern
             },
             {
               value: "part-time",
-              text: "Part-time"
+              text: "Part-time",
+              conditional: {
+                html: parttimeHtml
+              }
             },
             {
               value: "job-share",
