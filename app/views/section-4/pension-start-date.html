@@ -13,21 +13,21 @@ When did you first join the Civil Service?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="contract-type" method="post">
+      <form class="form" action="partial-retirement" method="post">
 
         {{ govukDateInput({
           id: "date-of-transfer",
           namePrefix: "start-date",
           fieldset: {
             legend: {
-              text: "What is the employee’s current loan end date?",
+              text: "What was the employee’s pension scheme start date?",
                  isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
 
           },
           hint: {
-            text: "For example, 27 3 2023"
+            text: "For example, 27 3 2007"
           }
         }) }}
 
