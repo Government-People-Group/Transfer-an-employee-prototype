@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -15,6 +15,13 @@
 
       <form class="form" action="security-clearance" method="post">
 
+
+        {% set notsure %}
+
+        <p class="govuk-body">
+          Refer to your line manager
+        </p>
+        {% endset -%}
 
         {% set nobpssHtml %}
 
@@ -46,7 +53,15 @@
               conditional: {
                 html: nobpssHtml
               }
+            },
+            {
+              value: "notsure",
+              text: "I'm not sure",
+              conditional: {
+                html: notsure
+              }
             }
+
           ]
         }) }}
 
