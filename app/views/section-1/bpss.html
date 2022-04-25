@@ -16,7 +16,7 @@
       <form class="form" action="security-clearance" method="post">
 
 
-        {% set notsure %}
+        {% set unsureHtml %}
 
         <p class="govuk-body">
           Refer to your line manager
@@ -27,7 +27,7 @@
 
         <p class="govuk-body">
 
-          Find information about <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" target="_blank">BPSS guidelines</>
+          Find information about <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" target="_blank">BPSS guidelines</></a>
         </p>
         {% endset -%}
 
@@ -55,10 +55,10 @@
               }
             },
             {
-              value: "notsure",
+              value: "unsureHtml",
               text: "I'm not sure",
               conditional: {
-                html: notsure
+                html: unsureHtml
               }
             }
 
