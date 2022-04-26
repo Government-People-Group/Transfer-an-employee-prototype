@@ -15,6 +15,27 @@ Was this individual recruited through fair and open competition?
 
       <form class="form" action="end-loan" method="post">
 
+        {% set unsureHtml %}
+
+        <p class="govuk-body">
+          Contact the employees HR department or the their original recruitment manager
+        </p>
+        {% endset -%}
+
+        {% set noHtml %}
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+  {{ govukTextarea({
+    name: "more-detail",
+    id: "more-detail",
+
+    hint: {
+      text: "Please explain why. e.g - managed move, surge support, etc."
+    }
+  }) }}
+        {% endset -%}
+
 {{ govukRadios({
   idPrefix: "competition",
   name: "competition",
@@ -32,7 +53,17 @@ Was this individual recruited through fair and open competition?
     },
     {
       value: "no",
-      text: "No"
+      text: "No",
+      conditional: {
+        html: noHtml
+      }
+    },
+    {
+      value: "unsureHtml",
+      text: "I'm not sure",
+      conditional: {
+        html: unsureHtml
+      }
     }
 
   ]
