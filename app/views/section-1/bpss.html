@@ -23,13 +23,7 @@
         </p>
         {% endset -%}
 
-        {% set nobpssHtml %}
 
-        <p class="govuk-body">
-
-          Find information about <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" target="_blank">BPSS guidelines</></a>
-        </p>
-        {% endset -%}
 
         {{ govukRadios({
           idPrefix: "bpss",
@@ -49,10 +43,7 @@
             },
             {
               value: "no",
-              text: "No",
-              conditional: {
-                html: nobpssHtml
-              }
+              text: "No"
             },
             {
               value: "unsureHtml",
@@ -70,6 +61,14 @@
       </form>
 
     </div>
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">Helpful links</h2>
+
+
+      <p class="govuk-body"><a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" class="govuk-link" rel="noreferrer noopener" target="_blank">BPSS Guidance (opens in new tab)</a>
+</p>
+    </div>
   </div>
+
 
 {% endblock %}
