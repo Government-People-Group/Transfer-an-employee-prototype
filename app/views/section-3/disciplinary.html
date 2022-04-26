@@ -15,6 +15,18 @@ Does the employee have any live disciplinary warning for misconduct?
 
       <form class="form" action="line-manager-declaration" method="post">
 
+        {% set yesHtml %}
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          name: "more-detail",
+          id: "more-detail",
+          hint: {
+            text: "Please add details"
+          }
+        }) }}
+        {% endset -%}
+
 {{ govukRadios({
   idPrefix: "disciplinary",
   name: "disciplinary",
@@ -28,7 +40,10 @@ Does the employee have any live disciplinary warning for misconduct?
   items: [
     {
       value: "yes",
-      text: "Yes"
+      text: "Yes",
+      conditional: {
+        html: yesHtml
+      }
     },
     {
       value: "no",
