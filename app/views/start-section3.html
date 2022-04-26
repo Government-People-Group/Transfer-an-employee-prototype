@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page - Transfer an employee across the Civil Service - Section 2 - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/section-2/sign-in-section2" method="GET">
+        <h1 class="govuk-heading-xl">
+          {% if serviceName %}
+            {{ serviceName }}
+          {% endif %}
+        </h1>
+
+        <div class="govuk-body">
+          This is section 3 and is to be completed by the Line Manager only. </div>
+
+
+        <p class="govuk-body">For this section you'll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>???</li>
+          <li>???</li>
+          <li>???</li>
+        </ul>
+
+        {{ govukButton({
+text: "Start now",
+classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+isStartButton: true
+}) }}
+
+<h2 class="govuk-heading-m">Other ways to complete the form</h2>
+    <p class="govuk-body">You can also complete a
+      <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies#:~:text=an%20accessible%20format.-,Civil%20Service%20Employee%20Transfer%20Form,-MS%20Excel%20Spreadsheet" class="govuk-link">spreadsheet version of the form</a>
+    </p>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Guidance
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list
+    govuk-!-font-size-16">
+              <li>
+                <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies" target="_blank">
+                  Guidance for civil servants: How to move jobs between departments and agencies
+                  <span class="govuk-visually-hidden">Link opens in new tab/window</span>
+                </a>
+            </ul>
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+  {% endblock %}
