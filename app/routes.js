@@ -262,6 +262,10 @@ router.post('/section-4/which-pension-answer', function (req, res) {
     // Send user to next page
     res.redirect('partnership')
   }
+  if (whichpensionAnswer == "alpha") {
+    // Send user to next page
+    res.redirect('pension-start-date')
+  }
   else {
     // Send user to ineligible page
     res.redirect('basic-employee-contributions')

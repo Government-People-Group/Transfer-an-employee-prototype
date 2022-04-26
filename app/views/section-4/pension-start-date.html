@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Does the employee have any live disciplinary warning for misconduct?
+When did you first join the Civil Service?
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
@@ -13,30 +13,23 @@ Does the employee have any live disciplinary warning for misconduct?
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="line-manager-declaration" method="post">
+      <form class="form" action="partial-retirement" method="post">
 
-{{ govukRadios({
-  idPrefix: "disciplinary",
-  name: "disciplinary",
-  fieldset: {
-    legend: {
-      text: "Does the employee have any live disciplinary warning for misconduct?",
-      isPageHeading: true,
+        {{ govukDateInput({
+          id: "date-of-transfer",
+          namePrefix: "start-date",
+          fieldset: {
+            legend: {
+              text: "What was the employee’s pension scheme start date?",
+                 isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
 
-  ]
-}) }}
+          },
+          hint: {
+            text: "For example, 27 3 2007"
+          }
+        }) }}
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 
