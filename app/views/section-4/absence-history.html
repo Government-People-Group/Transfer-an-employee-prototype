@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Transfer an employee across the Civil Service - GOV.UK
+  Absence history - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -144,13 +144,14 @@
     <div class="moj-button-action">
       {{ govukButton({
         text: 'Add another absence',
+        href: 'absence-history',
         classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
       }) }}
     </div>
 
     <div class="moj-button-action">
       {{ govukButton({
-        text: 'Continue'
+        text: 'Save and continue'
       }) }}
     </div>
 

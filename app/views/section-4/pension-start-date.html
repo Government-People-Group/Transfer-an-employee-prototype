@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-What is the employee's Civil Service start date? - GOV.UK
+What was the employee’s pension scheme start date? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
@@ -13,14 +13,14 @@ What is the employee's Civil Service start date? - GOV.UK
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="loan-end-dates" method="post">
+      <form class="form" action="partial-retirement" method="post">
 
         {{ govukDateInput({
           id: "date-of-transfer",
           namePrefix: "start-date",
           fieldset: {
             legend: {
-              text: "What is the employee's Civil Service start date?",
+              text: "What was the employee’s pension scheme start date?",
                  isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
