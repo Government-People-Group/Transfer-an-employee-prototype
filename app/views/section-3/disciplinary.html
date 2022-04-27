@@ -15,6 +15,18 @@ Does the employee have any live disciplinary warning for misconduct? - GOV.UK
 
       <form class="form" action="line-manager-declaration" method="post">
 
+        {% set yesHtml %}
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          name: "more-detail",
+          id: "more-detail",
+          hint: {
+            text: "Please add details"
+          }
+        }) }}
+        {% endset -%}
+
 {{ govukRadios({
   idPrefix: "disciplinary",
   name: "disciplinary",
@@ -27,12 +39,16 @@ Does the employee have any live disciplinary warning for misconduct? - GOV.UK
   },
   items: [
     {
-      value: "yes",
-      text: "Yes"
-    },
-    {
       value: "no",
       text: "No"
+
+    },
+    {
+      value: "yes",
+      text: "Yes",
+      conditional: {
+        html: yesHtml
+      }
     }
 
   ]

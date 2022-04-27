@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page - Transfer an employee across the Civil Service - GOV.UK
+  Start page - Transfer an employee across the Civil Service - Section 2 - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="section-1/task-list-start" method="GET">
+      <form action="/section-2/sign-in-section2" method="GET">
         <h1 class="govuk-heading-xl">
           {% if serviceName %}
             {{ serviceName }}
@@ -19,22 +19,15 @@
         </h1>
 
         <div class="govuk-body">
-          This service is for Civil Servants who are transferring to another Civil Service organisation, including arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs). </div>
+          This is section 2 for Civil Servants who are transferring to another Civil Service organisation, including arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs). </div>
           <div class="govuk-body">This process is commonly known as the other government departments (OGD) transfer process or staff transfers within the Civil Service.
         </div>
-        <div class="govuk-body">You can complete this section all at once or return later.
-      </div>
 
-        <p class="govuk-body">You'll need:</p>
+        <p class="govuk-body">For this section you'll need:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>National Insurance Number</li>
-          <li>Current department employee number</li>
-          <li>BPSS Clearance as minimum</li>
-          <li>Level of security clearance</li>
-          <li>Last 2 months of payslips</li>
-          <li>New department and job details
-        <!--     <a href="..">..</a>-->
-          </li>
+          <li>Your agreed start date</li>
+          <li>Your agreed salary for your new role</li>
+          <li>Your agreed working pattern details</li>
         </ul>
 
         {{ govukButton({

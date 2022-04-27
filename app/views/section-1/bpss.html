@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -16,13 +16,14 @@
       <form class="form" action="security-clearance" method="post">
 
 
-        {% set nobpssHtml %}
+        {% set unsureHtml %}
 
         <p class="govuk-body">
-
-          Find information about <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" target="_blank">BPSS guidelines</>
+          Refer to your line manager
         </p>
         {% endset -%}
+
+
 
         {{ govukRadios({
           idPrefix: "bpss",
@@ -42,11 +43,16 @@
             },
             {
               value: "no",
-              text: "No",
+              text: "No"
+            },
+            {
+              value: "unsureHtml",
+              text: "I'm not sure",
               conditional: {
-                html: nobpssHtml
+                html: unsureHtml
               }
             }
+
           ]
         }) }}
 
@@ -55,6 +61,24 @@
       </form>
 
     </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Helpful links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list
+    govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" class="govuk-link" rel="noreferrer noopener" target="_blank">BPSS Guidance (opens in new tab)</a>
+          </ul>
+
+        </nav>
+      </aside>
+    </div>
+
   </div>
+
 
 {% endblock %}

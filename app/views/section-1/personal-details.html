@@ -107,9 +107,19 @@
               id: "last-name",
               name: "last-name"
             }) }}
+
             {{ govukInput({
               label: {
-                text: "Preferred name"
+                text: "Previous last name (optional)"
+              },
+              classes: "govuk-input--width-20",
+              id: "previous-last-name",
+              name: "previous-last-name"
+            }) }}
+
+            {{ govukInput({
+              label: {
+                text: "Preferred name (optional)"
               },
               classes: "govuk-input--width-20",
               id: "pref-name",
@@ -150,7 +160,7 @@
    }
  ]
           }) }}
-          
+
         {% else %}
           {{ govukDateInput({
      id: "dob",
@@ -167,6 +177,25 @@
      }
    }) }}
       {% endif %}
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Marital status
+        </label>
+        <select class="govuk-select" id="sort" name="marital">
+        <option value="please select" selected>Select</option>
+        <option value="never">Never married and never registered in a civil partnership</option>
+        <option value="reg-partnership">In a registered civil partnership</option>
+        <option value="separated-legal-married">Separated, but still legally married</option>
+        <option value="separated-civil">Separated, but still legally in a civil partnership</option>
+        <option value="divorced">Divorced</option>
+        <option value="formely-civil">Formerly in a civil partnership which is now legally dissolved</option>
+        <option value="widowed">Widowed</option>
+        <option value="surviving">Surviving partner from a registered civil partnership</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+      </select>
+      </div>
+
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="sort">
@@ -406,25 +435,39 @@
 
    {{ govukInput({
      label: {
-       text: "Secondary email address"
+       text: "Backup email address"
      },
      hint: {
        text: "For example, a personal email address"
      },
        classes: "govuk-input--width-20",
-     id: "secondary-email",
-     name: "secondary-email",
+     id: "backup-email",
+     name: "backup-email",
      type: "email",
      autocomplete: "email",
      spellcheck: false
    }) }}
    {% endif %}
+   {% from "govuk/components/input/macro.njk" import govukInput %}
 
+   {{ govukInput({
+     label: {
+       text: "Telephone number"
+     },
+     hint: {
+       text: "This should be your personal number"
+     },
+     id: "telephone-number",
+     name: "telephone-number",
+     type: "tel",
+     autocomplete: "tel",
+     classes: "govuk-input--width-20"
+   }) }}
        {% if errorNin == true %}
 
    {{ govukInput({
        label: {
-         text: "National Insurance Number"
+         text: "National Insurance number"
        },
        hint: {
          text: "For example QQ 12 34 56 C"
@@ -433,7 +476,7 @@
        id: "national-insurance",
        name: "national-insurance",
        errorMessage: {
-         text: "Enter your National Insurance Number"
+         text: "Enter your National Insurance number"
        }
      }) }}
 
@@ -441,7 +484,7 @@
 
        {{ govukInput({
            label: {
-             text: "National Insurance Number"
+             text: "National Insurance number"
            },
            hint: {
              text: "For example QQ 12 34 56 C"

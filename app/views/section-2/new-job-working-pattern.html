@@ -14,6 +14,12 @@ What is your new working pattern? - GOV.UK
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="new-job-grade" method="post">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              New job working pattern
+            </h1>
+          </legend>
 
         {% set parttimeHtml %}
         {{ govukInput({
@@ -37,9 +43,7 @@ What is your new working pattern? - GOV.UK
           name: "working-pattern",
           fieldset: {
             legend: {
-              text: "What is your new working pattern?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
+              text: "What is your new working pattern?"
             }
           },
           hint: {
@@ -84,7 +88,20 @@ What is your new working pattern? - GOV.UK
           ]
         }) }}
 
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
+        {{ govukInput({
+          label: {
+            text: "What are your new contracted hours per week?"
+          },
+          classes: "govuk-input--width-5",
+          id: "hours",
+          name: "hours",
+          suffix: {
+            text: "hours"
+          },
+          spellcheck: false
+        }) }}
 
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
