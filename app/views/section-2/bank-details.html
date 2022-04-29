@@ -16,65 +16,55 @@
   <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <form action="student-loan" method="post">
 
-{% call govukFieldset({
-  legend: {
-    text: "Bank details for payroll",
-    classes: "govuk-fieldset__legend--l",
-    isPageHeading: true
-  }
-}) %}
+      <h1 class="govuk-heading-l">Bank details for payroll</h1>
 
-<br>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="bank-name">
+      Bank name
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20"
+    name="bank-name" type="text" spellcheck="false" autocomplete="name">
+  </div>
 
-  {{ govukInput({
-    label: {
-      text: "Bank name"
-    },
-    classes: "govuk-!-width-two-thirds",
-    id: "bank-name",
-    name: "bank-name",
-    autocomplete: ""
-  }) }}
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="account-holder">
+      Name of account holder
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20"
+    name="account-holder" type="text" spellcheck="false" autocomplete="name">
+  </div>
 
-  {{ govukInput({
-    label: {
-      text: "Name of account holder"
-    },
-    classes: "govuk-!-width-two-thirds",
-    id: "account-holder",
-    name: "account-holder"
-  }) }}
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="account-number">
+      Account number
+    </label>
+    <div id="account-number-hint" class="govuk-hint">
+      Must be between 6 and 8 digits long
+    </div>
+    <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+  </div>
 
-  {{ govukInput({
-    label: {
-      text: "Account number"
-    },
-    classes: "govuk-input--width-10",
-    id: "account-number",
-    name: "account-number",
-    autocomplete: ""
-  }) }}
 
-  {{ govukInput({
-    label: {
-      text: "Sort code"
-    },
-    classes: "govuk-input--width-10",
-    id: "sort-code",
-    name: "sort-code",
-    autocomplete: ""
-  }) }}
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort-code">
+      Sort code
+    </label>
+    <div id="sort-code-hint" class="govuk-hint">
+      Must be 6 digits long
+    </div>
+    <input class="govuk-input govuk-input--width-2" id="sort-code1" name="sort-code1" type="text" spellcheck="false" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
+    <input class="govuk-input govuk-input--width-2" id="sort-code2" name="sort-code2" type="text" spellcheck="false" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
+    <input class="govuk-input govuk-input--width-2" id="sort-code3" name="sort-code3" type="text" spellcheck="false" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
 
-{% endcall %}
+  </div>
 
-        {{ govukButton({
-           text: "Save and continue"
-         }) }}
 
-      </form>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+  </button>
 
     </div>
   </div>
