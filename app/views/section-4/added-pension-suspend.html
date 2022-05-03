@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Has the Added Pension been suspended? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="added-pension-suspend-answer" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Has the Added Pension been suspended?
+      </h1>
+    </legend>
+
+    <p class="govuk-hint">For example, due to maternity leave.</p>
+    
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+   
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-aps" name="aps" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="yes-aps">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-aps" name="aps" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="no-aps">
+          No
+        </label>
+      </div>
+      
+    </div>
+
+  </fieldset>
+</div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

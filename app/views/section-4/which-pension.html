@@ -15,6 +15,37 @@ Which pension scheme are you a member of? - GOV.UK
 
       <form class="form" action="which-pension-answer" method="post">
 
+<!--<h1 class="govuk-heading-l">
+  Which pension scheme is the employee a member of?
+</h1>
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Sort by"
+  },
+  items: [
+    {
+      value: "published",
+      text: "Recently published"
+    },
+    {
+      value: "updated",
+      text: "Recently updated",
+      selected: true
+    },
+    {
+      value: "views",
+      text: "Most views"
+    },
+    {
+      value: "comments",
+      text: "Most comments"
+    }
+  ]
+}) }}-->
+
         {{ govukRadios({
           idPrefix: "which-pension",
           name: "which-pension",
@@ -27,26 +58,10 @@ Which pension scheme are you a member of? - GOV.UK
           },
           items: [
             {
-              value: "classic",
-              text: "Classic"
-            },
-            {
-              value: "classic-plus",
-              text: "Classic Plus"
-            },
-            {
-              value: "nuvos",
-              text: "Nuvos"
-            },
-            {
               idPrefix: "partnership",
               name: "partnership",
               value: "partnership",
               text: "Partnership"
-            },
-            {
-              value: "premium",
-              text: "Premium"
             },
             {
               value: "alpha",
