@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What scheme is the Added Pension purchased under? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="added-pension-scheme-answer" method="post">
+
+        {{ govukRadios({
+          idPrefix: "added-pension-scheme",
+          name: "added-pension-scheme",
+          fieldset: {
+            legend: {
+              text: "What scheme is the Added Pension purchased under?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "classic",
+              text: "Classic"
+            },
+            {
+              value: "classic-plus",
+              text: "Classic Plus"
+            },
+            {
+              value: "nuvos",
+              text: "Nuvos"
+            },
+            {
+              value: "premium",
+              text: "Premium"
+            },
+            {
+              idPrefix: "alpha",
+              name: "alpha",
+              value: "alpha",
+              text: "Alpha"
+            }
+          ]
+        }) }}
+
+
+        {{ govukInput({
+          label: {
+            text: "Enter the monthly contribution rate"
+          },
+          classes: "govuk-input--width-5",
+          id: "contribution",
+          name: "contribution",
+          suffix: {
+            text: "%"
+          },
+          spellcheck: false
+        }) }}
+
+        <p class="govuk-body">The employee has purchased Added Pension for:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>themselves only</li>
+          <li>themselves and their dependants</li>
+        </ul>
+
+        <br>
+
+        <div class="moj-button-action">
+        {{ govukButton({
+          text: 'Add another',
+          href: 'added-pension-scheme',
+          classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+        }) }}
+       </div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

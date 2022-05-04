@@ -307,4 +307,21 @@ router.post('/section-4/added-pension-suspend-answer', function (req, res) {
 
 })
 
+router.post('/section-4/added-pension-scheme-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var addedpensionschemeAnswer = req.session.data['added-pension-scheme']
+
+  // Check whether the variable matches a condition
+  if (addedpensionschemeAnswer == "alpha") {
+    // Send user to next page
+    res.redirect('epa')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('completed-by')
+  }
+
+})
+
 module.exports = router
