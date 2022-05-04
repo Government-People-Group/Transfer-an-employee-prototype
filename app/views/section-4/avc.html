@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Does the employee make Additional Voluntary Contributions (AVC)? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="completed-by" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Does the employee make Additional Voluntary Contributions (AVC)?
+      </h1>
+    </legend>
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="consolidated" name="any-avc" type="radio" value="email" data-aria-controls="conditional-consolidated">
+        <label class="govuk-label govuk-radios__label" for="consolidated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consolidated">
+        <div class="govuk-form-group">
+
+          <span class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label" for="weight">
+      Enter the contribution rate
+    </label>
+  </h1>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+  </span>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p class="govuk-body">or</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <label class="govuk-label" for="percentage">
+  </label>
+  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="percentage" name="percentage" type="text" spellcheck="false">
+    <div class="govuk-input__suffix" aria-hidden="true">%</div>
+  </div>
+</div>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Who is the AVC provider?
+    </legend>
+    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Equitable Life
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Legal & General
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          Scottish Widows
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Standard Life
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+        </div>
+
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated-3" name="any-avc" type="radio" value="phone" data-aria-controls="conditional-non-consolidated-3">
+        <label class="govuk-label govuk-radios__label" for="non-consolidated-3">
+          No
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

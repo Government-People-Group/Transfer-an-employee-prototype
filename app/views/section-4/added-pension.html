@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Is the employee currently contributing to an Added Pension? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="added-pension-answer" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Is the employee currently contributing to an Added Pension?
+      </h1>
+    </legend>
+    
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+   
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-ap" name="ap" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="yes-ap">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-ap" name="ap" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="no-ap">
+          No
+        </label>
+      </div>
+      
+    </div>
+
+  </fieldset>
+</div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

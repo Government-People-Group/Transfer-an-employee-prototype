@@ -38,6 +38,8 @@ Advances of salary and deductions - GOV.UK
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consolidated">
         <div class="govuk-form-group">
 
+          <h1 class="govuk-heading-m">Advance of salary</h1>
+
           <label class="govuk-label" for="consolidated">
             Enter amount
           </label>
@@ -51,7 +53,61 @@ Advances of salary and deductions - GOV.UK
           <label class="govuk-label" for="consolidated">
             Enter details
           </label>
-          <input class="govuk-input govuk-!-width-three-quarters" id="details" name="details" type="email" spellcheck="false" autocomplete="email">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<hr>
+
+<h1 class="govuk-heading-m">Advance of salary
+
+  <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
+  
+<!--<span class="moj-button-action" style="float: right;">
+      {{ govukButton({
+        text: 'Remove',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </span>-->
+    </h1>
+
+<label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
         <!--<br><br>
         <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -102,7 +158,78 @@ Advances of salary and deductions - GOV.UK
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-non-consolidated">
         <div class="govuk-form-group">
 
-          <label class="govuk-label" for="non-consolidated">
+          <h1 class="govuk-heading-m">Deduction</h1>
+
+          <label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<hr>
+
+<h1 class="govuk-heading-m">Deduction
+
+  <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
+  
+<!--<span class="moj-button-action" style="float: right;">
+      {{ govukButton({
+        text: 'Remove',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </span>-->
+    </h1>
+
+<label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+          <!--<label class="govuk-label" for="non-consolidated">
             Enter amount
           </label>
           <div class="govuk-input__wrapper">
@@ -116,6 +243,7 @@ Advances of salary and deductions - GOV.UK
             Enter details
           </label>
           <input class="govuk-input govuk-!-width-three-quarters" id="details-2" name="details-2" type="email" spellcheck="false" autocomplete="email">
+          -->
         </div>
 
       </div>
@@ -129,14 +257,6 @@ Advances of salary and deductions - GOV.UK
 
   </fieldset>
 </div>
-
-<div class="moj-button-action">
-      {{ govukButton({
-        text: 'Add another advance of salary or deduction',
-        href: 'benefits',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </div>
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
 
