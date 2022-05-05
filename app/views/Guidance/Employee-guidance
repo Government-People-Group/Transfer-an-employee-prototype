@@ -1,0 +1,18 @@
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">This is a title</h1>
+        <p class="govuk-body">
+         This is some body test
+        </p>
+        <p class="govuk-body">
+          This is some more body text
+        </p>
+        <p class="govuk-body">
+          This is an example <a href="#" class="govuk-link">of a link</a> and some more text.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
