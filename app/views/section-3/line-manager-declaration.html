@@ -13,7 +13,7 @@ I have agreed to the date of transfer submitted by employee - GOV.UK
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<form action="check-your-answers" method="post">
+<form action="task-list-end" method="post">
 
 <h1 class="govuk-heading-l">Declaration</h1>
 
@@ -27,7 +27,13 @@ I have agreed to the date of transfer submitted by employee - GOV.UK
 
 <br>
 
-<p class="govuk-body-l govuk-!-font-weight-bold">Transfer date</p>
+<p class="govuk-body-l govuk-!-font-weight-bold">Transfer date &nbsp;
+  {%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+  {{ govukTag({
+    text:"29/01/2023"
+  }) }}
+</p>
 
 <ul class="govuk-list govuk-list--bullet">
 <li>I agree to the date of transfer submitted by the employee.</li>
@@ -38,7 +44,7 @@ I have agreed to the date of transfer submitted by employee - GOV.UK
 <button class="govuk-button" data-module="govuk-button">
 Confirm
 </button>
-</div> 
+</div>
 
 </form>
 

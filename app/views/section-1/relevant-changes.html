@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Has there been any relevant changes to your personal circumstances since you last submitted a vetting application? - GOV.UK
+  Since your last vetting application, are there any relevant changes to your circumstances?
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
@@ -12,20 +12,22 @@
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="relevant-changes-answer" method="post">
-      
+
         {% set textHtml %}
         <br>
-        <p class="govuk-body">For example:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>nationality</li>
-                <li>lived outside the UK for more than 6 months</li>
-                <li>arrest</li>
-                <li>caution</li>
-                <li>criminal conviction</li>
-                <li>marriage or civil partnership</li>
-                <li>substantial change in financial situation</li>
+        <p class="govuk-body">These may have an effect on how long it takes to transfer, the security clearance you need and your elgibility to transfer.</p>
 
-              </ul>
+        <p class="govuk-body">Relevant changes of circumstances include:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>nationality</li>
+                      <li>lived outside the UK for more than 6 months</li>
+                      <li>arrest</li>
+                      <li>caution</li>
+                      <li>criminal conviction</li>
+                      <li>marriage or civil partnership</li>
+                      <li>substantial change in financial situation</li>
+
+                    </ul>
   {% endset -%}
 
   {% set yesHtml %}

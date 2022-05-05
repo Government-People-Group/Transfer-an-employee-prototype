@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
-
+<span class="govuk-caption-l">Question 8 of 10</span>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -58,6 +58,11 @@
               text: "enhanced Developed Vetting (eDV)"
             },
             {
+              value: "none",
+              text: "None of the above"
+
+              },
+            {
               value: "unsure",
               text: "I'm not sure",
               conditional: {
@@ -71,6 +76,22 @@
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Helpful links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list
+    govuk-!-font-size-16">
+            <li>
+              <a href="hhttps://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels" class="govuk-link" rel="noreferrer noopener" target="_blank">National Security Vetting Clearance Levels (opens in new tab)</a>
+          </ul>
+
+        </nav>
+      </aside>
     </div>
   </div>
 
