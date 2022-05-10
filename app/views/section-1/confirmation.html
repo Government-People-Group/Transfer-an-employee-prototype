@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Sign in to Transfer an employee across the Civil Service - GOV.UK
+  Confirmation - GOV.UK
 {% endblock %}
 
 <!--service names are not currently shown on CH sign in or company authenticate-->
@@ -11,17 +11,6 @@
 {% block beforeContent %}
   {% include "includes/phase-banner.html" %}
 {% endblock %}
-
-{% block content %}
-
-  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form action="/section-1/task-list-start" method="GET">
-
-        {% set mainClasses = "govuk-main-wrapper--l" %}
-
-{% from "govuk/components/panel/macro.njk" import govukPanel %}
 
 {% block content %}
   <div class="govuk-grid-row">
@@ -47,9 +36,5 @@
       </p>
     </div>
   </div>
-{% endblock %}
-
-  </div>
-</div>
 
 {% endblock %}
