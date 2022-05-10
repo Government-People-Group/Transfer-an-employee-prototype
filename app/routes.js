@@ -82,7 +82,7 @@ router.post('/section-1/security-details-answer', function (req, res) {
 
 })
 
-router.post('/section-1/workplace-adjustment-answer', function (req, res) {
+router.post('/section-2/workplace-adjustment-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var workplaceadjustmentAnswer = req.session.data['workplace-adjustment']
@@ -94,7 +94,7 @@ router.post('/section-1/workplace-adjustment-answer', function (req, res) {
   }
   else {
     // Send user to ineligible page
-    res.redirect('check-your-answers')
+    res.redirect('start-date')
   }
 
 })
