@@ -26,7 +26,7 @@ Screen readers will read this out but it will not appear on the page. Without th
 
 1. Find the `<dt>` tag that contains the text 'Date of birth'.
 2. Change 'Date of birth' to 'Your most impressive juggling trick'.
-3. In the `<dd>` tag on the next line, change '5 January 1978' to `{{ data['most-impressive-trick'] }}`.
+3. In the `<dd>` tag on the next line, change '5 Jan 1978' to `{{ data['most-impressive-trick'] }}`.
 
 Change
 ```
