@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Declaration - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="check-your-answers" method="post">
+
+<h1 class="govuk-heading-l">Declaration</h1>
+<p class="govuk-body"></p>
+<ul class="govuk-list govuk-list--bullet">
+<li>I confirm the start date 28 July 2022 of this transfer is correct.</li>
+<li>I confirm the information given in this section is complete and correct. I understand that providing incorrect information could place the transfer at risk and/or result in disciplinary action.</li>
+<li>I consent to my information being sent to the new department for HR related queries.</li>
+</ul>
+
+<br>
+
+<button class="govuk-button" data-module="govuk-button">
+Confirm
+</button>
+</div> 
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
