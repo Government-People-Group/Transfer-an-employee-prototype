@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block content %}
-
-  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <form action="/section-1/task-list-start" method="GET">
-
-        {% set mainClasses = "govuk-main-wrapper--l" %}
-
-{% from "govuk/components/panel/macro.njk" import govukPanel %}
-
-{% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
@@ -47,9 +36,5 @@
       </p>
     </div>
   </div>
-{% endblock %}
-
-  </div>
-</div>
 
 {% endblock %}
