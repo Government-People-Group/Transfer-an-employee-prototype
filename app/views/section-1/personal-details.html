@@ -30,44 +30,12 @@
           Personal details
         </h1>
 
-{{ govukSelect({
-  id: "title",
-  name: "title",
-  label: {
-    text: "Title"
-  },
-  items: [
-    {
-      value: "select",
-      text: "Select",
-      selected: true
-    },
-    {
-      value: "mr",
-      text: "Mr"
-    },
-    {
-      value: "mrs",
-      text: "Mrs"
-    },
-    {
-      value: "ms",
-      text: "Ms"
-    },
-    {
-      value: "miss",
-      text: "Miss"
-    },
-    {
-      value: "mx",
-      text: "Mx"
-    },
-    {
-      value: "dr",
-      text: "Dr"
-    }
-  ]
-}) }}
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="title">
+            Title
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="title" name="title" type="text">
+        </div>
 
         {% if errorName == true %}
 
@@ -448,7 +416,6 @@
      spellcheck: false
    }) }}
    {% endif %}
-   {% from "govuk/components/input/macro.njk" import govukInput %}
 
    {{ govukInput({
      label: {
