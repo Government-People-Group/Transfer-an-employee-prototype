@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Notification email - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+{% endset%}
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Here is the notification to complete section 2</h1>
+        <p class="govuk-body">
+          Here is some body text
+        </p>
+        <p class="govuk-body">
+          <a class="govuk-link" href="#">a link to an action</a> you must complete.
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
