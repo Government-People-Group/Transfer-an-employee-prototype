@@ -68,16 +68,16 @@ router.post('/section-1/personal-details', function (req, res) {
 router.post('/section-1/security-details-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var higherClearance = req.session.data['more-clearance']
+  var currentClearance = req.session.data['clearance']
 
   // Check whether the variable matches a condition
-  if (higherClearance == "yes") {
+  if (currentClearance == "none") {
     // Send user to next page
-    res.redirect('birth')
+    res.redirect('check-your-answers')
   }
   else {
     // Send user to ineligible page
-    res.redirect('check-your-answers')
+    res.redirect('birth')
   }
 
 })
