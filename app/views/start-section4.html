@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page - Transfer an employee across the Civil Service - GOV.UK
+  Start page - Transfer an employee across the Civil Service - Section 4 - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="section-1/sign-in" method="GET">
+      <form action="/section-4/sign-in-section4" method="GET">
         <h1 class="govuk-heading-xl">
           {% if serviceName %}
             {{ serviceName }}
@@ -19,23 +19,34 @@
         </h1>
 
         <div class="govuk-body">
-          This service is for Civil Servants who are transferring to another Civil Service organisation, including arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs). </div>
-          <div class="govuk-body">This process is commonly known as the other government departments (OGD) transfer process or staff transfers within the Civil Service.
-        </div>
-        <div class="govuk-body">You can complete this section all at once or return later.
-      </div>
+          This section is for line managers of employees transferring across the Civil Service. These include arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs).</div>
 
-        <p class="govuk-body">You'll need:</p>
+
+        <p class="govuk-body">The process is also known as:
+</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>National Insurance Number</li>
-          <li>Current department employee number</li>
-          <li>Your BPSS status</li>
-          <li>Level of security clearance</li>
-          <li>Last 2 months of payslips</li>
-          <li>New department and job details
-        <!--     <a href="..">..</a>-->
-          </li>
+          <li>other government departments (OGD) transfer process</li>
+          <li>staff transfers within the Civil Service.</li>
         </ul>
+
+        <h2 class="govuk-heading-m">In this section</h2>
+        <div class="govuk-body">
+          You will review the employee’s answers to sections 1 and 2.
+
+To complete this section you also need some information about the employee:
+</div>
+<ul class="govuk-list govuk-list--bullet">
+  <li>recruitment through fair and open competition</li>
+  <li>loan end date (if they are on loan to another department)</li>
+  <li>probationary period (if they are on a probationary period)</li>
+  <li>disciplinary record (if any)</li>
+  <li>annual leave arrangements</li>
+  <li>date of transfer</li>
+</ul>
+
+<p class="govuk-body">You can complete Section 3 all at once or return later.
+</p>
+
 
         {{ govukButton({
 text: "Start now",
