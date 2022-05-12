@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  View your answers - GOV.UK
+  Review employee answers - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
@@ -9,8 +9,8 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">View your answers</h1>
-          <form class="form" action="/section-1/task-list-end" method="get">
+      <h1 class="govuk-heading-xl">Review employee answers</h1>
+          <form class="form" action="review-lm-answers" method="get">
 
       <h2 class="govuk-heading-m">Personal details</h2>
 
@@ -169,7 +169,7 @@
 
       </dl>
 
-      <!--<h2 class="govuk-heading-m">Civil Service details</h2>
+      <h2 class="govuk-heading-m">Civil Service details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -177,7 +177,7 @@
             Civil Service <br> start date
           </dt>
           <dd class="govuk-summary-list__value">
-            30 March 2020
+            30 Mar 2020
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -186,7 +186,7 @@
             </a>
           </dd>
         </div>
-      </dl>-->
+      </dl>
 
       <h2 class="govuk-heading-m">Current job details</h2>
 
@@ -297,7 +297,7 @@
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
+        <!--<div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Recent payslips
           </dt>
@@ -310,7 +310,7 @@
               <span class="govuk-visually-hidden"> Recent payslips</span>
             </a>
           </dd>
-        </div>
+        </div>-->
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -362,7 +362,7 @@
       <h2 class="govuk-heading-m">New job details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
+        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             New department
@@ -393,7 +393,7 @@
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
+        <!--<div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Town or city
           </dt>
@@ -436,11 +436,71 @@
               <span class="govuk-visually-hidden">Change of circumstance</span>
             </a>
           </dd>
-        </div>
+        </div>-->
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  28 Jul 2022
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Start date</span>
+                  </a>
+                </dd>
+              </div>
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Salary
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £55,000
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Salary</span>
+                  </a>
+                </dd>
+              </div>
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Working pattern
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Full time
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Working pattern</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  New grade
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Grade 6 Equivalent
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">New grade</span>
+                  </a>
+                </dd>
+              </div>
 
       </dl>
 
-      <h2 class="govuk-heading-m">Workplace adjustment details</h2>
+      <!--<h2 class="govuk-heading-m">Workplace adjustment details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         
@@ -505,8 +565,303 @@
           </dd>
         </div>
 
+      </dl>-->
+
+            <h2 class="govuk-heading-m">Transfer details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Type of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Fixed term
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Type of transfer</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Nature of transfer
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Promotion
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Nature of transfer</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Redeployment move
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Redeployment move</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+            <!--<h2 class="govuk-heading-m">New job details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  12 March 2022
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Start date</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Salary
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  £55,000
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Salary</span>
+                  </a>
+                </dd>
+              </div>
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Working pattern
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Full time
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Working pattern</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Grade
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Grade 6 Equivalent
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Grade</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Department
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Department for Education
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Department</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Bank details for payroll
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Lloyds Bank<br>Joe Bloggs<br>12345678<br>10-12-14
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Bank details for payroll</span>
+                  </a>
+                </dd>
+              </div>
+              
+            </dl>
+
+            <h2 class="govuk-heading-m">Student loan details</h2>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Student loan
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Student loan</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Student loan plan
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Plan 2
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Student loan plan</span>
+                  </a>
+                </dd>
+              </div>
+
       </dl>
 
+      <h2 class="govuk-heading-m">Tax details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Job status since 6 April
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Statement A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            
+            <span class="govuk-visually-hidden">Job status since 6 April</span>
+          </a>
+        </dd>
+      </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Declaration</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Declaration
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            
+            <span class="govuk-visually-hidden">Declaration</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Details updated on Civil Service Pension Portal
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#">
+            
+            <span class="govuk-visually-hidden">Details updated on Civil Service Pension Portal</span>
+          </a>
+        </dd>
+      </div>-->
+
+      </dl>
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        I have read and approve the employee's answers
+      </h1>
+    </legend>
+    <!--<div id="contact-hint" class="govuk-hint">
+      Selecting 'Yes' means you have read and approve the employee's answers.
+    </div>-->
+    <div class="govuk-radios" data-module="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-approve" name="contact" type="radio" value="yes-approve">
+        <label class="govuk-label govuk-radios__label" for="yes-approve">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+          </label>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-reject" name="contact" type="radio" value="text" data-aria-controls="conditional-no-reject">
+        <label class="govuk-label govuk-radios__label" for="no-reject">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no-reject">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Enter comments to explain your decision for not approving the employee's answers.
+          </label>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+      </div>
     </div>
+
+  </fieldset>
+</div>
+
+<form action="task-list-mid" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
   </div>
 {% endblock %}

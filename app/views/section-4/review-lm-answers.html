@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  View your answers - GOV.UK
+  Review employee answers - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
@@ -9,10 +9,10 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-xl">View your answers</h1>
-          <form class="form" action="/section-2/task-list-end" method="get">
+      <h1 class="govuk-heading-xl">Review line manager answers</h1>
+          <form class="form" action="task-list-mid" method="get">
 
-            <h2 class="govuk-heading-m">Employee transfer</h2>
+      <h2 class="govuk-heading-m">Employee transfer</h2>
 
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
@@ -123,7 +123,7 @@
 
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Disciplinary warning or misconduct
+                  Disciplinary warning for misconduct
                 </dt>
                 <dd class="govuk-summary-list__value">
                 No
@@ -131,7 +131,7 @@
                 <dd class="govuk-summary-list__actions">
                   <a href="#">
                     
-                    <span class="govuk-visually-hidden">Disciplinary warning or misconduct</span>
+                    <span class="govuk-visually-hidden">Disciplinary warning for misconduct</span>
                   </a>
                 </dd>
               </div>
@@ -172,6 +172,61 @@
               </div>
              </dl>
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        I have read and approve the line manager's answers
+      </h1>
+    </legend>
+    <!--<div id="contact-hint" class="govuk-hint">
+      Selecting 'Yes' means you have read and approve the employee's answers.
+    </div>-->
+    <div class="govuk-radios" data-module="govuk-radios">
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-approve" name="contact" type="radio" value="yes-approve">
+        <label class="govuk-label govuk-radios__label" for="yes-approve">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+          </label>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-reject" name="contact" type="radio" value="text" data-aria-controls="conditional-no-reject">
+        <label class="govuk-label govuk-radios__label" for="no-reject">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no-reject">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Enter comments to explain your decision for not approving the line manager's answers.
+          </label>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+      </div>
     </div>
+
+  </fieldset>
+</div>
+
+<form action="task-list-mid" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
   </div>
 {% endblock %}

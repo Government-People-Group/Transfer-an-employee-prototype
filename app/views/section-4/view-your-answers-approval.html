@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View your answers - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">View your answers</h1>
+          <form class="form" action="/section-2/task-list-end" method="get">
+
+          <h2 class="govuk-heading-m">Employee answers</h2>
+
+            <!--<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reviewed and accepted
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes - I have read and approve the employee's answers.
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Employee answers reviewed and accepted</span>
+                  </a>
+                </dd>
+              </div>-->
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  HR approval
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+
+                    <span class="govuk-visually-hidden">HR approval</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Comments for employee
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  The start date is not correct. Could you please check your contract and enter again?
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+
+                    <span class="govuk-visually-hidden">Comments for employee</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+            <h2 class="govuk-heading-m">Line manager answers</h2>
+
+            <!--<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Reviewed and accepted
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes - I have read and approve the employee's answers.
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+                    
+                    <span class="govuk-visually-hidden">Employee answers reviewed and accepted</span>
+                  </a>
+                </dd>
+              </div>-->
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  HR approval
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+
+                    <span class="govuk-visually-hidden">HR approval</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Comments for line manager
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  The employee's start date is not correct. Could you please check this with the employee's contract and resend for approval?
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#">
+
+                    <span class="govuk-visually-hidden">Comments for employee</span>
+                  </a>
+                </dd>
+              </div>
+
+            </dl>
+
+    </div>
+  </div>
+{% endblock %}
