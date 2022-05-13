@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Vacancy holder - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/section-1/higher-security-clearance" method="post">
+
+        {% if errorName == true or errorDob == true or errorEmail == true or errorNin == true%}
+          {{ govukErrorSummary({
+                 titleText: "There is a problem",
+                 errorList: errorList
+               }) }}
+        {% endif %}
+
+        <h1 class="govuk-heading-l">
+          Vacancy holder
+        </h1>
+
+
+
+        {% if errorName == true %}
+
+
+        {% else %}
+          {{ govukInput({
+              label: {
+                text: "Full name"
+              },
+              classes: "govuk-input--width-20",
+              id: "full-name",
+              name: "full-name"
+            }) }}
+            {{ govukInput({
+              label: {
+                text: "email address"
+              },
+              classes: "govuk-input--width-20",
+              id: "email",
+              name: "email"
+            }) }}
+
+        {% endif %}
+
+
+
+  
+
+        {{ govukButton({
+           text: "Save and continue"
+         }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
