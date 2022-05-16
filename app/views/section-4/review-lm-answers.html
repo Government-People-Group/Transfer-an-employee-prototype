@@ -176,7 +176,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        I have read and approve the line manager's answers
+        Review
       </h1>
     </legend>
     <!--<div id="contact-hint" class="govuk-hint">
@@ -187,7 +187,7 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="yes-approve" name="contact" type="radio" value="yes-approve">
         <label class="govuk-label govuk-radios__label" for="yes-approve">
-          Yes
+          I have read and confirm the line manager's answers
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
@@ -200,13 +200,13 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="no-reject" name="contact" type="radio" value="text" data-aria-controls="conditional-no-reject">
         <label class="govuk-label govuk-radios__label" for="no-reject">
-          No
+          I have read and corrected the line manager's answers
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-no-reject">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-text">
-            Enter comments to explain your decision for not approving the line manager's answers.
+          <label class="govuk-hint" for="contact-by-text">
+            Enter comments to explain your corrections
           </label>
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
         </div>
