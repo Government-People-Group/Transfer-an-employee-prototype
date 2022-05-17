@@ -22,28 +22,33 @@
         <ul class="govuk-tabs__list">
           <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
             <a class="govuk-tabs__tab" href="#code">
-              Currently being user tested
+              Tested with users
             </a>
           </li>
           <li class="govuk-tabs__list-item">
             <a class="govuk-tabs__tab" href="#form-versions">
-              Previous versions
+              Version history
             </a>
           </li>
         </ul>
+
+
         <div class="govuk-tabs__panel" id="code">
+
+          <p class="govuk-body-m">Tested with 4 users (employees) between 15/02/2022 - 17/02/2022</p>
+
           <h2 class="govuk-heading-l">
             Scenario
           </h2>
 
-          <p class="govuk-body">You currently work at MOJ. You have applied for and been offered a job at HMRC. To progress your application, you have been asked to complete an online form. </p><p class="govuk-body">You completed the first section of the form 2 days ago and you’ve since been notified via email you are now required to complete the next section. </p>
+          <p class="govuk-body">You currently work at MOJ. You have applied for and been offered a job at HMRC. To progress your application, you have been asked to complete an online form. <br><br> You completed the first section of the form 2 days ago and you’ve since been notified via email you are now required to complete the next section. <br><br> The first section covered your personal details, and Security Clearance status.</p>
 
           <h3 class="govuk-heading-m">Task</h3>
           <p class="govuk-body">
             Can you show and tell me how you would fill out the form?</p>
 
             <p class="govuk-body">Think aloud. I’ll ask you some specific questions as you progress through the form.</p>
-<p class="govuk-body">Use your real information wherever possible; this is a dummy version of the service and nothing will be stored. This is to help us understand how accessible the data we are asking for is. </p>
+<p class="govuk-body">Use your real information wherever possible; this is a dummy version of the service and nothing will be stored. This is to help us understand how accessible the data we are asking for is. <br><br> The screens that play the information back to you are pre-populated with dummy data.</p>
 
 
           <h2 class="govuk-heading-l">Shortcuts</h2>
@@ -195,7 +200,7 @@
 
 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="form-versions">
 <table class="govuk-table version-history">
-<caption class="govuk-table__caption govuk-heading-l">Previous versions</caption>
+<caption class="govuk-table__caption govuk-heading-l">Version history</caption>
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Version</th>
@@ -206,6 +211,34 @@
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header">
+  <a href="https://transfer-an-employee-v1.herokuapp.com/">Version 2</a>
+</th>
+<td class="govuk-table__cell">15/02/22 - 17/02/22</td>
+<td class="govuk-table__cell">
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Changes included in version 2
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      <ul class="govuk-list--bulletlist">
+
+        <li>
+          First version
+        </li>
+      </ul>
+    </div>
+  </details>
+</td>
+<td class="govuk-table__cell">
+  <strong class="govuk-tag govuk-tag--green">
+    Tested with 4 users (employees)
+  </strong>
+</td>
+</tr>
+
 <th scope="row" class="govuk-table__header">
   <a href="https://transfer-an-employee-v1.herokuapp.com/">Version 1</a>
 </th>
@@ -232,7 +265,7 @@
     Tested with 5 users
   </strong>
 </td>
-</tr>
+
 </tbody>
 </table>
 </div>
