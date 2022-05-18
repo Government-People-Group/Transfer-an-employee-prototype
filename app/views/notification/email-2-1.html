@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Notification email - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+{% endset%}
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Staff transfer: Section 1 completed</h1>
+        <p class="govuk-body">[PLACEHOLDER: INSERT EMPLOYEE NAME] has completed Section 1 of the staff transfer form.</p>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">
+          You need to review the details [PLACEHOLDER: INSERT EMPLOYEE NAME] has provided in Section 1.<br><br>
+          You should use the information they have provided to progress their pre-employment checks.<br><br> 
+          We will email [PLACEHOLDER: INSERT EMPLOYEE NAME] once their checks are complete. They will then complete Section 2 of the form and submit it to their current line manager. 
+
+        </p>
+       <p class="govuk-body"><a class="govuk-link" href="https://prototype-training.herokuapp.com/guidance/employee-guidance">Guidance on the staff transfer process</a>, including how to complete the form is on GOV.UK</p>
+       <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

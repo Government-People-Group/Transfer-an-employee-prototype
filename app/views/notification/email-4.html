@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Notification email - GOV.UK
+{% endblock %}
+
+{% set serviceName %}
+{% endset%}
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Completion of staff transfer form (Section 3) needed</h1>
+        <p class="govuk-body">[PLACEHOLDER: EMPLOYEE NAME] has accepted a provisional job offer in another Government department. They have completed the first 2 sections of the Civil Service staff transfer form.
+                              </p>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">You now need to complete <a class="govuk-link" href="https://transfer-an-employee-v6.herokuapp.com/section-3/start-section3">Section 3 of the staff transfer form</a>.</p>
+
+        <h3 class="govuk-heading-s">In this section</h3>
+
+        <p class="govuk-body">You need to review the employee’s answers to Sections 1 and 2.<br><br>
+                              To complete this section, you will also need some information about the employee:
+                              </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>recruitment through fair and open competition</li>
+          <li>loan end date (if they are on loan to another department)</li>
+          <li>probationary period (if they are on a probationary period)</li>
+          <li>disciplinary record (if any)</li>
+          <li>annual leave arrangements</li>
+          <li>date of transfer</li>
+        </ul>
+
+                <p class="govuk-body">You can complete this section all at once or return later.</p>
+
+
+                <p class="govuk-body">
+                  When you have completed this section, your current line manager will review the information you have provided. 
+                </p>
+
+              <h3 class="govuk-heading-s">Timescale</h3>
+
+              <p class="govuk-body">
+                Complete Section 3 within two working days and submit to your HR team/Shared Services. You should copy in [PLACEHOLDER: EMPLOYEE NAME].
+                </p>
+
+       <p class="govuk-body"><a class="govuk-link" href="https://prototype-training.herokuapp.com/guidance/employee-guidance">Guidance on the staff transfer process</a>, including how to complete the form is on GOV.UK</p>
+       <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
