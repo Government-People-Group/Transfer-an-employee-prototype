@@ -1,1 +1,73 @@
+{% extends "layout.html" %}
 
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">How to move roles across the Civil Service: General principles and further information</h1>
+<h2 class="govuk-heading-m">Contents</h2>
+<ul class="govuk-list govuk-list--bullet">
+<li><a class="scroll-to" href="#intro">Introduction</a></li>
+<li><a class="scroll-to" href="#who">Who does the staff transfer process apply to?</a></li>
+<li><a class="scroll-to" href="#how">How do I transfer?</a></li>
+<li><a class="scroll-to" href="#except">Exceptions</a></li>
+</ul>
+<h2 class="govuk-heading-m">Eligibility</h2>
+<p class="govuk-body">All civil servants recruited through open and fair competition can apply for, or be considered for a staff transfer on:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>a level grade</li>
+<li>a lower grade</li>
+<li>promotion</li>
+    </ul>
+<p class="govuk-body">Also eligible to apply:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>employees in crown non-departmental public bodies (NDPBs)</li>
+<li>employees in accredited non-crown NDPBs (accredited by the Civil Service Commission)</li>
+<li>employees transferring from the Northern Ireland Civil Service (NICS)</li>
+</ul>
+<p class="govuk-body">If you are on a probationary period, the job advert should clarify eligibility to transfer.</p>
+<p class="govuk-body">If you are not sure if you are eligible, contact your HR Business Partner.</p>
+<p class="govuk-body">Employees transferring to the NICS should contact the vacancy holder to check if they will honour your continuous service.</p>
+<h2 class="govuk-heading-m">Your transfer</h2>
+<p class="govuk-body">Make sure you understand the terms of your transfer in full, including any effect on your:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>allowances</li>
+<li>annual leave allowance</li>
+<li>entitlement to occupational maternity/paternity pay</li>
+<li>payments into any childcare voucher scheme</li>
+<li>pension contributions</li>
+<li>performance award/bonus</li>
+<li>salary</li>
+<li>terms and conditions of employment</li>
+</ul>
+<p class="govuk-body">This list is not exhaustive.</p>
+<p class="govuk-body">Refer to your job advert or check with your vacancy holder for more details about terms and conditions. Remember, your current department will pay you until your last working day with them.</p>
+<p class="govuk-body">Check how your performance award/bonus will be paid if this applies. Speak to your current manager, then your new manager to find out.</p>
+<p class="govuk-body">You will get an employment contract on or before your start date. If you do not, contact your line manager. You keep employment rights related to length of service. For example, annual leave and pension.</p>pension contributions
+<h2 class="govuk-heading-m">Systems and processes</h2> 
+<h3 class="govuk-heading-m">Your current department’s responsibilities</h3>
+<p class="govuk-body">Your current department is responsible for:</p>
+
+
+
+
+
+
+<h2 class="govuk-heading-m" id="XXXXX">XXXXX</h2>
+<p cass="govuk-body"></p>
+<p class="govuk-body"></p>
+<h2 class="govuk-heading-m" id="XXXXX">XXXXXX</h2>     
+<p class="govuk-body"></p>
+<ul class="govuk-list govuk-list--bullet">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+      </div>
+    </div>
+{% endblock %}
