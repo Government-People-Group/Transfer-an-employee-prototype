@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contact details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/section-1/current-department" method="post">
+
+        <h1 class="govuk-heading-l">
+          Contact details
+        </h1>
+
+   {% if errorEmail == true %}
+
+   {{ govukInput({
+     label: {
+       text: "Email address"
+     },
+     hint: {
+       text: "We’ll use this to .."
+     },  classes: "govuk-input--width-20",
+     id: "email",
+     name: "email",
+     type: "email",
+     autocomplete: "email",
+     errorMessage: {
+       text: "Enter an email address in the correct format, like name@example.com"
+     },
+     spellcheck: false
+   }) }}
+   {% else %}
+
+   {{ govukInput({
+     label: {
+       text: "Primary email address"
+     },
+     hint: {
+       text: "For example, your work email address"
+     },
+       classes: "govuk-input--width-20",
+     id: "primary-email",
+     name: "primary-email",
+     type: "email",
+     autocomplete: "email",
+     spellcheck: false
+   }) }}
+
+   {{ govukInput({
+     label: {
+       text: "Backup email address"
+     },
+     hint: {
+       text: "For example, a personal email address"
+     },
+       classes: "govuk-input--width-20",
+     id: "backup-email",
+     name: "backup-email",
+     type: "email",
+     autocomplete: "email",
+     spellcheck: false
+   }) }}
+   {% endif %}
+
+   {{ govukInput({
+     label: {
+       text: "Telephone number"
+     },
+     hint: {
+       text: "This should be your personal number"
+     },
+     id: "telephone-number",
+     name: "telephone-number",
+     type: "tel",
+     autocomplete: "tel",
+     classes: "govuk-input--width-20"
+   }) }}
+
+
+        {{ govukButton({
+           text: "Save and continue"
+         }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
