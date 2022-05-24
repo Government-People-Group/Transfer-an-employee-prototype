@@ -73,7 +73,7 @@ router.post('/section-1/security-details-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (currentClearance == "none") {
     // Send user to next page
-    res.redirect('check-your-answers')
+    res.redirect('workplace-adjustment')
   }
   else {
     // Send user to ineligible page
