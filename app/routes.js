@@ -170,10 +170,10 @@ router.post('/section-2/retirement-answer', function (req, res) {
 router.post('/section-3/probation-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
-  var pensionAnswer = req.session.data['probation']
+  var probationAnswer = req.session.data['probation']
 
   // Check whether the variable matches a condition
-  if (pensionAnswer == "yes") {
+  if (probationAnswer == "yes") {
     // Send user to next page
     res.redirect('disciplinary')
   }
