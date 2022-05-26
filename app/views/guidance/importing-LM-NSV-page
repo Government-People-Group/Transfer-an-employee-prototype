@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">National Security Vetting (NSV)</h1>
+        <p class="govuk-body-l">If the employee holds a National Security Vetting (NSV) clearance level or they need one for their new role, this is part of their transfer process.</p>
+        <p class="govuk-body">NSV is sometimes called security clearance. It sits with the employee, not their role.</p>
+        <p class="govuk-body">If they have a valid NSV, it will be transferable if the expiry date is longer than 3 months, unless there is:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>a risk flag</li>
+  <li>an issue with the transfer</li>
+</ul>
+      <p class="govuk-body">The employee will be told if the NSV transfer will take more than 7 days. For example:</p>
+           <ul class="govuk-list govuk-list--bullet">
+  <li>active after care is present</li>
+  <li>NSV is not found</li>
+</ul>
+        <p class="govuk-body">The employee should <strong>always</strong> complete part A-1 of the staff transfer form. They should only complete the NSV section if:</p>
+            <ul class="govuk-list govuk-list--bullet">
+  <li>their new role needs NSV - regardless of current clearance</li>
+  <li>they have valid NSV clearance - regardless of level, even if their new role does not need NSV clearance</li>
+</ul>
+<h2 class="govuk-heading-m">Pre-employment checks</h2>
+           <p class="govuk-body">The employee's new role may need them to have pre-employment checks. This could include checks on:</p>
+                   <ul class="govuk-list govuk-list--bullet">
+  <li><a href="#" class="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard">Baseline Personnel Security Standard (BPSS)</a></li>
+  <li>relationships with current prisoners</li>
+  <li>safeguarding checks to work with children or vulnerable adults</li>
+</ul>
+        <p class="govuk-body">This list is not exhaustive.</p>
+    </div>
+  </div>
+{% endblock %}
