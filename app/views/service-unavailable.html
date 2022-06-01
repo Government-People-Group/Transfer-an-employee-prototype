@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Service unavailable
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
+    <p class="govuk-body">
+      You will be able to use the service from 9am on Monday 13&nbsp;June&nbsp;2022.
+    </p>
+
+    <h2 class="govuk-heading-m">Other ways to complete the form</h2>
+        <p class="govuk-body">You can complete a
+          <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies#:~:text=an%20accessible%20format.-,Civil%20Service%20Employee%20Transfer%20Form,-MS%20Excel%20Spreadsheet" class="govuk-link">spreadsheet version of the form</a>
+        </p>
+    <p class="govuk-body">
+      <a class ="govuk-link" href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies">Guidance on GOV.UK</a> explains how to move between departments and agencies, including completing the Civil Service Employee Transfer form.
+
+
+    </p>
+  </div>
+</div>
+{% endblock %}

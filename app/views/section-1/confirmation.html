@@ -4,20 +4,14 @@
   Confirmation - GOV.UK
 {% endblock %}
 
-<!--service names are not currently shown on CH sign in or company authenticate-->
-{% set serviceName %}
-{% endset%}
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}{% endblock %}
 
-{% block beforeContent %}
-  {% include "includes/phase-banner.html" %}
-{% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
-        titleText: "Application submitted",
-        html: "Your reference number<br><strong>HDJ2123F</strong>"
+        titleText: "Section 1 submitted"
       }) }}
 
       <p class="govuk-body">We have sent you a confirmation email.</p>
@@ -25,10 +19,10 @@
       <h2 class="govuk-heading-m">What happens next</h2>
 
       <p class="govuk-body">
-        We’ve sent your application to the vacancy holder.
+        We’ve sent a copy of your answers to the vacancy holder.
       </p>
       <p class="govuk-body">
-        Your new department will progress your pre-employment check. They will contact you to agree a start date and salary for your new role.</p>
+        Your new department will progress your pre-employment checks. They will contact you to agree a start date and salary for your new role.</p>
       <p class="govuk-body">When these are confirmed, we will ask you to complete the second section of the staff transfer form.</p>
       <p class="govuk-body">
         <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
