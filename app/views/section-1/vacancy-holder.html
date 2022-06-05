@@ -19,47 +19,20 @@
 
       <form action="/section-1/higher-security-clearance" method="post">
 
-        {% if errorName == true or errorDob == true or errorEmail == true or errorNin == true%}
-          {{ govukErrorSummary({
-                 titleText: "There is a problem",
-                 errorList: errorList
-               }) }}
-        {% endif %}
+        {{ govukInput({
+          label: {
+            text: "What is the vacancy holders email address?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "A copy of the details you have provided will be sent to the vacancy holder"
+          },
 
-        <h1 class="govuk-heading-l">
-          Vacancy holder
-        </h1>
-
-
-
-        {% if errorName == true %}
-
-
-        {% else %}
-
-        <p class="govuk-hint">A copy of the details you have provided will be sent to the vacancy holder</p>
-          {{ govukInput({
-              label: {
-                text: "Full name"
-              },
-              classes: "govuk-input--width-20",
-              id: "full-name",
-              name: "full-name"
-            }) }}
-            {{ govukInput({
-              label: {
-                text: "Email address"
-              },
-              classes: "govuk-input--width-20",
-              id: "email",
-              name: "email"
-            }) }}
-
-        {% endif %}
-
-
-
-
+          classes: "govuk-input--width-20",
+          id: "email",
+          name: "email"
+        }) }}
 
         {{ govukButton({
            text: "Save and continue"
