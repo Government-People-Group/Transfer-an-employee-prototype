@@ -1,3 +1,10 @@
+
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
    <div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
     <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
         <nav class="gem-c-contents-list" aria-label="Contents" role="navigation" data-module="gem-track-click">
@@ -22,12 +29,6 @@
         </li>
     </ol>
 </nav>   
-{% extends "layout.html" %}
-
-<!-- Adds a class to increase vertical spacing for pages without a back button -->
-{% block pageTitle %}
-  Transfer an employee across the Civil Service
-{% endblock %}
 {% block beforeContent %}{% endblock %}
 {% block content %}
 <div class="govuk-width-container">
