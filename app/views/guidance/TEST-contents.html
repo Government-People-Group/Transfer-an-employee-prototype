@@ -5,12 +5,17 @@
 {% block pageTitle %}
   Transfer an employee across the Civil Service
 {% endblock %}
-   <div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
-    <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
-        <nav class="gem-c-contents-list" aria-label="Contents" role="navigation" data-module="gem-track-click">
-    <h2 class="gem-c-contents-list__title">
-      Contents
-</h2>
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">How to move roles across the Civil Service: guidance for employees</h1>
+        <p class="govuk-body-l">This guidance for employees explains the staff transfer process and what you need to do to change departments in the Civil Service.</p>
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+                                <h2 class="gem-c-contents-list__title">Contents</h2>
+                              </li>
     <ol class="gem-c-contents-list__list">
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered">
           <a class="scroll-to" href="#intro">Introduction</a>
@@ -27,17 +32,14 @@
         <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered">
           <a class="scroll-to" href="#principles">General principles and further information</a>
         </li>
-    </ol>
-</nav>   
-{% block beforeContent %}{% endblock %}
-{% block content %}
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">How to move roles across the Civil Service: guidance for employees</h1>
-        <p class="govuk-body-l">This guidance for employees explains the staff transfer process and what you need to do to change departments in the Civil Service.</p>
+                                
+                              </li>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
         <h2 class="govuk-heading-l" id="intro">Introduction</h2>
 <h3 class="govuk-heading-m" id="who">Who does the staff transfer process apply to?</h3>
 <p class="govuk-body">It applies to civil servants who are moving between:</p>
