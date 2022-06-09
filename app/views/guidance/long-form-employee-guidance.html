@@ -1,5 +1,12 @@
-<div class="govuk-width-container">
+{% extends "layout.html" %}
 
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}{% endblock %}
+{% block content %}
+<div class="govuk-width-container">
   <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
@@ -445,6 +452,7 @@ li>completing a new security clearance request if applicable</li>
   <p cass="govuk-body">You transferred to your new department in January 2022. Your old shared services/HR team were only told in March 2022 so your old department overpaid you by 2 months.</p>
   <p cass="govuk-body">When the overpayment ends, your old department contacts you to request you repay this. You should immediately repay the net figure to your old department.</p>
       </div>
+
       <div class="govuk-grid-column-one-third">
         <h2 class="govuk-heading-m">Related guidance</h2>
         <p class="govuk-body"><a href="#" class="https://prototype-training.herokuapp.com/guidance/exporting-LM-guidance-intro.html">Guidance for exporting managers</a></p>
@@ -454,6 +462,4 @@ li>completing a new security clearance request if applicable</li>
 
   </main>
 </div>
-      </div>
-    </div>
 {% endblock %}
