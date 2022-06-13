@@ -13,12 +13,35 @@
     bottom: 0;
     position: fixed;
 }
+.gem-c-print-link__button {
+    color: rgb(29, 112, 184);
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(177, 180, 182);
+    border-image: initial;
+    margin: 0px;
+}
+
+.gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+    color: rgb(11, 12, 12);
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.gem-c-print-link__link, .gem-c-print-link__button {
+    background-image: url(/assets/images/icon-print-2x.png);
+}
+
 </style>
 
 <div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
 	<div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
 	<nav class="gem-c-contents-list" aria-label="Contents" role="navigation" data-module="gem-track-click">
-	<h2 class="gem-c-contents-list__title">
+	<h2 class="govuk-heading-m">
 	Contents
 	</h2>
 	<ol class="gem-c-contents-list__list">
@@ -33,10 +56,6 @@
 	<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
 	</div>
 	</div>
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-
-    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">How to move roles across the Civil Service: guidance for employees</h1>
         <p class="govuk-body-l">This guidance for employees explains the staff transfer process and what you need to do to change departments in the Civil Service.</p>
@@ -377,6 +396,4 @@ You should complete sections 1-4 of the staff transfer form.
     </div>
         </div>
       </div>
-  </main>
-</div>
 {% endblock %}
