@@ -6,6 +6,15 @@
 {% endblock %}
 {% block beforeContent %}{% endblock %}
 {% block content %}
+
+<style>
+
+.js-enabled .sticky-element--stuck-to-window {
+    bottom: 0;
+    position: fixed;
+}
+</style>
+
 <div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
 	<div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
 	<nav class="gem-c-contents-list" aria-label="Contents" role="navigation" data-module="gem-track-click">
@@ -13,13 +22,13 @@
 	Contents
 	</h2>
 	<ol class="gem-c-contents-list__list">
-		</li><a class="scroll-to" href="#intro">Introduction</a></li>
+		<li><a class="scroll-to" href="#intro">Introduction</a></li>
 		<li><a class="scroll-to" href="#NSV">National Security Vetting (NSV)</a></li>
 		<li><a class="scroll-to" href="#steps">Steps in the staff transfer process</a></li>
-	<li><a class="scroll-to" href="#principles">General principles and further information</a></a></li>
+	<li><a class="scroll-to" href="#principles">General principles and further information</a></li>
 	</ol>
 	</nav>
-	
+
 	<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
 	<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
 	</div>
@@ -55,7 +64,7 @@
 <h2 class="govuk-heading-m" id="how">How do I transfer?</h2>
 <p class="govuk-body">You will get an email confirming your provisional job offer.</p>
 <p class="govuk-body">You should then complete the <a href="#" class="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/997207/Civil_Service_Employee_Transfer_Form__9.xlsx">staff transfer form</a>. This is otherwise known as the Civil Service Employee Transfer (CSET) form. It covers HR, payroll and security clearance transfer. Your line manager and HR/shared services also have sections of the form to complete.</p>
-<h2 class="govuk-heading-m">Exceptions</h2>     
+<h2 class="govuk-heading-m">Exceptions</h2>
 <p class="govuk-body">The staff transfer form is mandatory except for:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>machinery of government changes</li>
@@ -103,9 +112,9 @@
 </ul>
         <p class="govuk-body">Your security clearance will be transferable unless there is:</p>
        <ul class="govuk-list govuk-list--bullet">
-         <li>a risk flag</li> 
+         <li>a risk flag</li>
          <li>an issue with the transfer</li>
- </ul>     
+ </ul>
         <p class="govuk-body">Some departments do not need all of the completed sections. Check with your new department to find out what information they need from you.</p>
         <div class="govuk-inset-text">
           <h4 class="govuk-heading-s">Example 1: I do not have a valid NSV. My role does not need NSV.</h4>
@@ -113,7 +122,7 @@ If you do not hold National Security Clearance you should complete Part A-1, sec
 </div>
          <div class="govuk-inset-text">
            <h4 class="govuk-heading-s">Example 2: My role needs valid NSV but I do not have it.</h4>
-You should complete sections 1-4 of the staff transfer form. 
+You should complete sections 1-4 of the staff transfer form.
 </div>
          <div class="govuk-inset-text">
            <h4 class="govuk-heading-s">Example 3: I have valid NSV for at least 3 months.</h4>
@@ -136,7 +145,7 @@ You should complete sections 1-4 of the staff transfer form.
 </ul>
      <p class="govuk-body">Some departments do this at interview, but they will not repeat the checks at this stage.</p>
 <h3 class="govuk-heading-m">Step 5: Your start date is agreed</h3>
- <p class="govuk-body">Make sure both your current and new managers agree on a start date. It is strongly advised to agree a start date on the first of the month. Otherwise, this will have an effect on your pay. The most common examples are:</p>        
+ <p class="govuk-body">Make sure both your current and new managers agree on a start date. It is strongly advised to agree a start date on the first of the month. Otherwise, this will have an effect on your pay. The most common examples are:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>emergency tax applied</li>
   <li>under or overpayment of salary</li>
@@ -149,13 +158,13 @@ You should complete sections 1-4 of the staff transfer form.
 <p class="govuk-body">You should give your current department at least 1 calendar month notice.</p>
 <p class="govuk-body">You should always move before your new department’s payroll cut-off, even if your start date cannot be the first of the month. There is a payroll cut-off dates tab in the staff transfer form to help you find them.</p>
 <h4 class="govuk-heading-s">If you move after your new department’s payroll cut-off date</h4>
-<p class="govuk-body">Your new department will aim to add you to payroll as soon as possible.</p>        
-<p class="govuk-body">If you are not on payroll in time for your next payday you can:</p> 
+<p class="govuk-body">Your new department will aim to add you to payroll as soon as possible.</p>
+<p class="govuk-body">If you are not on payroll in time for your next payday you can:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>arrange an emergency payment with your new Shared Services/HR team.</li>
   <li>wait until your next payday when your pay is backdated</li>
 </ul>
-  <p class="govuk-body">If you are overpaid, any overpayments will be recovered from you, not your new department. For example, if both your current and new department pay you for the same period.</p> 
+  <p class="govuk-body">If you are overpaid, any overpayments will be recovered from you, not your new department. For example, if both your current and new department pay you for the same period.</p>
   <p class="govuk-body">If you notice any issues with your pay, raise this immediately with your new line manager.</p>
   <h3 class="govuk-heading-m">Step 6: You get confirmation of salary and start date</h3>
  <p class='govuk-body'>Following completion of pre-employment checks, you will receive confirmation of your salary and start date. You will then be asked to complete part A-2 of the staff transfer form.</p>
@@ -208,7 +217,7 @@ You should complete sections 1-4 of the staff transfer form.
 <p class="govuk-body">Refer to your job advert or check with your vacancy holder for more details about terms and conditions. Remember, your current department will pay you until your last working day with them.</p>
 <p class="govuk-body">Check how your performance award/bonus will be paid if this applies. Speak to your current manager, then your new manager to find out.</p>
 <p class="govuk-body">You will get an employment contract on or before your start date. If you do not, contact your line manager. You keep employment rights related to length of service. For example, annual leave and pension.</p>
-<h2 class="govuk-heading-m">Systems and processes</h2> 
+<h2 class="govuk-heading-m">Systems and processes</h2>
 <h3 class="govuk-heading-s">Your current department’s responsibilities</h3>
 <p class="govuk-body">Your current department is responsible for:</p>
 <ul class="govuk-list govuk-list--bullet">
@@ -227,16 +236,16 @@ You should complete sections 1-4 of the staff transfer form.
 <ul class="govuk-list govuk-list--bullet">
 <li>completing your pre-employment checks</li>
 <li>transfer of any valid security clearance</li>
-li>completing a new security clearance request if applicable</li>
+<li>completing a new security clearance request if applicable</li>
 <li>making sure you have a staff number and start date</li>
 <li>setting up your HR record and paying you from your start date</li>
 </ul>
-<h2 class="govuk-heading-m">Advice on pre-employment checks and security clearance</h2> 
+<h2 class="govuk-heading-m">Advice on pre-employment checks and security clearance</h2>
 <h3 class="govuk-heading-s">Pre-employment checks</h3>
 <p cass="govuk-body">All staff transferring from other departments undergo some pre-employment checks. These are known as Baseline Personnel Security Standard (BPSS) checks. Some departments also refer to them as ‘basic’ or ‘baseline’ checks.</p>
 <p cass="govuk-body">They help departments follow legislation to provide evidence of right to work, including:<p>
 <ul class="govuk-list govuk-list--bullet">
-<li>your right to work in the UK</li></li>
+<li>your right to work in the UK</li>
 <li>your right to work in the Civil Service</li>
 <li>your nationality and immigration status</li>
 <li>an identity check</li>
@@ -308,7 +317,7 @@ li>completing a new security clearance request if applicable</li>
 <li>move to the bottom of the new grade pay scale</li>
 <li>receive a per cent increase in basic pay (usually 10%)</li>
 </ul>
-   <p cass="govuk-body">whichever would be more.</p> 
+   <p cass="govuk-body">whichever would be more.</p>
 </div>
 <div class="govuk-inset-text">
   <h4 class="govuk-heading-s">Example 2</h4>
@@ -339,7 +348,7 @@ li>completing a new security clearance request if applicable</li>
 <h3 class="govuk-heading-m">The effect of under or overpayment</h3>
 <p cass="govuk-body">To avoid any payroll or tax issues, it is strongly advised to agree a start date of the first of the month.</p>
 <p cass="govuk-body">If your old department is not told to remove you from payroll in time, you may be overpaid. You should consider payroll cut off dates and your start date when you move departments. Speak to your HR team to understand payroll cutoff dates.</p>
-<p cass="govuk-body">If you are overpaid, do not spend this money. You will need to pay it back in a lump sum after tax. You should not feel any effect on your take home pay.</p> 
+<p cass="govuk-body">If you are overpaid, do not spend this money. You will need to pay it back in a lump sum after tax. You should not feel any effect on your take home pay.</p>
 <p cass="govuk-body">Your old department will contact you to recover any overpayment. This will be the salary for the time you did not work for them.</p>
 <p cass="govuk-body">If returning the overpayment creates a particular hardship, contact your old department immediately. In extreme circumstances they may be able to support a gradual repayment.</p>
 <p cass="govuk-body">If you notice any issues with your pay, raise this immediately.</p>
@@ -351,13 +360,23 @@ li>completing a new security clearance request if applicable</li>
       </div>
       </div>
     </div>
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">Related guidance</h2>
-        <p class="govuk-body"><a href="#" class="https://prototype-training.herokuapp.com/guidance/exporting-LM-guidance-intro.html">Staff transfer guidance for exporting managers</a></p>
-        <p class="govuk-body"><a href="#" class="https://prototype-training.herokuapp.com/guidance/importing-LM-guidance-intro.html">Staff transfer guidance for importing managers</a></p>
-      </div>
-    </div>
 
+    <div data-sticky-element="" class="sticky-element sticky-element--enabled sticky-element--stuck-to-window">
+        <a class="govuk-link app-c-back-to-top dont-print" href="#contents">
+        <svg class="app-c-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        Contents
+    </a>
+
+        <div class="sticky-element__print-link">
+
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+
+        <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+        </div>
+      </div>
   </main>
 </div>
 {% endblock %}
