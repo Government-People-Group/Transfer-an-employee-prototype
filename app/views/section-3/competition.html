@@ -15,16 +15,7 @@ Was this individual recruited through fair and open competition? - GOV.UK
 
       <form class="form" action="probation" method="post">
 
-        {% set unsureHtml %}
-
-        <p class="govuk-body">
-          Contact the employees HR department or the their original recruitment manager
-        </p>
-        {% endset -%}
-
         {% set noHtml %}
-
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
   {{ govukTextarea({
     name: "more-detail",
@@ -46,10 +37,14 @@ Was this individual recruited through fair and open competition? - GOV.UK
       classes: "govuk-fieldset__legend--l"
     }
   },
+  hint: {
+    text: "If you are not sure, contact the employees HR department or the their original recruitment manager"
+    },
   items: [
     {
       value: "yes",
       text: "Yes"
+
     },
     {
       value: "no",
@@ -57,15 +52,7 @@ Was this individual recruited through fair and open competition? - GOV.UK
       conditional: {
         html: noHtml
       }
-    },
-    {
-      value: "unsureHtml",
-      text: "I'm not sure",
-      conditional: {
-        html: unsureHtml
-      }
     }
-
   ]
 }) }}
 
@@ -73,6 +60,21 @@ Was this individual recruited through fair and open competition? - GOV.UK
 
       </form>
 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-s" id="subsection-title">
+          Helpful links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list
+    govuk-!-font-size-16">
+            <li>
+              <a href="https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/" class="govuk-link" rel="noreferrer noopener" target="_blank">Civil Service Commision - Recruitment Priciples (opens in new tab)</a>
+          </ul>
+
+        </nav>
+      </aside>
     </div>
   </div>
 
