@@ -14,16 +14,7 @@
 
       <form class="form" action="security-details-answer" method="post">
 
-        {% set unsureHtml %}
-
-        <p class="govuk-body">
-          The job advert for your new role should contain the level of security clearance you need. Contact your vacancy holder if you cannot find this.
-
-        </p>
-        {% endset -%}
-
-        {% set yesHtml %}
-
+{% set yesHtml %}
         <p class="govuk-body">
           You will need to complete a new NSV application in addition to this form. Your vacancy holder will arrange this as necessary.
         </p>
@@ -39,6 +30,9 @@
               classes: "govuk-fieldset__legend--l"
             }
           },
+          hint: {
+  text: "The job advert for your new role should contain the level of security clearance you need. Contact your vacancy holder if you cannot find this."
+},
 
           items: [
             {
@@ -51,13 +45,7 @@
             {
               value: "no",
               text: "No"
-            },
-            {
-              value: "unsure",
-              text: "I'm not sure",
-              conditional: {
-                html: unsureHtml
-              }
+            
             }
           ]
         }) }}
