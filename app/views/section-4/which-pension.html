@@ -5,7 +5,7 @@ Which pension scheme are you a member of? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -14,37 +14,6 @@ Which pension scheme are you a member of? - GOV.UK
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="which-pension-answer" method="post">
-
-<!--<h1 class="govuk-heading-l">
-  Which pension scheme is the employee a member of?
-</h1>
-
-{{ govukSelect({
-  id: "sort",
-  name: "sort",
-  label: {
-    text: "Sort by"
-  },
-  items: [
-    {
-      value: "published",
-      text: "Recently published"
-    },
-    {
-      value: "updated",
-      text: "Recently updated",
-      selected: true
-    },
-    {
-      value: "views",
-      text: "Most views"
-    },
-    {
-      value: "comments",
-      text: "Most comments"
-    }
-  ]
-}) }}-->
 
         {{ govukRadios({
           idPrefix: "which-pension",
@@ -58,14 +27,13 @@ Which pension scheme are you a member of? - GOV.UK
           },
           items: [
             {
-              idPrefix: "partnership",
-              name: "partnership",
-              value: "partnership",
-              text: "Partnership"
-            },
-            {
+
               value: "alpha",
               text: "Alpha"
+            },
+            {
+              value: "partnership",
+              text: "Partnership"
             }
           ]
         }) }}
