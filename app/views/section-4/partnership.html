@@ -5,7 +5,7 @@ Who is the Partnership provider? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -27,6 +27,10 @@ Who is the Partnership provider? - GOV.UK
           },
           items: [
             {
+              value: "legal general",
+              text: "Legal and General"
+            },
+            {
               value: "scottish widows",
               text: "Scottish Widows"
             },
@@ -37,13 +41,11 @@ Who is the Partnership provider? - GOV.UK
             {
               value: "tuc prudential",
               text: "TUC / Prudential"
-            },
-            {
-              value: "legal general",
-              text: "Legal & General"
             }
           ]
         }) }}
+
+
 
         <span class="govuk-form-group">
   <h1 class="govuk-body">Enter the employee's contribution details</h1>
@@ -51,7 +53,7 @@ Who is the Partnership provider? - GOV.UK
     <div class="govuk-input__prefix" aria-hidden="true">£</div>
     <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
   </span>
-</span>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <p class="govuk-body">or</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -65,10 +67,9 @@ Who is the Partnership provider? - GOV.UK
 <br><br>
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-
+</div
       </form>
 
     </div>
-  </div>
 
 {% endblock %}
