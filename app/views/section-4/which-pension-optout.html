@@ -5,7 +5,7 @@ Which pension scheme has the employee opted out of? - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -26,6 +26,11 @@ Which pension scheme has the employee opted out of? - GOV.UK
             }
           },
           items: [
+          
+          {
+            value: "alpha",
+            text: "Alpha"
+          },
             {
               value: "classic",
               text: "Classic"
@@ -45,10 +50,6 @@ Which pension scheme has the employee opted out of? - GOV.UK
             {
               value: "premium",
               text: "Premium"
-            },
-            {
-              value: "alpha",
-              text: "Alpha"
             }
           ]
         }) }}
