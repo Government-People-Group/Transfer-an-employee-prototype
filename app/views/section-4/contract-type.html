@@ -15,21 +15,6 @@ What is the employee’s current contract type? - GOV.UK
 
       <form class="form" action="contract-type-answer" method="post">
 
-        {% set tempHtml %}
-{{ govukDateInput({
-  id: "temp-end",
-  namePrefix: "temp-end",
-  fieldset: {
-    legend: {
-      text: "What is the end date?"
-    }
-  },
-  hint: {
-    text: "For example, 27 3 2023"
-  }
-}) }}
-{% endset -%}
-
 {% set ftaHtml %}
 {{ govukDateInput({
   id: "fta-end",
