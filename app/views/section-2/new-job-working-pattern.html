@@ -26,8 +26,7 @@ What is your new working pattern? - GOV.UK
           id: "parttime",
           name: "parttime",
           label: {
-            text: "What is your full time equivalant contracted hours?",
-            isPageHeading: true
+            text: "What is your full time equivalant contracted hours?"
           },
           suffix: {
             text: "hours"
@@ -37,6 +36,16 @@ What is your new working pattern? - GOV.UK
         }) }}
 
         {% endset -%}
+
+        {% set compressedhoursHtml %}
+{{ govukTextarea({
+  id: "compressed-hours",
+  name: "compressed-hours",
+  label: {
+    text: "Provide details of your compressed hours"
+  }
+}) }}
+{% endset -%}
 
         {{ govukCheckboxes({
           idPrefix: "working-pattern",
@@ -67,7 +76,10 @@ What is your new working pattern? - GOV.UK
             },
             {
               value: "compressed-hours",
-              text: "Compressed-hours"
+              text: "Compressed-hours",
+              conditional: {
+                html: compressedhoursHtml
+              }
             },
             {
               value: "annual-hours",
