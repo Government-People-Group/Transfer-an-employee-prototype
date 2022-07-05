@@ -14,20 +14,18 @@ Advances of salary and deductions - GOV.UK
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="pay-award" method="post">
+        <h1 class="govuk-heading-l">
+          Advances of salary and deductions
+        </h1>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+              Does the employee have any advances of salary?
+            </legend>
+      <div id="changed-name-hint" class="govuk-hint">
+           For example, season tickets, holiday advance, religious festival advance, cycle to work scheme.
+         </div>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Advances of salary and deductions
-      </h1>
-    </legend>
-
-    <div id="question-1" class="govuk-body">
-      Does the employee have any advances of salary?
-      <p class="govuk-hint">For example, season tickets, holiday advance, religious festival advance, cycle to work scheme.</p>
-      </div>
-    
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="consolidated" name="consolidated" type="radio" value="email" data-aria-controls="conditional-consolidated">
@@ -57,9 +55,6 @@ Advances of salary and deductions - GOV.UK
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
   </h1>
-  <!--<div id="more-detail-hint" class="govuk-hint">
-    Do not include personal or financial information, like your National Insurance number or credit card details.
-  </div>-->
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
 </div>
 
@@ -68,14 +63,6 @@ Advances of salary and deductions - GOV.UK
 <h1 class="govuk-heading-m">Advance of salary
 
   <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
-  
-<!--<span class="moj-button-action" style="float: right;">
-      {{ govukButton({
-        text: 'Remove',
-        href: 'benefits',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </span>-->
     </h1>
 
 <label class="govuk-label" for="consolidated">
@@ -95,9 +82,7 @@ Advances of salary and deductions - GOV.UK
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
   </h1>
-  <!--<div id="more-detail-hint" class="govuk-hint">
-    Do not include personal or financial information, like your National Insurance number or credit card details.
-  </div>-->
+
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
 </div>
 
@@ -108,29 +93,7 @@ Advances of salary and deductions - GOV.UK
         classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
       }) }}
     </div>
-        <!--<br><br>
-        <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      See examples of benefits
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-body">You can buy:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>Flexible working arrangements and Flexi-time</li>
-  <li>25 days annual leave on entry increasing to 30 days after 5 years’ service</li>
-  <li>Exceptional contributory pension scheme</li>
-  <li>3 days of paid volunteering</li>
-  <li>Generous paid Parental Leave</li>
-  <li>Occupational sick pay</li>
-  <li>Staff networks to join including the LGBT+, Ethnic Minority, Mental Health, Disability, Women’s Network</li>
-  <li>Access to excellent learning and development platforms</li>
-  <li>Season ticket loan</li>
-  <li>Cycle to work scheme</li>
-</ul>
-  </div>
-</details>-->
+
     </div>
 
       </div>
@@ -177,9 +140,7 @@ Advances of salary and deductions - GOV.UK
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
   </h1>
-  <!--<div id="more-detail-hint" class="govuk-hint">
-    Do not include personal or financial information, like your National Insurance number or credit card details.
-  </div>-->
+
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
 </div>
 
@@ -188,14 +149,7 @@ Advances of salary and deductions - GOV.UK
 <h1 class="govuk-heading-m">Deduction
 
   <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
-  
-<!--<span class="moj-button-action" style="float: right;">
-      {{ govukButton({
-        text: 'Remove',
-        href: 'benefits',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </span>-->
+
     </h1>
 
 <label class="govuk-label" for="consolidated">
@@ -215,9 +169,7 @@ Advances of salary and deductions - GOV.UK
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
   </h1>
-  <!--<div id="more-detail-hint" class="govuk-hint">
-    Do not include personal or financial information, like your National Insurance number or credit card details.
-  </div>-->
+
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
 </div>
 
@@ -228,21 +180,6 @@ Advances of salary and deductions - GOV.UK
         classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
       }) }}
     </div>
-
-          <!--<label class="govuk-label" for="non-consolidated">
-            Enter amount
-          </label>
-          <div class="govuk-input__wrapper">
-    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-    <input class="govuk-input govuk-!-width-one-quarter" id="amount-2" name="amount-2" type="text" spellcheck="false">
-        </div>
-
-        <br>
-
-        <label class="govuk-label" for="non-consolidated">
-            Enter details
-          </label>
-          <input class="govuk-input govuk-!-width-three-quarters" id="details-2" name="details-2" type="email" spellcheck="false" autocomplete="email">
           -->
         </div>
 
