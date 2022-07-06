@@ -16,8 +16,6 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<div data-module="moj-add-another">
-
   <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Absence history</h2>
 
   <p class="govuk-body">Provide a 4 year absence history including the absence dates and reason for absence.</p>
@@ -92,41 +90,12 @@
  ]
   }) }}
 
-  {{ govukRadios({
-  idPrefix: "absence-type",
-  name: "absence-type",
-  fieldset: {
-    legend: {
-      text: "Absence type"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "option one"
-    },
-    {
-      value: "scotland",
-      text: "option two"
-    },
-    {
-      value: "wales",
-      text: "option three"
-    },
-    {
-      value: "northern-ireland",
-      text: "option four"
-    }
-  ]
-}) }}
-
-{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
 {{ govukTextarea({
   name: "more-detail",
   id: "more-detail",
   label: {
-    text: "Other related information"
+    text: "Enter absense reason and other related information"
   }
 }) }}
 

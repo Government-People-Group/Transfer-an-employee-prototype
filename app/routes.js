@@ -307,4 +307,21 @@ router.post('/section-4/added-pension-scheme-answer', function (req, res) {
 
 })
 
+router.post('/section-4/absence-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var absenceAnswer = req.session.data['absence']
+
+  // Check whether the variable matches a condition
+  if (absenceAnswer == "yes") {
+    // Send user to next page
+    res.redirect('absence-history')
+  }
+  else {
+    // Send user to ineligible page
+    res.redirect('section-break-1')
+  }
+
+})
+
 module.exports = router

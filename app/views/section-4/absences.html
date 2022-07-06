@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Absence history - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+    {% include "includes/user-bar.html" %}
+
+<!--<a class="govuk-back-link" href="javascript:history.back()">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="absence-answer" method="post">
+
+
+      {{ govukRadios({
+        idPrefix: "absence",
+        name: "absence",
+        fieldset: {
+          legend: {
+            text: "In the last 4 years, has the transferee had any absences?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+    <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+  </form>
+
+    </div>
+  </div>
+
+{% endblock %}
