@@ -23,16 +23,20 @@ Terms and conditions of employment - GOV.UK
       </h1>
     </legend>
 
-    <div class="govuk-body">
+      <label class="govuk-label">
       What is the employee’s annual leave entitlement?
-    </div>
-    <div class="govuk-form-group">
-  <label class="govuk-label" for="weight">
-  </label>
-  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+    </label>
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="days" name="days" type="text" spellcheck="false">
     <div class="govuk-input__suffix" aria-hidden="true">days</div>
-  </div>
-</div>
+
+    <p class="govuk-body" style="
+        padding: 10px;
+    ">or</p>
+<input class="govuk-input govuk-input--width-5" id="hours" name="hours" type="text" spellcheck="false">
+      <div class="govuk-input__suffix" aria-hidden="true">hours</div>
+    </div>
+
 
     <div id="question-1" class="govuk-body">
       Is the employee in a mobile grade?
