@@ -71,21 +71,31 @@ Terms and conditions of employment - GOV.UK
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="nopay" name="consolidated" type="radio" value="email" data-aria-controls="conditional-yespay">
+        <input class="govuk-radios__input" id="nopay" name="consolidated" type="radio" data-aria-controls="conditional-yes">
         <label class="govuk-label govuk-radios__label" for="nopay">
           No
         </label>
       </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Enter details
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+</div>
+      </div>
+
+
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="mixpay" name="consolidated" type="radio" value="phone" data-aria-controls="conditional-nopay">
-        <label class="govuk-label govuk-radios__label" for="mixpay">
+        <input class="govuk-radios__input" id="mix" name="consolidated" type="radio" data-aria-controls="conditional-mix">
+        <label class="govuk-label govuk-radios__label" for="mix">
           Mix of both
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-nopay">
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mix">
         <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Provide details on pre-modernised terms
+    Enter details on pre-modernised terms
   </label>
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
 </div>
