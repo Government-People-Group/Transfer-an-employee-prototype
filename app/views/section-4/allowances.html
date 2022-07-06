@@ -48,7 +48,14 @@ Allowances - GOV.UK
             Enter details
           </label>
           <input class="govuk-input govuk-!-width-three-quarters" id="details" name="details" type="text" spellcheck="false" autocomplete="text">
+        </div><div class="moj-button-action">
+          {{ govukButton({
+            text: 'Add another',
+            href: 'benefits',
+            classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+          }) }}
         </div>
+
 
       </div>
       <div class="govuk-radios__item">
@@ -88,6 +95,14 @@ Allowances - GOV.UK
             Enter details
           </label>
           <input class="govuk-input govuk-!-width-three-quarters" id="details-2" name="details-2" type="text" spellcheck="false" autocomplete="text">
+        </div>
+
+        <div class="moj-button-action">
+          {{ govukButton({
+            text: 'Add another',
+            href: 'benefits',
+            classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+          }) }}
         </div>
 
       </div>
