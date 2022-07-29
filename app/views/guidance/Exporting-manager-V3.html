@@ -11,7 +11,7 @@
 
 .js-enabled .sticky-element--stuck-to-window {
     bottom: 0;
-    position: fixed;
+    position:;
 }
 .gem-c-print-link__button {
     color: rgb(29, 112, 184);
@@ -70,10 +70,10 @@
 	  	<li><strong><a class="scroll-to" href="#related_content">Related content</a></strong></li>
 	</ul>
 	</nav>
-  
-<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
-    <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
-</div>
+
+	<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+	<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
+	</div>
 	</div>
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">How to move roles across the Civil Service: guidance for employees</h1>
@@ -446,11 +446,13 @@ You should complete Part A-1, sections 1-4 of the staff transfer form.
         </svg>
         Contents
     </a>
-    <div class="sticky-element__print-link">
-      
-<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
-    <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
-</div>
+
+        <div class="sticky-element__print-link">
+
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+
+        <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
         </div>
       </div>
 {% endblock %}
