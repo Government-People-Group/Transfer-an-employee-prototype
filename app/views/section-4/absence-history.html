@@ -23,6 +23,19 @@
 
   <form action="section-break-1" method="post">
 
+
+
+     <h2 class="govuk-heading-m">Bulk upload absences</h2>
+
+
+      {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "file-upload-1",
+        label: {
+          text: "Upload a CSV, PDF, PNG or JPG file."
+        }
+      }) }}
+
     {% call govukFieldset({
       classes: 'moj-add-another__item',
       legend: {
