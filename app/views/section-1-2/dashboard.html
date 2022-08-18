@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+{% block content %}
+
+    <div class="govuk-grid-column-full-width">
+      <h1 class="govuk-heading-xl">
+        Vacancy Holder Review
+      </h1>
+      <p class="govuk-body">Use this dashboard to review vacancy transfers</p>
+
+<p class="govuk-body">
+  <a href="review-employee-answers">
+    Joseph Bloggs
+    <span class="govuk-visually-hidden">View profile of Josh Bloggs</span>
+  </a>
+</p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<p class="govuk-body">
+  <a href="review-employee-answers">
+    Kate Moss
+    <span class="govuk-visually-hidden">View profile of Josh Bloggs</span>
+  </a>
+</p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<p class="govuk-body">
+  <a href="review-employee-answers">
+    Craig David
+    <span class="govuk-visually-hidden">View profile of Josh Bloggs</span>
+  </a>
+</p>
+
+
+{% endblock %}
