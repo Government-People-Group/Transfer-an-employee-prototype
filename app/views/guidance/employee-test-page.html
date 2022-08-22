@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page - Transfer an employee across the Civil Service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="section-1/task-list-start" method="GET">
+        <h1 class="govuk-heading-xl">
+          {% if serviceName %}
+            {{ serviceName }}
+          {% endif %}
+        </h1>
+
+        <div class="govuk-body">
+          This service is for Civil Servants who are transferring to another Civil Service organisation, including arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs). </div>
+          <div class="govuk-body">This process is commonly known as the other government departments (OGD) transfer process or staff transfers within the Civil Service.
+        </div>
+        <div class="govuk-body">You can complete this section all at once or return later.
+      </div>
+
+        <p class="govuk-body">You'll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>National Insurance Number</li>
+          <li>Current department employee number</li>
+          <li>BPSS Clearance as minimum</li>
+          <li>Level of security clearance</li>
+          <li>Last 2 months of payslips</li>
+          <li>New department and job details
+        <!--     <a href="..">..</a>-->
+          </li>
+        </ul>
+
+        {{ govukButton({
+text: "Start now",
+classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+isStartButton: true
+}) }}
+
+<h2 class="govuk-heading-m">Other ways to complete the form</h2>
+    <p class="govuk-body">You can also complete a
+      <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies#:~:text=an%20accessible%20format.-,Civil%20Service%20Employee%20Transfer%20Form,-MS%20Excel%20Spreadsheet" class="govuk-link">spreadsheet version of the form</a>
+    </p>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Guidance
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list
+    govuk-!-font-size-16">
+              <li>
+                <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies" target="_blank">
+                  Guidance for civil servants: How to move jobs between departments and agencies
+                  <span class="govuk-visually-hidden">Link opens in new tab/window</span>
+                </a>
+            </ul>
+
+          </nav>
+        </aside>
+      </div>
+    </div>
+  {% endblock %}
