@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page - Transfer an employee across the Civil Service - GOV.UK
+  How to move roles across the Civil Service: guidance for employees - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,34 +19,46 @@
         </h1>
 
         <div class="govuk-body">
-          This service is for Civil Servants who are transferring to another Civil Service organisation, including arm’s length bodies (ALBs) and non-departmental public bodies (NDPBs). </div>
-          <div class="govuk-body">This process is commonly known as the other government departments (OGD) transfer process or staff transfers within the Civil Service.
-        </div>
-        <div class="govuk-body">You can complete this section all at once or return later.
-      </div>
-
-        <p class="govuk-body">You'll need:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>National Insurance Number</li>
-          <li>Current department employee number</li>
-          <li>BPSS Clearance as minimum</li>
-          <li>Level of security clearance</li>
-          <li>Last 2 months of payslips</li>
-          <li>New department and job details
-        <!--     <a href="..">..</a>-->
-          </li>
-        </ul>
-
-        {{ govukButton({
-text: "Start now",
-classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
-isStartButton: true
-}) }}
-
-<h2 class="govuk-heading-m">Other ways to complete the form</h2>
-    <p class="govuk-body">You can also complete a
-      <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies#:~:text=an%20accessible%20format.-,Civil%20Service%20Employee%20Transfer%20Form,-MS%20Excel%20Spreadsheet" class="govuk-link">spreadsheet version of the form</a>
-    </p>
+<h2 class="govuk-heading-l" id="intro">Introduction</h2>
+<h3 class="govuk-heading-m" id="who">Who does the staff transfer process apply to?</h3>
+<p class="govuk-body">It applies to civil servants who are transferring permanently or on a loan of more than 6 months, between:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>departments</li>
+<li>arm’s length bodies</li>
+<li>non-departmental public bodies employing civil servants</li>
+    </ul>
+<p cass="govuk-body"><a href="https://www.gov.uk/government/organisations" class="https://www.gov.uk/government/organisations">Departments, agencies and public bodies</a> lists Government departments, non-departmental public bodies and other bodies.</p>
+<p class="govuk-body">The staff transfer process also applies to civil servants transferring from the Northern Ireland Civil Service (NICS) and the Scottish and Welsh governments.</p>
+<p class="govuk-body">To be eligible, your original appointment must be on merit and by <a href="https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/" class="https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/">fair and open competition</a>.</p> 
+<h2 class="govuk-heading-m" id="how">How do I transfer?</h2>
+<p class="govuk-body">You will get an email confirming your provisional job offer from the relevant recruitment team. You should then follow the <a class="scroll-to" href="#steps">steps in the staff transfer process</a>.</p>
+<p class="govuk-body">You will need to complete Parts A-1 and A-2 of the <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies" class="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies">staff transfer form</a>. Your current manager and HR/Shared Services will also complete parts B and C of the form. It is otherwise known as the Civil Service Employee Transfer (CSET) form. The form covers HR, payroll and security clearance transfer.</p>
+<h2 class="govuk-heading-m" id="except">Exceptions</h2>
+<p class="govuk-body">The staff transfer form is mandatory except:</p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>for <a href="https://www.gov.uk/government/publications/machinery-of-government-changes-information" class="https://www.gov.uk/government/publications/machinery-of-government-changes-information">machinery of government changes</a>. For example, these involve whole business areas transferring between departments.</li>
+  <li><a href="https://www.gov.uk/government/publications/staff-transfers-in-the-public-sector" class="https://www.gov.uk/government/publications/staff-transfers-in-the-public-sector">Cabinet Office statement of practice (COSOP)</a> moves</li>
+  <li>if you are are a public sector worker. For example a teacher, police officer or you are staff employed by a local authority</li>
+  <li>if you are transferring to a non-departmental public body who does not employ civil servants</li>
+  <li>if you are a civil servant on a loan of less than 6 months</li>
+</ul>
+<h2 class="govuk-heading-m" id="what">What is included in the transfer process?</h2>
+<p class="govuk-body">When you transfer to a new department, the process normally includes transferring your:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>HR record</li>
+  <li>pension details</li>
+  <li>any current and valid security clearance you hold, including existing National Security Vetting (NSV) clearance</li>
+  <li>any reasonable adjustments</li>
+</ul>
+<h2 class="govuk-heading-m" id="support">If you need support with your transfer</h2>        
+<p class="govuk-body">You should follow this guidance. If you need further support with the staff transfer process you could:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>ask your current line manager</li>
+  <li>ask the vacancy holder</li>
+  <li>check the job advert</li>
+  <li>contact your vetting authority/cluster security unit</li>
+  <li>check your department’s intranet for more information</li>
+</ul>       
 
       </div>
 
@@ -59,8 +71,8 @@ isStartButton: true
             <ul class="govuk-list
     govuk-!-font-size-16">
               <li>
-                <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies" target="_blank">
-                  Guidance for civil servants: How to move jobs between departments and agencies
+                <a href="https://prototype-training.herokuapp.com/guidance/employee-steps.html" target="_blank">
+                  Steps for employees in the staff transfer process
                   <span class="govuk-visually-hidden">Link opens in new tab/window</span>
                 </a>
             </ul>
