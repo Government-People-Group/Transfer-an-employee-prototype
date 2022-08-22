@@ -1,108 +1,130 @@
-<!DOCTYPE html>
-<html lang="en" class="govuk-template ">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="utf-8">
-  <title>GOV.UK - The best place to find government services and information</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b0c0c">
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}{% endblock %}
+{% block content %}
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
 
-  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-  <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+.js-enabled .sticky-element--stuck-to-window {
+    bottom: 0;
+    position:;
+}
+.gem-c-print-link__button {
+    color: rgb(29, 112, 184);
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(177, 180, 182);
+    border-image: initial;
+    margin: 0px;
+}
 
-  <!--[if !IE 8]><!-->
-  <link href="/govuk-frontend/govuk/all.css" rel="stylesheet">
-  <!--<![endif]-->
+.gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+    color: rgb(11, 12, 12);
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
 
-  <!--[if IE 8]>
-    <link href="/govuk-frontend/all-ie8.css" rel="stylesheet">
-  <![endif]-->
+.gem-c-print-link__link, .gem-c-print-link__button {
+    background: url(https://www.gov.uk/assets/government-frontend/govuk_publishing_components/icon-print-9785e3a205c49d1efe1bfe07f3b60cafe820be2d0ca670aa2f4565f5deed4d5f.png) 10px 50% / 16px 18px no-repeat;
+    padding: 10px 10px 10px 36px;
+    text-decoration: none;
+}
 
-  <!--[if lt IE 9]>
-    <script src="/html5-shiv/html5shiv.js"></script>
-  <![endif]-->
+</style>
 
-</head>
+<div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
+	<div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
+	<nav class="gem-c-contents-list" aria-label="Contents" role="navigation" data-module="gem-track-click">
+	<h2 class="govuk-heading-m">
+	Contents
+	</h2>
+  <ul class="govuk-list">
+	  	<li><strong><a class="scroll-to" href="#intro">Introduction</a></strong></li>
+		<li><a class="scroll-to" href="#who">Who does the staff transfer process apply to?</a></li>
+		<li><a class="scroll-to" href="#how">How do I transfer?</a></li>
+		<li><a class="scroll-to" href="#except">Exceptions</a></li>
+		<li><a class="scroll-to" href="#what">What is included in the transfer process?</a></li>
+		<li><a class="scroll-to" href="#support">If you need support with your transfer</a></li>
+	  	<br>
+	 	<li><strong><a class="scroll-to" href="#steps">Steps in the staff transfer process</a></strong></li>
+		<br>
+	  	<li><strong><a class="scroll-to" href="#principles">General principles and further information</a></strong></li>
+	        <br>
+	  	<li><strong><a class="scroll-to" href="#related_content">Related content</a></strong></li>
+	</ul>
+	</nav>
 
-<body class="govuk-template__body ">
-  <script>
-    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
-
-  </script>
-
-  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-
-  <header class="govuk-header " role="banner" data-module="govuk-header">
-    <div class="govuk-header__container govuk-width-container">
-      <div class="govuk-header__logo">
-        <a href="/" class="govuk-header__link govuk-header__link--homepage">
-          <span class="govuk-header__logotype">
-            <!--[if gt IE 8]><!-->
-            <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
-              <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
-            </svg>
-            <!--<![endif]-->
-            <!--[if IE 8]>
-          <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
-          <![endif]-->
-            <span class="govuk-header__logotype-text">
-              GOV.UK
-            </span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </header>
-<div class="govuk-width-container">
-  <a href="#" class="govuk-back-link">Back</a>
-
-  <main class="govuk-main-wrapper">
-
-    <div class="govuk-grid-row">
+	<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+	<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
+	</div>
+	</div>
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Two-thirds column</h1>
-        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
-      </div>
+        <h1 class="govuk-heading-xl">How to move roles across the Civil Service: guidance for employees</h1>
+        <p class="govuk-body-l">This guidance for employees explains the staff transfer process and what you need to do to change departments in the Civil Service.</p>
+        <h2 class="govuk-heading-l" id="intro">Introduction</h2>
+<h3 class="govuk-heading-m" id="who">Who does the staff transfer process apply to?</h3>
+<p class="govuk-body">It applies to civil servants who are transferring permanently or on a loan of more than 6 months, between:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>departments</li>
+<li>arm’s length bodies</li>
+<li>non-departmental public bodies employing civil servants</li>
+    </ul>
+<p cass="govuk-body"><a href="https://www.gov.uk/government/organisations" class="https://www.gov.uk/government/organisations">Departments, agencies and public bodies</a> lists Government departments, non-departmental public bodies and other bodies.</p>
+<p class="govuk-body">The staff transfer process also applies to civil servants transferring from the Northern Ireland Civil Service (NICS) and the Scottish and Welsh governments.</p>
+<p class="govuk-body">To be eligible, your original appointment must be on merit and by <a href="https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/" class="https://civilservicecommission.independent.gov.uk/recruitment/recruitment-principles/">fair and open competition</a>.</p> 
+<h2 class="govuk-heading-l" id="how">How do I transfer?</h2>
+<p class="govuk-body">You will get an email confirming your provisional job offer from the relevant recruitment team. You should then follow the <a class="scroll-to" href="#steps">steps in the staff transfer process</a>.</p>
+<p class="govuk-body">You will need to complete Parts A-1 and A-2 of the <a href="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies" class="https://www.gov.uk/government/publications/guidance-for-civil-servants-how-to-move-jobs-between-departments-and-agencies">staff transfer form</a>. Your current manager and HR/Shared Services will also complete parts B and C of the form. It is otherwise known as the Civil Service Employee Transfer (CSET) form. The form covers HR, payroll and security clearance transfer.</p>
+<h2 class="govuk-heading-l" id="except">Exceptions</h2>
+<p class="govuk-body">The staff transfer form is mandatory except:</p>
+<ul class="govuk-list govuk-list--bullet">
+	<li>for <a href="https://www.gov.uk/government/publications/machinery-of-government-changes-information" class="https://www.gov.uk/government/publications/machinery-of-government-changes-information">machinery of government changes</a>. For example, these involve whole business areas transferring between departments.</li>
+  <li><a href="https://www.gov.uk/government/publications/staff-transfers-in-the-public-sector" class="https://www.gov.uk/government/publications/staff-transfers-in-the-public-sector">Cabinet Office statement of practice (COSOP)</a> moves</li>
+  <li>if you are are a public sector worker. For example a teacher, police officer or you are staff employed by a local authority</li>
+  <li>if you are transferring to a non-departmental public body who does not employ civil servants</li>
+  <li>if you are a civil servant on a loan of less than 6 months</li>
+</ul>
+<h2 class="govuk-heading-m" id="what">What is included in the transfer process?</h2>
+<p class="govuk-body">When you transfer to a new department, the process normally includes transferring your:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>HR record</li>
+  <li>pension details</li>
+  <li>any current and valid security clearance you hold, including existing National Security Vetting (NSV) clearance</li>
+  <li>any reasonable adjustments</li>
+</ul>
+<h2 class="govuk-heading-l" id="support">If you need support with your transfer</h2>        
+<p class="govuk-body">You should follow this guidance. If you need further support with the staff transfer process you could:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>ask your current line manager</li>
+  <li>ask the vacancy holder</li>
+  <li>check the job advert</li>
+  <li>contact your vetting authority/cluster security unit</li>
+  <li>check your department’s intranet for more information</li>
+</ul>        
 
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">One-third column</h2>
-        <p class="govuk-body">This is a paragraph inside a one-third wide column</p>
-      </div>
+    <div data-sticky-element="" class="sticky-element sticky-element--enabled sticky-element--stuck-to-window">
+        <a class="govuk-link app-c-back-to-top dont-print" href="#contents">
+        <svg class="app-c-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+        </svg>
+        Contents
+    </a>
+
+        <div class="sticky-element__print-link">
+
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+
+        <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
     </div>
-
-  </main>
-</div>
-<footer class="govuk-footer " role="contentinfo">
-    <div class="govuk-width-container ">
-      <div class="govuk-footer__meta">
-        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
-
-          <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
-            <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
-          </svg>
-          <span class="govuk-footer__licence-description">
-            All content is available under the
-            <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
-          </span>
-        </div>
-        <div class="govuk-footer__meta-item">
-          <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <script src="/govuk-frontend/all.js"></script>
-  <script>
-    window.GOVUKFrontend.initAll()
-
-  </script>
-</body>
-
-</html>
+{% endblock %}
