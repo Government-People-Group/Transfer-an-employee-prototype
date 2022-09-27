@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Job status since 6th April - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="declaration" method="post">
+
+      <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Job status since 6th April
+                </h1>
+              </legend>
+
+              <br>
+              <p class="govuk-hint">This information is essential to ensure that your tax information is shared correctly with HMRC.</p>
+              <p class="govuk-hint"> It is important to choose the statement that best fits your situation. For most staff transfers statements B or C would apply.</p>
+              <p class="govuk-hint"> Choose statement A if this is your first job since 6th of April and you have not received:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Jobseeker's Allowance</li>
+                <li>Employment and Support Allowance</li>
+                <li>or Incapacity Benefit</li>
+              </ul>
+              <p class="govuk-hint">For example, a school leaver who hasn't ever had any part-time work and is now starting their first job. They would choose statement A.</p>
+              <p class="govuk-hint">Choose statement B if you have lost your P45, or you did not get one from your last employer or Jobcentre Plus</p>
+              <p class="govuk-hint">Remember, if you receive payments from any pensions do not choose statements A or B.</p>
+              <p class="govuk-hint">Choose statement C if you are in receipt of any pension - state, works or private and/or you are receiving payments from another job</p>
+              <br>
+              <p class="govuk-body">Select one of the three statements.</p>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="statement-a"
+                    name="statement"
+                    type="radio"
+                    value="statement-a"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="statement-a"
+                  >
+                  <strong>Statement A</strong>
+                  </label>
+                  <div id="statement-a-hint" class="govuk-radios__hint">
+                    This is my first job since 6 April. Since 6 April I have not received payments from either Jobseeker’s Allowance, Employment and Support Allowance or Incapacity Benefit.
+                  </div>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="statement-b"
+                    name="statement"
+                    type="radio"
+                    value="statement-b"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="statement-b"
+                  >
+                  <strong>Statement B</strong>
+                  </label>
+                  <div id="statement-b-hint" class="govuk-radios__hint">
+                    I have had another job since 6 April but I do not have a P45. Since 6 April I have received payments from either Jobseeker’s Allowance, Employment and Support Allowance or Incapacity Benefit.
+                    </div>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="statement-c"
+                    name="statement"
+                    type="radio"
+                    value="statement-c"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="statement-c"
+                  >
+                  <strong>Statement C</strong>
+                  </label>
+                  <div id="statement-c-hint" class="govuk-radios__hint">
+                    I have another job and/or I am in receipt of a State, Works or Private Pension.
+                    </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        
+        <br>
+        
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
