@@ -1,0 +1,275 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Advances of salary and deductions - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}{% include "includes/phase-banner.html" %}{% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="pay-award" method="post">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Advances of salary and deductions
+      </h1>
+    </legend>
+
+    <div id="question-1" class="govuk-body">
+      Does the employee have any advances of salary?
+      <p class="govuk-hint">For example, season tickets, holiday advance, religious festival advance, cycle to work scheme.</p>
+      </div>
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="consolidated" name="consolidated" type="radio" value="email" data-aria-controls="conditional-consolidated">
+        <label class="govuk-label govuk-radios__label" for="consolidated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-consolidated">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-m">Advance of salary</h1>
+
+          <label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<hr>
+
+<h1 class="govuk-heading-m">Advance of salary
+
+  <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
+  
+<!--<span class="moj-button-action" style="float: right;">
+      {{ govukButton({
+        text: 'Remove',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </span>-->
+    </h1>
+
+<label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+        <!--<br><br>
+        <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      See examples of benefits
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">You can buy:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Flexible working arrangements and Flexi-time</li>
+  <li>25 days annual leave on entry increasing to 30 days after 5 years’ service</li>
+  <li>Exceptional contributory pension scheme</li>
+  <li>3 days of paid volunteering</li>
+  <li>Generous paid Parental Leave</li>
+  <li>Occupational sick pay</li>
+  <li>Staff networks to join including the LGBT+, Ethnic Minority, Mental Health, Disability, Women’s Network</li>
+  <li>Access to excellent learning and development platforms</li>
+  <li>Season ticket loan</li>
+  <li>Cycle to work scheme</li>
+</ul>
+  </div>
+</details>-->
+    </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-1" name="consolidated" type="radio" value="phone" data-aria-controls="conditional-no-1">
+        <label class="govuk-label govuk-radios__label" for="no-1">
+          No
+        </label>
+      </div>
+    </div>
+
+    <br>
+
+    <div id="question-1" class="govuk-body">
+      Does the employee have any further deductions?
+      <p class="govuk-hint">For example, court orders.</p>
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated" name="non-consolidated" type="radio" value="email" data-aria-controls="conditional-non-consolidated">
+        <label class="govuk-label govuk-radios__label" for="non-consolidated">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-non-consolidated">
+        <div class="govuk-form-group">
+        <div class="govuk-form-group">
+            <label for="autocomplete-default" class="govuk-label">Enter court order details</label>
+      <div class="govuk-input--width-40">
+        <div id="event-name-hint" class="govuk-hint">
+    If the employee has a court order, enter details including court order date, reference number and amount remaining
+  </div>
+        <div id="department" class="autocomplete-wrapper"></div>
+        </div>
+        </div>
+
+          <h1 class="govuk-heading-m">Deduction</h1>
+
+          <label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<hr>
+
+<h1 class="govuk-heading-m">Deduction
+
+  <span><a class="govuk-body govuk-link govuk-link--no-visited-state" href="#" style="float: right;">Remove</a></span>
+  
+<!--<span class="moj-button-action" style="float: right;">
+      {{ govukButton({
+        text: 'Remove',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </span>-->
+    </h1>
+
+<label class="govuk-label" for="consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount" name="amount" type="text" spellcheck="false">
+        </div>
+
+        <br>
+
+          <label class="govuk-label" for="consolidated">
+            Enter details
+          </label>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+  </h1>
+  <!--<div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div>-->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        href: 'benefits',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+          <!--<label class="govuk-label" for="non-consolidated">
+            Enter amount
+          </label>
+          <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-!-width-one-quarter" id="amount-2" name="amount-2" type="text" spellcheck="false">
+        </div>
+        <br>
+        <label class="govuk-label" for="non-consolidated">
+            Enter details
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="details-2" name="details-2" type="email" spellcheck="false" autocomplete="email">
+          -->
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="non-consolidated-2" name="non-consolidated" type="radio" value="phone" data-aria-controls="conditional-non-consolidated-2">
+        <label class="govuk-label govuk-radios__label" for="no-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
