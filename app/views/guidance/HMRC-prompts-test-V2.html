@@ -29,7 +29,9 @@ Job status since 6th April - GOV.UK
               <p class="govuk-hint">Choose Statement B if you have lost your P45, or you did not get one from your last employer or Jobcentre Plus.</p>
               <p class="govuk-hint">Remember, if you receive payments from any pensions do not choose statements A or B.</p>
               <p class="govuk-hint">Choose Statement C if you are in receipt of any pension - state, works or private and/or you are receiving payments from another job</p>
-              <br>
+              <p class="govuk-hint">Statement D enables former students to indicate to their employer to make Student Loan deductions from their pay.</p>
+              
+             <br>
               <p class="govuk-body">Select one of the three statements.</p>
 
               <div class="govuk-radios">
@@ -48,7 +50,7 @@ Job status since 6th April - GOV.UK
                   <strong>Statement A</strong>
                   </label>
                   <div id="statement-a-hint" class="govuk-radios__hint">
-                    This is my first job since 6 April. Since 6 April I have not received payments from either Jobseeker’s Allowance, Employment and Support Allowance or Incapacity Benefit.
+                    This is my first job since last 6 April and I have not been receiving taxable Jobseeker’s Allowance, Employment and Support Allowance or taxable Incapacity Benefit or a state or occupational pension.
                   </div>
                 </div>
 
@@ -67,7 +69,7 @@ Job status since 6th April - GOV.UK
                   <strong>Statement B</strong>
                   </label>
                   <div id="statement-b-hint" class="govuk-radios__hint">
-                    I have had another job since 6 April but I do not have a P45. Since 6 April I have received payments from either Jobseeker’s Allowance, Employment and Support Allowance or Incapacity Benefit.
+                    This is now my only job, but since last 6 April I have had another job, or have received taxable Jobseeker’s Allowance, Employment and Support Allowance or Incapacity Benefit. I do not receive a state or occupational pension.
                     </div>
                 </div>
 
@@ -86,13 +88,35 @@ Job status since 6th April - GOV.UK
                   <strong>Statement C</strong>
                   </label>
                   <div id="statement-c-hint" class="govuk-radios__hint">
-                    I have another job and/or I am in receipt of a State, Works or Private Pension.
+                    	I have another job or receive a state or occupational pension.
                     </div>
                 </div>
               </div>
             </fieldset>
           </div>
         
+       
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="statement-d"
+                    name="statement"
+                    type="radio"
+                    value="statement-d"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="statement-d"
+                  >
+                  <strong>Statement D</strong>
+                  </label>
+                  <div id="statement-c-hint" class="govuk-radios__hint">
+                    	If you left a course of Higher Education before last 6 April and received your first Student Loan instalment on or after 1 September 1998 and you have not fully repaid your Student Loan, choose statement D. (If you are required to repay your Student Loan through your bank or building society account do not enter choose statement D)
+                    </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
         <br>
         
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
