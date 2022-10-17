@@ -1,1 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Have you undergone BPSS screening? - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}  {% include "includes/phase-banner.html" %}  {% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="security-clearance" method="post">
+
+
+        {% set unsureHtml %}
+
+        <p class="govuk-body">
+          Refer to your line manager
+        </p>
+        {% endset -%}
+
+
+
+        {{ govukRadios({
+          idPrefix: "bpss",
+          name: "bpss",
+          fieldset: {
+            legend: {
+              text: "Have you undergone Baseline Personnel Security Standards (BPSS) screening in the past 3 years?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            },
+            {
+              value: "unsureHtml",
+              text: "I'm not sure",
+              conditional: {
+                html: unsureHtml
+              }
+            }
+
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Helpful links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list
+    govuk-!-font-size-16">
+            All staff transferring from other departments undergo some pre-employment checks. These are known as <a href="https://www.gov.uk/government/publications/government-baseline-personnel-security-standard" class="govuk-link" rel="noreferrer noopener" target="_blank">Baseline Personnel Security Standard (BPSS) checks (opens in new tab)</a>. Some departments also refer to them as ‘basic’ or ‘baseline’ checks.
+            They help departments follow legislation to provide evidence of right to work, including:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>your right to work in the UK</li>
+              <li>your right to work in the Civil Service</li>
+              <li>your nationality and immigration status</li>
+              <li>an identity check</li>
+            </ul>
+            Basic, standard or enhanced criminal record checks may be needed. Depending on your new role, you may need additional checks, for example:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>relationships with current prisoners</li>
+              <li>safeguarding checks to work with children or vulnerable adults</li>
+            </ul>
+            This list is not exhaustive.
+            The job advert should confirm the level of checking needed for the role. If you are not sure, check with your vacancy holder.
+
+        </nav>
+      </aside>
+    </div>
+
+  </div>
+
+
+{% endblock %}
 
