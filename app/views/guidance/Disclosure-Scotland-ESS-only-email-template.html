@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% block pageTitle %}
+  Transfer an employee across the Civil Service
+{% endblock %}
+{% block beforeContent %}{% endblock %}
+{% block content %}
+
+<style>
+
+.js-enabled .sticky-element--stuck-to-window {
+    bottom: 0;
+    position:;
+}
+.gem-c-print-link__button {
+    color: rgb(29, 112, 184);
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(177, 180, 182);
+    border-image: initial;
+    margin: 0px;
+}
+
+.gem-c-print-link__link, .gem-c-print-link__button {
+    background: url(https://www.gov.uk/assets/government-frontend/govuk_publishing_components/icon-print-9785e3a205c49d1efe1bfe07f3b60cafe820be2d0ca670aa2f4565f5deed4d5f.png) 10px 50% / 16px 18px no-repeat;
+    padding: 10px 10px 10px 36px;
+    text-decoration: none;
+}
+
+</style>
+
+<div class="govuk-grid-row sidebar-with-body" data-module="sticky-element-container" id="">
+	<div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
+	<nav class="gem-c-contents-list" aria-label="" role="navigation" data-module="gem-track-click">
+	<h2 class="govuk-heading-m">
+	</h2>
+	</nav>
+
+	<div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+	<button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link">Print this page</button>
+	</div>
+	</div>
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">How to move roles across the Civil Service: request Disclosure Scotland - email template </h1>
+<p class="govuk-body-l">This page for Goverment Recruitment Services provices the email template for a Disclosure Scotland request for ESS only.</p>
+<h1 class="govuk-heading-m">Who does this email apply to?</h1>
+<p class="govuk-body">It applies to civil servants who are transferring permanently or on a loan of more than 6 months, and need a Disclosure Scotland check as part of their transfer to another government department.</p>
+<p class="govuk-body">Use the wording provided for emails to transferring employees who need a Disclosure Scotland check as part of the staff transfer process.</p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h1 class="govuk-heading-m">Requesting Disclosure Scotland: ESS only - email wording</h1>
+<p>Dear [path]application.user.formdata.1:1:1.value[/path],
+<br>Re: [path]application.opportunity.id[/path]
+<br>[path]application.opportunity.title_labels.label_text[/path]</p>
+<br>
+<p class='govuk-body'>Congratulations on your provisional job offer.</p> 
+<h1 class="govuk-heading-m">Steps to take immediately</h1>
+<p class='govuk-body'>You now need to complete a Disclosure Scotland (DS) application:</p>
+<p class='govuk-body'><a href="https://www.mygov.scot/basic-disclosure/apply-for-basic-disclosure" class="https://www.mygov.scot/basic-disclosure/apply-for-basic-disclosure">https://www.mygov.scot/basic-disclosure/apply-for-basic-disclosure</a></p> 
+<p class='govuk-body'>We encourage you to apply online using the “Apply Now” functionality, which is significantly quicker.</p> 
+<p class='govuk-body'>When you open the application you will be asked ‘Are you applying for a disclosure for a coronavirus role in Scotland?’ Select No to this question.</p>
+<p class='govuk-body'>If you are not able to apply online, a paper application is route available:</p>
+<p class='govuk-body'><a href="https://www.mygov.scot/disclosure-paper-application" class="https://www.mygov.scot/disclosure-paper-application">https://www.mygov.scot/disclosure-paper-application</a></p>
+<h1 class="govuk-heading-m">When your criminal record check is complete</h1>
+</p>A disclosure certificate will be sent directly to your home address. To complete your pre-employment checks, we will need sight of the original certificate.</p>
+<p class='govuk-body'>To prevent delay please send your certificate with a covering letter asking for the certificate to be returned to you as soon as possible to:</p>
+<br>
+<div class="address"><div class="adr org fn"><p>
+FAO: Pre-Employment Checking Team 
+<br>Government Recruitment Service
+<br>BP3302
+<br>Warkworth House
+<br>Longbenton
+<br>Newcastle
+<br>NE98 1ZZ
+<br>
+</p></div></div>
+<p class='govuk-body'>If you have any queries please email XXX@cabinetoffice.gov.uk</p>
+<p class='govuk-body'>Kind regards</p>
+<p class='govuk-body'>Government Recruitment Service</p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h2 class="govuk-heading-m">Staff transfer email templates</h2>
+<p class="govuk-body">Return to <a href="https://prototype-training.herokuapp.com/guidance/staff_transfer_emails.html" class="https://prototype-training.herokuapp.com/guidance/staff_transfer_emails.html">list of staff transfer email templates</a>.</p>     
+    </div>
+
+        <div class="sticky-element__print-link">
+
+    <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+
+        <button class="govuk-link govuk-body-s gem-c-print-link__button" data-module="print-link" data-print-link-module-started="true">Print this page</button>
+    </div>
+        </div>
+      </div>
+{% endblock %}
